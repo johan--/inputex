@@ -11,7 +11,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
     <script src="../../build/inputex-loader/inputex-loader.js"></script>
     <script>YUI_config.groups.inputex.base = '../../build/';</script>
-    
+
 </head>
 <body class="yui3-skin-sam">
 
@@ -21,7 +21,7 @@
     <div id="hd">
         <h1><img src="http://yuilibrary.com/img/yui-logo.png"> Example: Basic menu creation</h1>
     </div>
-    
+
 
     <div class="yui3-g">
         <div class="yui3-u-3-4">
@@ -136,24 +136,24 @@ YUI({}).use('inputex-menu', function(Y){
 
    var button1 = Y.inputEx.cn('button', null, null, "SetValue with 'Fr' (France)");
    div.appendChild(button1);
-   Y.one(button1).on('click' ,function() { 
-      f.setValue("Fr"); 
+   Y.one(button1).on('click' ,function() {
+      f.setValue("Fr");
    });
    var button2 = Y.inputEx.cn('button', null, null, "SetValue with empty string");
    div.appendChild(button2);
-   Y.one(button2).on('click' ,function() { 
+   Y.one(button2).on('click' ,function() {
       f.setValue('');
    });
 
    var button3 = Y.inputEx.cn('button', null, null, "GetValue");
    div.appendChild(button3);
-   Y.one(button3).on('click' ,function() { 
+   Y.one(button3).on('click' ,function() {
       alert(f.getValue());
    });
 
    var button4 = Y.inputEx.cn('button', null, null, "Clear");
    div.appendChild(button4);
-   Y.one(button4).on('click' ,function() { 
+   Y.one(button4).on('click' ,function() {
       f.clear();
    });
 
@@ -426,7 +426,7 @@ YUI({}).use('inputex-menu', function(Y){
          }
       }
    ];
-   
+
    var menu = new Y.inputEx.MenuField({
       parentEl: 'container3',
       name: 'country',
@@ -537,24 +537,24 @@ YUI({}).use('inputex-menu', function(Y){
 
    var button1 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;SetValue with &#x27;Fr&#x27; (France)&quot;);
    div.appendChild(button1);
-   Y.one(button1).on(&#x27;click&#x27; ,function() { 
-      f.setValue(&quot;Fr&quot;); 
+   Y.one(button1).on(&#x27;click&#x27; ,function() {
+      f.setValue(&quot;Fr&quot;);
    });
    var button2 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;SetValue with empty string&quot;);
    div.appendChild(button2);
-   Y.one(button2).on(&#x27;click&#x27; ,function() { 
+   Y.one(button2).on(&#x27;click&#x27; ,function() {
       f.setValue(&#x27;&#x27;);
    });
 
    var button3 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;GetValue&quot;);
    div.appendChild(button3);
-   Y.one(button3).on(&#x27;click&#x27; ,function() { 
+   Y.one(button3).on(&#x27;click&#x27; ,function() {
       alert(f.getValue());
    });
 
    var button4 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Clear&quot;);
    div.appendChild(button4);
-   Y.one(button4).on(&#x27;click&#x27; ,function() { 
+   Y.one(button4).on(&#x27;click&#x27; ,function() {
       f.clear();
    });
 
@@ -827,7 +827,7 @@ YUI({}).use('inputex-menu', function(Y){
          }
       }
    ];
-   
+
    var menu = new Y.inputEx.MenuField({
       parentEl: &#x27;container3&#x27;,
       name: &#x27;country&#x27;,
@@ -845,9 +845,9 @@ YUI({}).use('inputex-menu', function(Y){
 
         <div class="yui3-u-1-4">
             <div class="sidebar">
-                
 
-                
+
+
                     <div class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Examples</h2>
@@ -855,19 +855,19 @@ YUI({}).use('inputex-menu', function(Y){
 
                         <div class="bd">
                             <ul class="examples">
-                                
-                                    
+
+
                                         <li data-description="How to create a menu.">
                                             <a href="menu.html">Basic menu creation</a>
                                         </li>
-                                    
-                                
+
+
                             </ul>
                         </div>
                     </div>
-                
 
-                
+
+
 
 
                     <div id="links-sidebox" class="sidebox">
@@ -921,7 +921,7 @@ YUI.Env.Tests = {
     name: 'menu',
     title: 'Basic menu creation',
     newWindow: '',
-    auto:  true 
+    auto:  true
 };
 YUI.Env.Tests.examples.push('menu');
 

@@ -11,7 +11,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
     <script src="../../build/inputex-loader/inputex-loader.js"></script>
     <script>YUI_config.groups.inputex.base = '../../build/';</script>
-    
+
 </head>
 <body class="yui3-skin-sam">
 
@@ -21,7 +21,7 @@
     <div id="hd">
         <h1><img src="http://yuilibrary.com/img/yui-logo.png"> Example: Basic combine field creation</h1>
     </div>
-    
+
 
     <div class="yui3-g">
         <div class="yui3-u-3-4">
@@ -47,19 +47,19 @@ How to create a combine field.
     <h2>Field names</h2>
     <p>The names are automatically set on sub-fields, so that standard forms can work. Click the button and check the URL</p>
     <div class='demoContainer' id='container3'></div>
-   
+
 
 <script>
 YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inputex-url', 'inputex-select', 'inputex-date', 'json', function(Y) {
 
     // Example 1
     var field = new Y.inputEx.CombineField({
-        parentEl: 'container1', 
+        parentEl: 'container1',
         label: 'Your name',
         description: 'Please enter your name',
         fields: [
-            { name: 'firstname', typeInvite: 'firstname' },
-            { name: 'lastname', typeInvite: 'lastname' }
+            { name: 'firstname', placeholder: 'firstname' },
+            { name: 'lastname', placeholder: 'lastname' }
         ],
         separators: [false,"&nbsp;&nbsp;&nbsp;",false],
         required:true
@@ -82,20 +82,20 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
         logDiv.innerHTML += "Updated at "+(new Date())+" with value "+value;
         logDiv.appendChild(Y.inputEx.cn('br'));
     });
-    
-    
+
+
     // Example 2
     new Y.inputEx.CombineField({
-        parentEl: 'container2', 
+        parentEl: 'container2',
         label:'Select Datetime :',
         fields: [
-            {type: 'date', name: 'date', typeInvite: 'mm/dd/YYYY' },
+            {type: 'date', name: 'date', placeholder: 'mm/dd/YYYY' },
             {type: 'time', name: 'time' }
         ],
         separators: [false,"&nbsp;",false]
     });
-    
-    
+
+
     // Example 3
     new Y.inputEx.Form( {
         fields: [
@@ -114,8 +114,8 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
                     description: 'Please enter your name',
                     name: 'this_is_a_test',
                     fields: [
-                        { name: 'firstname', typeInvite: 'firstname' },
-                        { name: 'lastname', typeInvite: 'lastname' }
+                        { name: 'firstname', placeholder: 'firstname' },
+                        { name: 'lastname', placeholder: 'lastname' }
                     ],
                     value: ['Jimi','Hendrix'],
                     name: "person",
@@ -154,12 +154,12 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
 
     &#x2F;&#x2F; Example 1
     var field = new Y.inputEx.CombineField({
-        parentEl: &#x27;container1&#x27;, 
+        parentEl: &#x27;container1&#x27;,
         label: &#x27;Your name&#x27;,
         description: &#x27;Please enter your name&#x27;,
         fields: [
-            { name: &#x27;firstname&#x27;, typeInvite: &#x27;firstname&#x27; },
-            { name: &#x27;lastname&#x27;, typeInvite: &#x27;lastname&#x27; }
+            { name: &#x27;firstname&#x27;, placeholder: &#x27;firstname&#x27; },
+            { name: &#x27;lastname&#x27;, placeholder: &#x27;lastname&#x27; }
         ],
         separators: [false,&quot;&amp;nbsp;&amp;nbsp;&amp;nbsp;&quot;,false],
         required:true
@@ -182,20 +182,20 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
         logDiv.innerHTML += &quot;Updated at &quot;+(new Date())+&quot; with value &quot;+value;
         logDiv.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
     });
-    
-    
+
+
     &#x2F;&#x2F; Example 2
     new Y.inputEx.CombineField({
-        parentEl: &#x27;container2&#x27;, 
+        parentEl: &#x27;container2&#x27;,
         label:&#x27;Select Datetime :&#x27;,
         fields: [
-            {type: &#x27;date&#x27;, name: &#x27;date&#x27;, typeInvite: &#x27;mm&#x2F;dd&#x2F;YYYY&#x27; },
+            {type: &#x27;date&#x27;, name: &#x27;date&#x27;, placeholder: &#x27;mm&#x2F;dd&#x2F;YYYY&#x27; },
             {type: &#x27;time&#x27;, name: &#x27;time&#x27; }
         ],
         separators: [false,&quot;&amp;nbsp;&quot;,false]
     });
-    
-    
+
+
     &#x2F;&#x2F; Example 3
     new Y.inputEx.Form( {
         fields: [
@@ -214,8 +214,8 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
                     description: &#x27;Please enter your name&#x27;,
                     name: &#x27;this_is_a_test&#x27;,
                     fields: [
-                        { name: &#x27;firstname&#x27;, typeInvite: &#x27;firstname&#x27; },
-                        { name: &#x27;lastname&#x27;, typeInvite: &#x27;lastname&#x27; }
+                        { name: &#x27;firstname&#x27;, placeholder: &#x27;firstname&#x27; },
+                        { name: &#x27;lastname&#x27;, placeholder: &#x27;lastname&#x27; }
                     ],
                     value: [&#x27;Jimi&#x27;,&#x27;Hendrix&#x27;],
                     name: &quot;person&quot;,
@@ -242,9 +242,9 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
 
         <div class="yui3-u-1-4">
             <div class="sidebar">
-                
 
-                
+
+
                     <div class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Examples</h2>
@@ -252,19 +252,19 @@ YUI().use('inputex-combine', 'inputex-time', 'inputex-form','inputex-list', 'inp
 
                         <div class="bd">
                             <ul class="examples">
-                                
-                                    
+
+
                                         <li data-description="How to create a combine field.">
                                             <a href="combine.html">Basic combine field creation</a>
                                         </li>
-                                    
-                                
+
+
                             </ul>
                         </div>
                     </div>
-                
 
-                
+
+
 
 
                     <div id="links-sidebox" class="sidebox">
@@ -318,7 +318,7 @@ YUI.Env.Tests = {
     name: 'combine',
     title: 'Basic combine field creation',
     newWindow: '',
-    auto:  true 
+    auto:  true
 };
 YUI.Env.Tests.examples.push('combine');
 

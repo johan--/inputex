@@ -1,1 +1,1 @@
-YUI.add("lang/inputex-date_nl",function(e){e.Intl.add("inputex-date","nl",{dayTypeInvite:"Dag",defaultDateFormat:"d/m/Y",invalidDate:"De datum is incorrect, bv: 25/01/2007",monthTypeInvite:"Maand",selectMonth:"- Maak een keuze -",yearTypeInvite:"Jaar"})},"@VERSION@");
+YUI.add("lang/inputex-date_nl",function(e){e.Intl.add("inputex-date","nl",{dayPlaceholder:"Dag",defaultDateFormat:"d/m/Y",invalidDate:"De datum is incorrect, bv: 25/01/2007",monthPlaceholder:"Maand",selectMonth:"- Maak een keuze -",yearPlaceholder:"Jaar"})},"@VERSION@");

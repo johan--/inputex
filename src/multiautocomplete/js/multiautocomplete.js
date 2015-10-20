@@ -18,29 +18,29 @@ inputEx.MultiAutoComplete = function(options) {
 };
 
 Y.extend(inputEx.MultiAutoComplete, inputEx.AutoComplete, {
-   
+
    /**
     * Build the DDList
     * @method renderComponent
     */
    renderComponent: function() {
       inputEx.MultiAutoComplete.superclass.renderComponent.call(this);
-      
+
       this.ddlist = new inputEx.DDListField({parentEl: this.fieldContainer});
       this.ddlist.on("itemRemoved",function() {
          this.setClassFromState();
          this.fireUpdatedEvt();
       }, this);
       this.ddlist.on("updated", this.fireUpdatedEvt, this);
-   },  
-   
+   },
+
    /**
     * Additional options
     * @method setOptions
     */
    setOptions: function(options) {
       inputEx.MultiAutoComplete.superclass.setOptions.call(this, options);
-      
+
       // Method to format the ddlist item labels
       this.options.returnLabel = options.returnLabel;
    },
@@ -51,7 +51,7 @@ Y.extend(inputEx.MultiAutoComplete, inputEx.AutoComplete, {
     */
    itemSelectHandler: function(v) {
       v.halt();
-      
+
       var aData = v.result;
       var value = lang.isFunction(this.options.returnValue) ? this.options.returnValue(aData) : aData.raw;
       var label = lang.isFunction(this.options.returnLabel) ? this.options.returnLabel(aData) : value;
@@ -62,7 +62,7 @@ Y.extend(inputEx.MultiAutoComplete, inputEx.AutoComplete, {
       this.onChange();
       this.yEl.ac.hide();
    },
-   
+
    /**
     * Set the value
     * @method setValue
@@ -71,16 +71,16 @@ Y.extend(inputEx.MultiAutoComplete, inputEx.AutoComplete, {
     */
    setValue: function (value, sendUpdatedEvt) {
       this.ddlist.setValue(value);
-      
+
       // set corresponding style
       this.setClassFromState();
-      
+
       if(sendUpdatedEvt !== false) {
          // fire update event
          this.fireUpdatedEvt();
       }
    },
-   
+
    clear: function (sendUpdatedEvt) {
       this.ddlist.clear();
       this.setValue(lang.isUndefined(this.options.value) ? [] : this.options.value, sendUpdatedEvt);
@@ -98,37 +98,38 @@ Y.extend(inputEx.MultiAutoComplete, inputEx.AutoComplete, {
    isEmpty: function () {
       return this.getValue().length === 0;
    },
-   
+
    /**
     * onChange event handler
     * @method onChange
     * @param {Event} e The original 'change' event
     */
     onChange: function(e) {
-       if (this.hiddenEl.value != this.stringifyValue()){ 
+       if (this.hiddenEl.value != this.stringifyValue()){
           this.hiddenEl.value = this.stringifyValue();
        }
        // erase inherited version, so don't trash previous value if input is empty
     },
-    
+
     /**
      * @method onBlur
      */
     onBlur : function(){
        this.el.value = '';
+       // -- Legacy HTML5 Placeholder for old browsers --
        if(this.el.value === '' && this.options.typeInvite) {
           Dom.addClass(this.divEl, "inputEx-typeInvite");
           if (this.el.value === '') this.el.value = this.options.typeInvite;
        }
     },
-    
+
     /**
      * @method stringifyValue
      */
     stringifyValue: function(){
        return Y.JSON.stringify(this.getValue());
     }
-   
+
 });
 
 // Register this class as "multiautocomplete" type

@@ -5,19 +5,19 @@ YUI().use('inputex-integer', function(Y) {
     field.on('updated', function(value) {
         Y.one('#valueContainer1').innerHTML = "value: " + value + ", type: " + typeof(value);
     });
-    
+
     // Example 2
     new Y.inputEx.IntegerField({ parentEl: 'container4', showMsg: true, min:3, max:10 });
-    
+
     // Example 3
     new Y.inputEx.IntegerField({ parentEl: 'container3', showMsg: true, negative:true, value: -12 });
-    
+
     // Example 4
     var field = new Y.inputEx.IntegerField({
         parentEl: 'container2',
         showMsg: true,
         required: true,
-        typeInvite: "Enter a number",
+        placeholder: "Enter a number",
         trim: true,
         minLength: 3,
         regexp: /^1/
@@ -25,7 +25,5 @@ YUI().use('inputex-integer', function(Y) {
     field.on('updated', function(value) {
         Y.one('#valueContainer2').innerHTML = "value: " + value + ", type: " + typeof(value);
     });
-    
+
 });
-
-

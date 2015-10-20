@@ -15,13 +15,15 @@
  *   <li>size: size attribute of the input</li>
  *   <li>maxLength: maximum size of the string field (no message display, uses the maxlength html attribute)</li>
  *   <li>minLength: minimum size of the string field (will display an error message if shorter)</li>
- *   <li>typeInvite: string displayed when the field is empty</li>
+ *   <li>placeholder: string displayed when the field is empty</li>
  *   <li>readonly: set the field as readonly</li>
  * </ul>
+ *
  */
 inputEx.StringField = function(options) {
    inputEx.StringField.superclass.constructor.call(this, options);
 
+     // -- Legacy HTML5 Placeholder for old browsers --
      if(this.options.typeInvite) {
         this.updateTypeInvite();
      }
@@ -43,7 +45,23 @@ Y.extend(inputEx.StringField, inputEx.Field, {
       this.options.size = options.size;
       this.options.maxLength = options.maxLength;
       this.options.minLength = options.minLength;
-      this.options.typeInvite = options.typeInvite;
+
+      // Type Invite message deprecated
+      if (options.typeInvite)
+        console.warn('[inputEx.StringField] typeInvite option is deprecated, please use placeholder instead');
+
+      // HTML5 Placeholder
+      // If HTML5 Placeholder is supported by the browser
+      if (document.createElement("input").placeholder !== undefined) {
+        // use the placeholder option or make it compatible with the legacy option typeInvite if placeholder is not set
+        this.options.placeholder = options.placeholder? options.placeholder:options.typeInvite;
+      }
+      // if HTML5 Placeholder is not supported by the browser
+      else {
+        // use the legacy option typeInvite even if placeholder is set
+        this.options.typeInvite = options.placeholder? options.placeholder:options.typeInvite;
+      }
+
       this.options.readonly = options.readonly;
 
       // possible values: "on", "off", or "default" (= inherit from attribute set on form tag)
@@ -78,6 +96,11 @@ Y.extend(inputEx.StringField, inputEx.Field, {
       if(this.options.required){
          attributes.required = "required";
          attributes["aria-required"] = true;
+      }
+
+      // Add placeholder attribute
+      if (this.options.placeholder) {
+        attributes.placeholder = this.options.placeholder;
       }
 
       // Create the node
@@ -228,6 +251,7 @@ Y.extend(inputEx.StringField, inputEx.Field, {
    },
 
    /**
+    * -- Legacy HTML5 Placeholder for old browsers --
     * Display the type invite after setting the class
     * @method setClassFromState
     */
@@ -247,6 +271,7 @@ Y.extend(inputEx.StringField, inputEx.Field, {
    },
 
    /**
+    * -- Legacy HTML5 Placeholder for old browsers --
     * @method updateTypeInvite
     */
    updateTypeInvite: function() {
@@ -278,6 +303,7 @@ Y.extend(inputEx.StringField, inputEx.Field, {
    },
 
    /**
+    * -- Legacy HTML5 Placeholder for old browsers --
     * Clear the typeInvite when the field gains focus
     * @method onFocus
     */
@@ -323,7 +349,7 @@ Y.extend(inputEx.StringField, inputEx.Field, {
 
 // Register this class as "string" type
 inputEx.registerType("string", inputEx.StringField, [
-    { type: 'string', label: 'Type invite', name: 'typeInvite', value: ''},
+    { type: 'string', label: 'Placeholder', name: 'placeholder', value: ''},
     { type: 'integer', label: 'Size', name: 'size', value: 20},
     { type: 'integer', label: 'Min. length', name: 'minLength', value: 0}
 ]);

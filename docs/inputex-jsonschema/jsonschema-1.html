@@ -11,7 +11,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
     <script src="../../build/inputex-loader/inputex-loader.js"></script>
     <script>YUI_config.groups.inputex.base = '../../build/';</script>
-    
+
 </head>
 <body class="yui3-skin-sam">
 
@@ -21,9 +21,9 @@
     <div id="hd">
         <h1><img src="http://yuilibrary.com/img/yui-logo.png"> inputex-jsonschema</h1>
     </div>
-    
+
         <a href="#toc" class="jump">Jump to Table of Contents</a>
-    
+
 
     <div class="yui3-g">
         <div class="yui3-u-3-4">
@@ -33,16 +33,16 @@
     <h2 id="build-a-form-from-jsonschema">Build a form from JsonSchema</h2>
     <p>Instantiate a inputEx.JsonSchema.Builder object, configure the schemaIdentifierMap (Hash of json-schema definitions) and call the <i>schemaToInputEx</i> method to get the inputEx definition.</p>
     <div class='demoContainer' id='container1'></div>
-    
-    
+
+
     <h2 id="overriding-inputex-options">Overriding inputEx options</h2>
     <p>Use the <i>"_inputEx"</i> attribute on json-schema properties. This object will override inputEx' default properties in the field definition. You may also override the inputEx type through the <i>"_type"</i> attribute.</p>
     <div class='demoContainer' id='container2'></div>
-    
+
     <script>
     YUI_config.groups.inputex.base = '../../build/';
     YUI().use('inputex-group','inputex-select','inputex-string', 'inputex-date','inputex-datepicker','inputex-jsonschema','inputex-checkbox','inputex-list','inputex-color', function(Y) {
-    // Create a schemaIdentifierMap 
+    // Create a schemaIdentifierMap
 var schemaIdentifierMap = {
     // Person definition
     "Person": {
@@ -55,7 +55,7 @@ var schemaIdentifierMap = {
             "gender" : { "type":"string", "choices": [ {"value":"male","label":"Guy"}, {"value":"female","label":"Girl"} ]},
             "grownup": { "type": "boolean" },
             "favoritecolors": { "type": "array" },
-            "address": { 
+            "address": {
                 "type":"object",
                 "properties":{
                     "street":{"type":"string"},
@@ -84,7 +84,7 @@ var f = Y.inputEx(inputExDefinition);
 
 //----------------------------------------------------------------------------
 
-// Create a schemaIdentifierMap 
+// Create a schemaIdentifierMap
 var schemaIdentifierMap = {
     // Person definition
     "Person": {
@@ -92,7 +92,7 @@ var schemaIdentifierMap = {
         "description":"A person",
         "type":"object",
         "properties": {
-            "name": { "type":"string", "_inputex": {typeInvite: "you can add a type invitation", label: 'Your name'} },
+            "name": { "type":"string", "_inputex": {placeholder: "you can add a placeholder", label: 'Your name'} },
             "born" : { "type":"string", "format":"date", "optional":true, "_inputex": {"_type": "datepicker", valueFormat: 'Y-m-d', value: '2009-01-01', label: 'Birthdate'} },
             "gender" : { "type":"string", "choices": [ {"value":"male","label":"Guy"}, {"value":"female","label":"Girl"} ]},
             "grownup": { "type": "boolean", "_inputex": { label: "Grownup?", "description": "Over 18 only"} },
@@ -105,7 +105,7 @@ var schemaIdentifierMap = {
 // Create the JsonSchema builder object
 var builder = new Y.inputEx.JsonSchema.Builder({
     'schemaIdentifierMap': schemaIdentifierMap,
-    
+
     // Those options will be added on all fields
     'defaultOptions': {
         'showMsg':true
@@ -136,7 +136,7 @@ var f = Y.inputEx(inputExDefinition);
 
 <h3 id="implementation">Implementation</h3>
 
-<pre class="code prettyprint">&#x2F;&#x2F; Create a schemaIdentifierMap 
+<pre class="code prettyprint">&#x2F;&#x2F; Create a schemaIdentifierMap
 var schemaIdentifierMap = {
     &#x2F;&#x2F; Person definition
     &quot;Person&quot;: {
@@ -149,7 +149,7 @@ var schemaIdentifierMap = {
             &quot;gender&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;choices&quot;: [ {&quot;value&quot;:&quot;male&quot;,&quot;label&quot;:&quot;Guy&quot;}, {&quot;value&quot;:&quot;female&quot;,&quot;label&quot;:&quot;Girl&quot;} ]},
             &quot;grownup&quot;: { &quot;type&quot;: &quot;boolean&quot; },
             &quot;favoritecolors&quot;: { &quot;type&quot;: &quot;array&quot; },
-            &quot;address&quot;: { 
+            &quot;address&quot;: {
                 &quot;type&quot;:&quot;object&quot;,
                 &quot;properties&quot;:{
                     &quot;street&quot;:{&quot;type&quot;:&quot;string&quot;},
@@ -178,7 +178,7 @@ var f = Y.inputEx(inputExDefinition);
 
 &#x2F;&#x2F;----------------------------------------------------------------------------
 
-&#x2F;&#x2F; Create a schemaIdentifierMap 
+&#x2F;&#x2F; Create a schemaIdentifierMap
 var schemaIdentifierMap = {
     &#x2F;&#x2F; Person definition
     &quot;Person&quot;: {
@@ -186,7 +186,7 @@ var schemaIdentifierMap = {
         &quot;description&quot;:&quot;A person&quot;,
         &quot;type&quot;:&quot;object&quot;,
         &quot;properties&quot;: {
-            &quot;name&quot;: { &quot;type&quot;:&quot;string&quot;, &quot;_inputex&quot;: {typeInvite: &quot;you can add a type invitation&quot;, label: &#x27;Your name&#x27;} },
+            &quot;name&quot;: { &quot;type&quot;:&quot;string&quot;, &quot;_inputex&quot;: {placeholder: &quot;you can add a placeholder&quot;, label: &#x27;Your name&#x27;} },
             &quot;born&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;format&quot;:&quot;date&quot;, &quot;optional&quot;:true, &quot;_inputex&quot;: {&quot;_type&quot;: &quot;datepicker&quot;, valueFormat: &#x27;Y-m-d&#x27;, value: &#x27;2009-01-01&#x27;, label: &#x27;Birthdate&#x27;} },
             &quot;gender&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;choices&quot;: [ {&quot;value&quot;:&quot;male&quot;,&quot;label&quot;:&quot;Guy&quot;}, {&quot;value&quot;:&quot;female&quot;,&quot;label&quot;:&quot;Girl&quot;} ]},
             &quot;grownup&quot;: { &quot;type&quot;: &quot;boolean&quot;, &quot;_inputex&quot;: { label: &quot;Grownup?&quot;, &quot;description&quot;: &quot;Over 18 only&quot;} },
@@ -199,7 +199,7 @@ var schemaIdentifierMap = {
 &#x2F;&#x2F; Create the JsonSchema builder object
 var builder = new Y.inputEx.JsonSchema.Builder({
     &#x27;schemaIdentifierMap&#x27;: schemaIdentifierMap,
-    
+
     &#x2F;&#x2F; Those options will be added on all fields
     &#x27;defaultOptions&#x27;: {
         &#x27;showMsg&#x27;:true
@@ -221,7 +221,7 @@ var f = Y.inputEx(inputExDefinition);</pre>
 
         <div class="yui3-u-1-4">
             <div class="sidebar">
-                
+
                     <div id="toc" class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Table of Contents</h2>
@@ -249,9 +249,9 @@ var f = Y.inputEx(inputExDefinition);</pre>
 </ul>
                         </div>
                     </div>
-                
 
-                
+
+
                     <div class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Examples</h2>
@@ -259,19 +259,19 @@ var f = Y.inputEx(inputExDefinition);</pre>
 
                         <div class="bd">
                             <ul class="examples">
-                                
-                                    
+
+
                                         <li data-description="How to create a jsonschema field.">
                                             <a href="jsonschema.html">Basic jsonschema field creation</a>
                                         </li>
-                                    
-                                
+
+
                             </ul>
                         </div>
                     </div>
-                
 
-                
+
+
 
 
                     <div id="links-sidebox" class="sidebox">
@@ -325,7 +325,7 @@ YUI.Env.Tests = {
     name: 'inputex-jsonschema',
     title: 'inputex-jsonschema',
     newWindow: '',
-    auto:  true 
+    auto:  true
 };
 YUI.Env.Tests.examples.push('jsonschema');
 

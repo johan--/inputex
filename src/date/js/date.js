@@ -49,7 +49,7 @@ Y.extend(inputEx.DateField, inputEx.StringField, {
 
       var separator = this.options.dateFormat.match(/[^Ymd ]/g)[0],
                       // instead of this.el.value, use getValue of the superclass,
-                      // which correctly handles typeInvite and trim options.
+                      // which correctly handles typeInvite (legacy HTML5 Placeholder for old browsers) and trim options.
           value     = inputEx.DateField.superclass.getValue.call(this),
           ladate    = value.split(separator),
           formatSplit, yearIndex, d, Y, m, unedate, annee;
@@ -115,7 +115,7 @@ Y.extend(inputEx.DateField, inputEx.StringField, {
     * @return {String || Date} Formatted date using the valueFormat or a javascript Date instance
     */
    getValue: function (forceDate) {
-      // let parent class function check if typeInvite, etc...
+      // let parent class function check if typeInvite (legacy HTML5 Placeholder for old browsers), etc...
       var value = inputEx.DateField.superclass.getValue.call(this),
           finalDate;
 

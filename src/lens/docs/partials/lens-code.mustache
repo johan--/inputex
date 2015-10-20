@@ -1,13 +1,13 @@
 YUI().use('inputex-lens','inputex-string', 'inputex-url', 'inputex-select', 'json', function(Y) {
-   
+
 
          var g = new Y.inputEx.Lens({
             parentEl: 'container1',
             fields: [
-               { typeInvite: 'Firstname',name: 'firstname'  },  
-               { typeInvite: 'Lastname', name: 'lastname' },
-               { typeInvite: 'Email', name: 'email' },
-               { type: 'url', name: "picUrl", typeInvite: 'url' }
+               { placeholder: 'Firstname',name: 'firstname'  },  
+               { placeholder: 'Lastname', name: 'lastname' },
+               { placeholder: 'Email', name: 'email' },
+               { type: 'url', name: "picUrl", placeholder: 'url' }
             ],
             value: {
                firstname: 'Lena',

@@ -1,6 +1,6 @@
 {
-   "dayTypeInvite": "Giorno",
+   "dayPlaceholder": "Giorno",
    "defaultDateFormat": "d/m/Y",
-   "monthTypeInvite": "Mese",
-   "yearTypeInvite": "Anno"
+   "monthPlaceholder": "Mese",
+   "yearPlaceholder": "Anno"
 }

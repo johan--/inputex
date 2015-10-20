@@ -66,7 +66,7 @@ YUI().use('inputex-date', function(Y) {
     
     // example 3
     var logDiv3 = Y.one('#container3');
-    var dateField = new Y.inputEx.DateField({value: new Date(),  parentEl: logDiv3, showMsg: true, required:true, typeInvite:'m/d/Y'}); 
+    var dateField = new Y.inputEx.DateField({value: new Date(),  parentEl: logDiv3, showMsg: true, required:true, placeholder:'m/d/Y'}); 
     dateField.on('updated', function(val) {
         logDiv3.appendChild( Y.inputEx.cn('div', null, null, val) ); 
     });
@@ -81,7 +81,7 @@ YUI().use('inputex-date', function(Y) {
     
     
     // example 4
-    var stringdateField = new Y.inputEx.DateField({value: new Date(),  parentEl: 'container4', showMsg: true, required:true, typeInvite:'m/d/Y', valueFormat: 'Y-m-d'}); 
+    var stringdateField = new Y.inputEx.DateField({value: new Date(),  parentEl: 'container4', showMsg: true, required:true, placeholder:'m/d/Y', valueFormat: 'Y-m-d'}); 
     
     // Logger
     var logDiv4 = Y.one('#container4');
@@ -126,7 +126,7 @@ YUI().use('inputex-date', function(Y) {
     
     &#x2F;&#x2F; example 3
     var logDiv3 = Y.one(&#x27;#container3&#x27;);
-    var dateField = new Y.inputEx.DateField({value: new Date(),  parentEl: logDiv3, showMsg: true, required:true, typeInvite:&#x27;m&#x2F;d&#x2F;Y&#x27;}); 
+    var dateField = new Y.inputEx.DateField({value: new Date(),  parentEl: logDiv3, showMsg: true, required:true, placeholder:&#x27;m&#x2F;d&#x2F;Y&#x27;}); 
     dateField.on(&#x27;updated&#x27;, function(val) {
         logDiv3.appendChild( Y.inputEx.cn(&#x27;div&#x27;, null, null, val) ); 
     });
@@ -141,7 +141,7 @@ YUI().use('inputex-date', function(Y) {
     
     
     &#x2F;&#x2F; example 4
-    var stringdateField = new Y.inputEx.DateField({value: new Date(),  parentEl: &#x27;container4&#x27;, showMsg: true, required:true, typeInvite:&#x27;m&#x2F;d&#x2F;Y&#x27;, valueFormat: &#x27;Y-m-d&#x27;}); 
+    var stringdateField = new Y.inputEx.DateField({value: new Date(),  parentEl: &#x27;container4&#x27;, showMsg: true, required:true, placeholder:&#x27;m&#x2F;d&#x2F;Y&#x27;, valueFormat: &#x27;Y-m-d&#x27;}); 
     
     &#x2F;&#x2F; Logger
     var logDiv4 = Y.one(&#x27;#container4&#x27;);

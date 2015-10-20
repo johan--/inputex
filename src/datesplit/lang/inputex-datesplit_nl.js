@@ -1,6 +1,6 @@
 {
-   "dayTypeInvite": "Dag",
+   "dayPlaceholder": "Dag",
    "defaultDateFormat": "d/m/Y",
-   "monthTypeInvite": "Maand",
-   "yearTypeInvite": "Jaar"
+   "monthPlaceholder": "Maand",
+   "yearPlaceholder": "Jaar"
 }

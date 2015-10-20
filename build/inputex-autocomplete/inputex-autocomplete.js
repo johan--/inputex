@@ -143,6 +143,7 @@ Y.extend(inputEx.AutoComplete, inputEx.StringField, {
 
       inputEx.AutoComplete.superclass.onBlur.call(this);
 
+      // -- Legacy HTML5 Placeholder for old browsers --
       if (this.el.value === '' && this.options.typeInvite) {
          Y.one(this.divEl).addClass("inputEx-typeInvite");
          this.el.value = this.options.typeInvite;
@@ -190,5 +191,6 @@ Y.extend(inputEx.AutoComplete, inputEx.StringField, {
 
 // Register this class as "autocomplete" type
 inputEx.registerType("autocomplete", inputEx.AutoComplete);
+
 
 }, '@VERSION@', {"requires": ["inputex-string", "autocomplete"], "ix_provides": "autocomplete"});

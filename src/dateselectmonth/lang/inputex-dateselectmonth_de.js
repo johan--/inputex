@@ -1,5 +1,5 @@
 {
-   "dayTypeInvite": "Tag",
+   "dayPlaceholder": "Tag",
    "defaultDateFormat": "d.m.Y",
    "invalidDate": "falsches Datumsformat, bsp: 25.01.2007",
    "months": [
@@ -16,7 +16,7 @@
       "November",
       "Dezember"
    ],
-   "monthTypeInvite": "Monat",
+   "monthPlaceholder": "Monat",
    "selectMonth": "- Monat auswählen -",
-   "yearTypeInvite": "Jahr"
+   "yearPlaceholder": "Jahr"
 }

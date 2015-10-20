@@ -1,1 +1,1 @@
-YUI.add("lang/inputex-date_it",function(e){e.Intl.add("inputex-date","it",{dayTypeInvite:"Giorno",defaultDateFormat:"d/m/Y",invalidDate:"Data non valida, es: 25/01/2007",monthTypeInvite:"Mese",selectMonth:"- Seleziona Mese -",yearTypeInvite:"Anno"})},"@VERSION@");
+YUI.add("lang/inputex-date_it",function(e){e.Intl.add("inputex-date","it",{dayPlaceholder:"Giorno",defaultDateFormat:"d/m/Y",invalidDate:"Data non valida, es: 25/01/2007",monthPlaceholder:"Mese",selectMonth:"- Seleziona Mese -",yearPlaceholder:"Anno"})},"@VERSION@");

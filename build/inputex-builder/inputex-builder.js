@@ -156,13 +156,13 @@ g.setValue({
    "fields": [
       {
          "type": "string",
-         "typeInvite": "firstname",
+         "placeholder": "firstname",
          "name": "firstname",
          "label": "Firstname"
       },
       {
          "type": "string",
-         "typeInvite": "lastname",
+         "placeholder": "lastname",
          "name": "lastname",
          "label": "Lastname"
       },
@@ -178,7 +178,7 @@ g.setValue({
 }, false);
 
 
-var rebuildPreview = function() { 
+var rebuildPreview = function() {
    var value = g.getValue();
    var previewGroup = new Y.inputEx.Group(value);
 
@@ -204,11 +204,11 @@ Y.one('#generateButton').on('click', function() {
       "<head>",
       "  <title>inputEx Builder: generate inputEx Forms</title>",
       "  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />\n",
-      
+
       "<link rel='stylesheet' href='http://yui.yahooapis.com/3.14.1/build/cssgrids/grids-min.css'>",
 
       "<link rel='stylesheet' href='http://yui.yahooapis.com/combo?3.14.1/build/cssreset/reset-min.css&3.14.1/build/cssfonts/fonts-min.css'>",
-      
+
       "  <style>",
       "#formContainer {",
       "background-color:#EEEEFF;",
@@ -225,9 +225,9 @@ Y.one('#generateButton').on('click', function() {
       "<scr"+"ipt type='text/javascript' src='../../build/inputex-loader/inputex-loader.js'></scr"+"ipt>",
       "<scr"+"ipt>",
       "YUI_config.groups.inputex.base = '../../build/';",
-      
+
       "var formDef = "+g.getValue().toPrettyJSONString(true)+";",
-      
+
       "YUI().use('inputex-group', function(Y) {",
 
       "   // Load the modules using Y.use (asynchronously)",
@@ -240,8 +240,8 @@ Y.one('#generateButton').on('click', function() {
       "   });",
 
       "});",
-      
-      
+
+
       "</scr"+"ipt>",
       "</body>",
       "</html>"
@@ -266,11 +266,11 @@ Example1 = {};
 
 Y.one("#loadButton").on("click", function() {
    Example1.myPanel.show();
-}); 
+});
 
 var formConfig = {
    type: 'form',
-   fields: [ 
+   fields: [
       {
          type: 'text',
          name: 'code',
@@ -289,7 +289,7 @@ var formConfig = {
       {
          type: 'submit',
          value: 'Load',
-         onClick: function() { 
+         onClick: function() {
 
             try {
                var value = Example1.myPanel.get('field').getValue();
@@ -318,7 +318,7 @@ var formConfig = {
                            if(o.hasOwnProperty(k)) {
                               r = o[k];
                            }
-                        } 
+                        }
                         return r;
                      })(code);
 
@@ -359,11 +359,11 @@ var formConfig = {
 Example1.myPanel = new Y.inputEx.Panel({
    inputEx: formConfig,
    title: 'Copy/Paste your inputEx JSON or JSON Schema here :',
-   constraintoviewport: true, 
-   underlay:"shadow", 
-   close:true, 
+   constraintoviewport: true,
+   underlay:"shadow",
+   close:true,
    fixedcenter: true,
-   visible:false, 
+   visible:false,
    plugins: [Y.Plugin.Drag],
    modal: true,
    render: true

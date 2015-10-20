@@ -1,8 +1,8 @@
 {
-   "dayTypeInvite": "Day",
+   "dayPlaceholder": "Day",
    "defaultDateFormat": "m/d/Y",
    "invalidDate": "Invalid date, ex: 03/27/2008",
-   "monthTypeInvite": "Month",
+   "monthPlaceholder": "Month",
    "selectMonth": "- Select Month -",
-   "yearTypeInvite": "Year"
+   "yearPlaceholder": "Year"
 }

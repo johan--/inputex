@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="res/guide.css" />
 
-<link rel="stylesheet" type="text/css" href="res/syntaxhighlighter/styles/shCore.css" />  
+<link rel="stylesheet" type="text/css" href="res/syntaxhighlighter/styles/shCore.css" />
 <link type="text/css" rel="stylesheet" href="res/syntaxhighlighter/styles/shThemeDefault.css" id="shTheme"/>
 
 <script type="text/javascript" src="res/syntaxhighlighter/scripts/shCore.js"></script>
@@ -22,35 +22,35 @@
  </head>
 
  <body>
-  
+
 <div id='headbar'>
   <div id="titleContainer" class="pageWidth">
-      
+
       <h1>inputEx</h1>
       <p>field framework for web applications</p>
-      
+
   <ul class="navigation">
     <li><a href="./">Home</a></li>
-    <li><a href="http://github.com/neyric/inputex/">GitHub[Git]</a></li>  
+    <li><a href="http://github.com/neyric/inputex/">GitHub[Git]</a></li>
     <li><a href="http://github.com/neyric/inputex/issues">Issues</a></li>
     <li><a href="api/index.html">API Documentation</a></li>
     <li><a href="guide.html">Guide</a></li>
-    <li><a href="http://neyric.com/category/inputex/">Blog</a> 
+    <li><a href="http://neyric.com/category/inputex/">Blog</a>
         <a href="http://neyric.com/feed/"><img src="res/rss.png" alt="rss icon"/></a></li>
     <li><a href="http://groups.google.com/group/inputex/">Forums</a></li>
   </ul>
-  
-  
+
+
   <div class="links">
     <img src='http://www.twitter.com/favicon.ico' /> follow <a href="http://twitter.com/inputex">inputEx on Twitter</a><br />
     <img src="http://www.delicious.com/favicon.ico" /> bookmark on <a href="http://delicious.com/url/3ec78b218716387ceb93dda7b5d0f84d">Del.icio.us</a><br />
     <img src='http://github.com/favicon.ico'/> follow <a href="http://github.com/neyric/inputex/tree/master"> on GitHub</a>
   </div>
-  
+
   </div>
 
 </div>
-  
+
 <div align="center">
 
   <div style="text-align: left; width: 70%; position: relative;">
@@ -78,7 +78,7 @@
           <li><a href="#htmlForms">HTML forms vs. JS/Ajax</a></li>
           <li><a href="#terminology">Terminology</a></li>
         </ul>
-      </li>  
+      </li>
 
       <li>
         <a href="#GettingStarted"><span>Getting Started</span></a>
@@ -91,10 +91,10 @@
           <li><a href="#metaFields">Meta Fields</a></li>
           <li><a href="#insertDom">Insert a Field into the DOM</a></li>
           <li><a href="#updatedEvent">The "updated" event</a></li>
-          
+
         </ul>
       </li>
-      
+
       <li>
         <a href="#AdvancedUsage"><span>Advanced Usage</span></a>
 
@@ -102,7 +102,7 @@
           <li><a href="#visualization">Visualization</a></li>
         </ul>
       </li>
-      
+
       <li>
         <a href="#CustomFields"><span>Create custom fields</span></a>
 
@@ -111,8 +111,8 @@
           <li><a href="#MarkupStructure">Markup Structure</a></li>
         </ul>
       </li>
-      
-      
+
+
       <li>
         <a href="#Production"><span>Production</span></a>
 
@@ -120,7 +120,7 @@
           <li><a href="#Minification">Minification</a></li>
         </ul>
       </li>
-      
+
       <li>
         <a href="#Contribute"><span>Contribute</span></a>
 
@@ -132,7 +132,7 @@
           <li><a href="#Contributors">Contributors</a></li>
         </ul>
       </li>
-      
+
     </ol>
   </div>
 
@@ -151,13 +151,13 @@
 
   <p>The code for inputEx is provided under <a href="license.txt">MIT license</a>.</p>
 
-  
+
   <a name="htmlForms"><h2>1.2 HTML forms VS. JS/Ajax</h2></a>
 
   <p>While it is still possible to create forms using inputEx and send them using the browser, inputEx was made to build web applications. A preferable way to retrieve value is to use javascript and to send the value using ajax.</p>
 
   <p>We use some hacks to make inputEx work with "standard" html forms :</p>
-  
+
   <ul>
     <li>Usage of a "hidden" field to store the value</li>
     <li>Naming conventions for objects</li>
@@ -166,11 +166,11 @@
 
   <a name="terminology"><h2>1.2 Terminology</h2></a>
 
-  
+
     <p>inputEx is built around the <b>Field</b> class. It is an <b>abstract</b> class (we <i>never</i> instantiate it).<br/>
        All the other field classes inherits directly or indirectly from this base class. (see diagram below)</p>
 
-  
+
      <p>The important difference between "fields" and "widgets" is simple :</p>
 
      <p><b>All fields inherit from the Y.inputEx.Field class</b>
@@ -207,11 +207,11 @@
     <p></p>
 
 
-    
-    
+
+
     <a name="GettingStarted"><h1>2 Getting Started</h1></a>
-    
-    
+
+
     <a name="installation"><h2>2.1 Installation</h2></a>
 
     <p>inputEx is just a bunch of static files (javascript files, css, and images). As usual, you will have to copy those files into your project directory.</p>
@@ -220,27 +220,27 @@
       <li><a href="http://github.com/neyric/inputex/downloads" target="_new">Download</a> the latest inputEx zip file</li>
       <li>Copy the <i>js,css,images</i> directories into your project corresponding directories</li>
     </ul>
-    
-    
+
+
     <a name="firstExample"><h2>2.2 First Example</h2></a>
-    
-    
+
+
       <h3>Add inputEx to your page</h3>
 
       <ul>
         <li>Using the YUI loader, include the inputEx loader :
     <pre class="brush:js">
-      
+
     &lt;!-- YUI loader --&gt;
     &lt;script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"&gt;&lt;/script&gt;
     &lt;script src="path/to/inputex/src/loader.js"  type='text/javascript'&gt;&lt;/script&gt;
     &lt;script&gt;
     YUI_config.groups.inputex.base = 'path/to/inputex/';
     YUI().use('inputex-string','inputex-...', function(Y) {
-      
+
     });
     &lt;/script&gt;
-      
+
     </pre>
         </li>
       </ul>
@@ -248,7 +248,7 @@
       <h3>Basic example</h3>
 
       <ul>
-        <li>Create a DOM element that will contain your form: 
+        <li>Create a DOM element that will contain your form:
     <pre class="brush:xml">
       <div id='myFormContainer'></div>
     </pre>
@@ -265,11 +265,11 @@
     </pre>
         </li>
       </ul>
-    
+
     <a name="directoryStructure"><h2>2.3 Directory structure</h2></a>
 
 
-    
+
     <table>
       <thead>
         <tr>
@@ -343,7 +343,7 @@
 <pre class="brush:js">
   var field = new Y.inputEx.StringField({name: 'test'});
 </pre></li><br />
-      <li>Using the inputEx function with the "type" construction:<br /> 
+      <li>Using the inputEx function with the "type" construction:<br />
 <pre class="brush:js">
   var field = Y.inputEx({ type: 'string', name: 'test' });
 </pre></li><br/>
@@ -537,9 +537,9 @@
   // This setValue won't fire the "updated" event
   myField.setValue("My Value", false);
 </pre>
-  
-  
-  
+
+
+
 
 
 
@@ -547,7 +547,7 @@
   <a name="AdvancedUsage"><h1>3 Advanced Usage</h1></a>
 
   <a name="visualization"><h2>3.1 Visualization</h2></a>
-  
+
   <h3>Introduction</h3>
 
   <p>The use of a template engine in inputEx first appeared for the Autocompleter, InPlaceEdit and Uneditable fields.<br />
@@ -592,14 +592,14 @@
     <li><a href="../../examples/inplaceedit.html">InPlaceEdit</a></li>
     <li><a href="../../examples/uneditable_field.html">UneditableField</a></li>
   </ul>
-  
-  
-  
-  
+
+
+
+
   <a name="CustomFields"><h1>4 Create custom fields</h1></a>
-  
+
   <a name="customfieldsintro"><h2>4.1 Introduction</h2></a>
-  
+
   <p>Once you've grasped the main ideas behind inputEx, you'll probably want to create your own fields. Here are some hints  on how to do so :</p>
 
 
@@ -638,15 +638,15 @@
   <div>
     <p><b><u>Register your type</u></b></p>
 
-    <p>After your class definition, you can associate your class to a type string. 
+    <p>After your class definition, you can associate your class to a type string.
        You can either create a new type, or override a previous one.</p>
 
     <p>use <i>Y.inputEx.registerType("myType", Y.inputEx.MyFieldClass);</i></p>
 
   </div>
-  
-  
-  
+
+
+
   <a name="MarkupStructure"><h2>4.2 Markup Structure</h2></a>
 
   <p>Getting familiar with the inputEx markup structure will help a lot if you want to change CSS.</p>
@@ -677,14 +677,14 @@
   <p>The "fieldWrapper" create a box that contains the entire field, labels, descriptions, widgets, etc...</p>
 
   <p>The wrapper childNodes have the "float" css attribute set to "left" so you can decide where to break lines between them by using css: it gets much easier to put the label over the field, or the messages under etc...</p>
-  
+
 
   <a name="Production"><h1>5 Production</h1></a>
-  
+
   <a name="Minification"><h2>5.1 Minification</h2></a>
-  
+
   <p>When using inputEx in production, you might want to combine all the files into one (to reduce the number of HTTP requests) and minify it. Here is a little script, which uses YUI compressor :</p>
-  
+
   <pre class="brush:ps">
     #!/bin/sh
     #
@@ -716,14 +716,14 @@
     java -jar $YUIcompressorJar $CURRENT_PATH/../css/inputEx.css -o $BUILD_PATH/inputex-min.css --charset utf8
 
   </pre>
-  
-  
-  
+
+
+
   <a name="Contribute"><h1>6 Contribute</h1></a>
-  
+
   <a name="Internationalization"><h2>6.1 Internationalization</h2></a>
-  
-  
+
+
   <p><strong>Usage</strong></p>
 
   <p>The basic messages are stored into the <i>inputEx.messages</i> object :</p>
@@ -757,7 +757,7 @@
      */
      // InputEx French localization
      YUI.add("inputex-lang-fr",function(Y){
-       
+
        var inputEx = Y.inputEx;
        var msgs = inputEx.messages;
 
@@ -776,9 +776,9 @@
        msgs.weekdays1char =  ["D", "L", "M", "M", "J", "V", "S"];
        msgs.shortWeekdays = ["Di","Lu","Ma","Me","Je","Ve","Sa"];
        msgs.selectMonth = "- Choisissez -";
-       msgs.dayTypeInvite = "Jour";
-       msgs.monthTypeInvite = "Mois";
-       msgs.yearTypeInvite = "Année";
+       msgs.dayPlaceholder = "Jour";
+       msgs.monthPlaceholder = "Mois";
+       msgs.yearPlaceholder = "Année";
        msgs.cancelEditor = "annuler";
        msgs.okEditor = "Ok";
        msgs.defaultCalendarOpts = {
@@ -807,8 +807,8 @@
        requires: ['inputex']
      });
 </pre>
-  
-  
+
+
   <a name="ReportIssue"><h2>6.2 Reporting an Issue</h2></a>
 
   <p>The issues/bugs and feature requests are managed through the <a href="http://github.com/neyric/inputex/issues">GitHub issue tracker</a>. Feel free to add new ones, vote for your favorites, comment on existing one, ...</p>
@@ -863,22 +863,22 @@
 
 <div class="footer">
   <div  class="pageWidth">
-      
+
   <ul class="navigation">
     <li><a href="http://neyric.github.com/inputex">Home</a></li>
-    <li><a href="http://github.com/neyric/inputex/">GitHub[Git]</a></li>  
+    <li><a href="http://github.com/neyric/inputex/">GitHub[Git]</a></li>
     <li><a href="http://github.com/neyric/inputex/issues">Issues</a></li>
     <li><a href="api/index.html">API Documentation</a></li>
     <li><a href="guide.html">Guide</a></li>
-    <li><a href="http://neyric.com/category/inputex/">Blog</a> 
+    <li><a href="http://neyric.com/category/inputex/">Blog</a>
         <a href="http://neyric.com/feed/"><img src="res/rss.png" alt="rss icon"/></a></li>
     <li><a href="http://groups.google.com/group/inputex/">Forums</a></li>
   </ul>
-  
+
   </div>
-  
+
   <br /><br />
-  
+
   <p style="font-size: 90%; margin-top: 20px;">inputEx is released under the <a href="license.txt" style="color: white;">MIT license</a>.</p>
 </div>
 

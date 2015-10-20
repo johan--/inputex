@@ -26,6 +26,13 @@ div.inputEx-empty > div.inputEx-label label {
    font-weight:normal;
 }
 
+/* Legacy HTML5 Placeholder for old browsers */
 div.inputEx-typeInvite > div.inputEx-Field input, div.inputEx-typeInvite > div.inputEx-Field textarea {
    color: #aaa;
 }
+
+/* HTML5 Placeholder */
+div.inputEx-Field ::-webkit-input-placeholder { color: #aaa; } /* chrome / Safari / Opera */
+div.inputEx-Field ::-moz-placeholder { color:#aaa; } /* firefox 19+ */
+div.inputEx-Field :-ms-input-placeholder { color:#aaa; } /* ie */
+div.inputEx-Field input:-moz-placeholder, div.inputEx-Field textarea:-moz-placeholder { color:#aaa; } /* firefox 19- */
