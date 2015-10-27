@@ -11,7 +11,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
     <script src="../../build/inputex-loader/inputex-loader.js"></script>
     <script>YUI_config.groups.inputex.base = '../../build/';</script>
-
+    
 </head>
 <body class="yui3-skin-sam">
 
@@ -21,7 +21,7 @@
     <div id="hd">
         <h1><img src="http://yuilibrary.com/img/yui-logo.png"> Example: Basic string field creation</h1>
     </div>
-
+    
 
     <div class="yui3-g">
         <div class="yui3-u-3-4">
@@ -79,11 +79,9 @@ How to create a string field.
     <p>How to listen to the updated event :</p>
     <div class='demoContainer' id='container9'></div>
 
-    <h2>Type Invitation</h2>
-    <p>Deprecated, you can now use Placeholder instead of Type Invitation.</p>
 
     <h2>Placeholder</h2>
-    <p>HTML5 placeholder support, the old browsers will still work with Type Invitation in background.</p>
+    <p>Display a text when the field is empty.</p>
     <div class='demoContainer' id='container10'></div>
 
 
@@ -299,9 +297,9 @@ YUI().use('inputex-string',function(Y) {
 
         <div class="yui3-u-1-4">
             <div class="sidebar">
+                
 
-
-
+                
                     <div class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Examples</h2>
@@ -309,19 +307,19 @@ YUI().use('inputex-string',function(Y) {
 
                         <div class="bd">
                             <ul class="examples">
-
-
+                                
+                                    
                                         <li data-description="How to create a string field.">
                                             <a href="string.html">Basic string field creation</a>
                                         </li>
-
-
+                                    
+                                
                             </ul>
                         </div>
                     </div>
+                
 
-
-
+                
 
 
                     <div id="links-sidebox" class="sidebox">
@@ -375,7 +373,7 @@ YUI.Env.Tests = {
     name: 'string',
     title: 'Basic string field creation',
     newWindow: '',
-    auto:  true
+    auto:  true 
 };
 YUI.Env.Tests.examples.push('string');
 

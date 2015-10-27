@@ -48,7 +48,7 @@ var schemaIdentifierMap = {
         "description":"A person",
         "type":"object",
         "properties": {
-            "name": { "type":"string", "_inputex": {placeholder: "you can add a type invitation", label: 'Your name'} },
+            "name": { "type":"string", "_inputex": {placeholder: "you can add a placeholder", label: 'Your name'} },
             "born" : { "type":"string", "format":"date", "optional":true, "_inputex": {"_type": "datepicker", valueFormat: 'Y-m-d', value: '2009-01-01', label: 'Birthdate'} },
             "gender" : { "type":"string", "choices": [ {"value":"male","label":"Guy"}, {"value":"female","label":"Girl"} ]},
             "grownup": { "type": "boolean", "_inputex": { label: "Grownup?", "description": "Over 18 only"} },

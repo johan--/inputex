@@ -11,7 +11,7 @@
     <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
     <script src="../../build/inputex-loader/inputex-loader.js"></script>
     <script>YUI_config.groups.inputex.base = '../../build/';</script>
-
+    
 </head>
 <body class="yui3-skin-sam">
 
@@ -21,9 +21,9 @@
     <div id="hd">
         <h1><img src="http://yuilibrary.com/img/yui-logo.png"> inputex-jsonschema</h1>
     </div>
-
+    
         <a href="#toc" class="jump">Jump to Table of Contents</a>
-
+    
 
     <div class="yui3-g">
         <div class="yui3-u-3-4">
@@ -33,12 +33,12 @@
     <h2 id="build-a-form-from-jsonschema">Build a form from JsonSchema</h2>
     <p>Instantiate a inputEx.JsonSchema.Builder object, configure the schemaIdentifierMap (Hash of json-schema definitions) and call the <i>schemaToInputEx</i> method to get the inputEx definition.</p>
     <div class='demoContainer' id='container1'></div>
-
-
+    
+    
     <h2 id="overriding-inputex-options">Overriding inputEx options</h2>
     <p>Use the <i>"_inputEx"</i> attribute on json-schema properties. This object will override inputEx' default properties in the field definition. You may also override the inputEx type through the <i>"_type"</i> attribute.</p>
     <div class='demoContainer' id='container2'></div>
-
+    
     <script>
     YUI_config.groups.inputex.base = '../../build/';
     YUI().use('inputex-group','inputex-select','inputex-string', 'inputex-date','inputex-datepicker','inputex-jsonschema','inputex-checkbox','inputex-list','inputex-color', function(Y) {
@@ -120,6 +120,7 @@ inputExDefinition.parentEl = 'container2';
 
 // Create the form
 var f = Y.inputEx(inputExDefinition);
+
     });
     </script>
 
@@ -221,7 +222,7 @@ var f = Y.inputEx(inputExDefinition);</pre>
 
         <div class="yui3-u-1-4">
             <div class="sidebar">
-
+                
                     <div id="toc" class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Table of Contents</h2>
@@ -249,9 +250,9 @@ var f = Y.inputEx(inputExDefinition);</pre>
 </ul>
                         </div>
                     </div>
+                
 
-
-
+                
                     <div class="sidebox">
                         <div class="hd">
                             <h2 class="no-toc">Examples</h2>
@@ -259,19 +260,19 @@ var f = Y.inputEx(inputExDefinition);</pre>
 
                         <div class="bd">
                             <ul class="examples">
-
-
+                                
+                                    
                                         <li data-description="How to create a jsonschema field.">
                                             <a href="jsonschema.html">Basic jsonschema field creation</a>
                                         </li>
-
-
+                                    
+                                
                             </ul>
                         </div>
                     </div>
+                
 
-
-
+                
 
 
                     <div id="links-sidebox" class="sidebox">
@@ -325,7 +326,7 @@ YUI.Env.Tests = {
     name: 'inputex-jsonschema',
     title: 'inputex-jsonschema',
     newWindow: '',
-    auto:  true
+    auto:  true 
 };
 YUI.Env.Tests.examples.push('jsonschema');
 

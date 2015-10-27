@@ -79,6 +79,11 @@ Y.extend(inputEx.AutoComplete, inputEx.StringField, {
       if(this.options.readonly) attributes.readonly = 'readonly';
       if(this.options.maxLength) attributes.maxLength = this.options.maxLength;
 
+      // Add placeholder attribute
+      if (this.options.placeholder) {
+        attributes.placeholder = this.options.placeholder;
+      }
+      
       // Create the node
       this.el = inputEx.cn('input', attributes);
 

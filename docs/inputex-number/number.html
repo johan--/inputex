@@ -84,9 +84,9 @@ YUI().use('inputex-number',  function(Y) {
 
     // Add "getValue" buttons
     Y.Array.each([field, field2, field3], function (f) {
-        
+
         var container = Y.one(f.getEl()).ancestor('.demoContainer');
-        
+
         Y.Node.create('<button>getValue</button>').
                appendTo(container).
                on('click', function() { alert(f.getValue()); });
@@ -94,7 +94,6 @@ YUI().use('inputex-number',  function(Y) {
     });
 
 });
-
 
 </script>
 
@@ -141,9 +140,9 @@ YUI().use('inputex-number',  function(Y) {
 
     &#x2F;&#x2F; Add &quot;getValue&quot; buttons
     Y.Array.each([field, field2, field3], function (f) {
-        
+
         var container = Y.one(f.getEl()).ancestor(&#x27;.demoContainer&#x27;);
-        
+
         Y.Node.create(&#x27;&lt;button&gt;getValue&lt;&#x2F;button&gt;&#x27;).
                appendTo(container).
                on(&#x27;click&#x27;, function() { alert(f.getValue()); });

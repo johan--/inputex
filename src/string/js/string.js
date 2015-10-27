@@ -47,19 +47,20 @@ Y.extend(inputEx.StringField, inputEx.Field, {
       this.options.minLength = options.minLength;
 
       // Type Invite message deprecated
-      if (options.typeInvite)
-        console.warn('[inputEx.StringField] typeInvite option is deprecated, please use placeholder instead');
+      if (options.typeInvite && window.console && console.warn) {
+         console.warn('[inputEx.StringField] typeInvite option is deprecated, please use placeholder instead');
+      }
 
       // HTML5 Placeholder
       // If HTML5 Placeholder is supported by the browser
       if (document.createElement("input").placeholder !== undefined) {
-        // use the placeholder option or make it compatible with the legacy option typeInvite if placeholder is not set
-        this.options.placeholder = options.placeholder? options.placeholder:options.typeInvite;
+         // use the placeholder option or make it compatible with the legacy option typeInvite if placeholder is not set
+         this.options.placeholder = options.placeholder ? options.placeholder : options.typeInvite;
       }
       // if HTML5 Placeholder is not supported by the browser
       else {
-        // use the legacy option typeInvite even if placeholder is set
-        this.options.typeInvite = options.placeholder? options.placeholder:options.typeInvite;
+         // use the legacy option typeInvite even if placeholder is set
+         this.options.typeInvite = options.placeholder ? options.placeholder : options.typeInvite;
       }
 
       this.options.readonly = options.readonly;

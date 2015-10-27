@@ -66,6 +66,11 @@ Y.extend(inputEx.Textarea, inputEx.StringField, {
          attributes["aria-required"] = true;
       }
 
+      // Add placeholder attribute
+      if (this.options.placeholder) {
+        attributes.placeholder = this.options.placeholder;
+      }
+      
       // Create the node
       this.el = inputEx.cn('textarea', attributes, null, this.options.value);
       
@@ -103,8 +108,8 @@ Y.extend(inputEx.Textarea, inputEx.StringField, {
 
       return inputEx.Textarea.superclass.getStateString.call(this, state);
    },
+   
    /**
-    * Display the type invite after setting the class
     * @method setClassFromState
     */
    setClassFromState: function(state) {

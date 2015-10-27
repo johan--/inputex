@@ -61,13 +61,13 @@ YUI().use('inputex-integer', function(Y) {
     field.on('updated', function(value) {
         Y.one('#valueContainer1').innerHTML = "value: " + value + ", type: " + typeof(value);
     });
-    
+
     // Example 2
     new Y.inputEx.IntegerField({ parentEl: 'container4', showMsg: true, min:3, max:10 });
-    
+
     // Example 3
     new Y.inputEx.IntegerField({ parentEl: 'container3', showMsg: true, negative:true, value: -12 });
-    
+
     // Example 4
     var field = new Y.inputEx.IntegerField({
         parentEl: 'container2',
@@ -81,10 +81,8 @@ YUI().use('inputex-integer', function(Y) {
     field.on('updated', function(value) {
         Y.one('#valueContainer2').innerHTML = "value: " + value + ", type: " + typeof(value);
     });
-    
+
 });
-
-
 
 </script>
 
@@ -107,13 +105,13 @@ YUI().use('inputex-integer', function(Y) {
     field.on(&#x27;updated&#x27;, function(value) {
         Y.one(&#x27;#valueContainer1&#x27;).innerHTML = &quot;value: &quot; + value + &quot;, type: &quot; + typeof(value);
     });
-    
+
     &#x2F;&#x2F; Example 2
     new Y.inputEx.IntegerField({ parentEl: &#x27;container4&#x27;, showMsg: true, min:3, max:10 });
-    
+
     &#x2F;&#x2F; Example 3
     new Y.inputEx.IntegerField({ parentEl: &#x27;container3&#x27;, showMsg: true, negative:true, value: -12 });
-    
+
     &#x2F;&#x2F; Example 4
     var field = new Y.inputEx.IntegerField({
         parentEl: &#x27;container2&#x27;,
@@ -127,7 +125,7 @@ YUI().use('inputex-integer', function(Y) {
     field.on(&#x27;updated&#x27;, function(value) {
         Y.one(&#x27;#valueContainer2&#x27;).innerHTML = &quot;value: &quot; + value + &quot;, type: &quot; + typeof(value);
     });
-    
+
 });</pre>
 
 </div>

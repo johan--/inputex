@@ -76,7 +76,12 @@ Y.extend(inputEx.PasswordField, inputEx.StringField, {
       attributes.type = 'password';
       attributes.size = this.options.size;
       if(this.options.name) { attributes.name = this.options.name; }
-   
+      
+      // Add placeholder attribute
+      if (this.options.placeholder) {
+        attributes.placeholder = this.options.placeholder;
+      }
+
       // Create the node
       this.el = inputEx.cn('input', attributes);
       
