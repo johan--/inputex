@@ -71,3 +71,11 @@ Special thanks to the major contributors :
     post
 -   [maximerety](http://github.com/maximerety) - major contributor on
     the inputEx library
+-   [kimihub](http://github.com/kimihub)
+-   [wittydeveloper](http://github.com/wittydeveloper)
+-   [ArnaudD](http://github.com/ArnaudD)
+-   [paulRbr](http://github.com/paulRbr)
+-   [BenNG](http://github.com/BenNG)
+-   [stanBienaives](http://github.com/stanBienaives)
+-   [Fredust85](http://github.com/Fredust85)
+
