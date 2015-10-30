@@ -14,22 +14,22 @@ It is built on top of the [YUI library](http://developer.yahoo.com/yui/3/) (3.x 
 Resources
 =========
 
- * Homepage: [http://neyric.github.com/inputex](http://neyric.github.com/inputex)
- * Repository: [http://github.com/neyric/inputex/](http://github.com/neyric/inputex/)
- * Wiki: [http://wiki.github.com/neyric/inputex](http://wiki.github.com/neyric/inputex)
- * Issues: [http://github.com/neyric/inputex/issues](http://github.com/neyric/inputex/issues)
+ * Homepage: [http://clicrdv.github.io/inputex/](http://clicrdv.github.io/inputex/)
+ * Repository: [https://github.com/clicrdv/inputex](https://github.com/clicrdv/inputex)
+ * Wiki: [https://github.com/clicrdv/inputex/wiki](https://github.com/clicrdv/inputex/wiki)
+ * Issues: [https://github.com/clicrdv/inputex/issues](https://github.com/clicrdv/inputex/issues)
  * Blog: [http://javascript.neyric.com/blog/category/inputex/](http://javascript.neyric.com/blog/category/inputex/)
  * Forum: [http://groups.google.com/group/inputex/](http://groups.google.com/group/inputex/)
 
 Contribute
 ==========
 
-See the [contribution page](https://github.com/neyric/inputex/blob/shifter/CONTRIBUTE.md)
+See the [contribution page](https://github.com/clicrdv/inputex/blob/shifter/CONTRIBUTE.md)
 
 Release process
 ==============
 
-See the [developer guide](https://github.com/neyric/inputex/blob/shifter/GUIDELINES.md)
+See the [developer guide](https://github.com/clicrdv/inputex/blob/shifter/GUIDELINES.md)
 
 Apply all the steps to build the modules, generate the docs, run the tests, then merge & push the `gh-pages` branch!
 

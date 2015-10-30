@@ -87,7 +87,7 @@ istanbul report --root coverage-results
 Translations
 ------------
 
-The translations are managed on LocaleApp: http://www.localeapp.com/projects/6326
+The translations are managed on LocaleApp: https://www.localeapp.com/projects/8788
 
 To pull the new translations, you'll get to be registered as 'Developer' in the inputex project on localeapp and the look in the settings section for the API key.
 

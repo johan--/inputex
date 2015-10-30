@@ -52,7 +52,7 @@ You can contribute in a lot of different ways :
 Translations
 ------------
 
-The translations are managed on LocaleApp: http://www.localeapp.com/projects/6326
+The translations are managed on LocaleApp: https://www.localeapp.com/projects/8788
 
 Contributors
 ------------
