@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/rpc/js/rpc.js - InputEx</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="InputEx" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 4.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/inputEx.html">inputEx</a></li>
+                                <li><a href="../classes/inputEx.AutoComplete.html">inputEx.AutoComplete</a></li>
+                                <li><a href="../classes/inputEx.Base.html">inputEx.Base</a></li>
+                                <li><a href="../classes/inputEx.CheckBox.html">inputEx.CheckBox</a></li>
+                                <li><a href="../classes/inputEx.CheckboxMultiState.html">inputEx.CheckboxMultiState</a></li>
+                                <li><a href="../classes/inputEx.ColorField.html">inputEx.ColorField</a></li>
+                                <li><a href="../classes/inputEx.CombineField.html">inputEx.CombineField</a></li>
+                                <li><a href="../classes/inputEx.constructor.html">inputEx.constructor</a></li>
+                                <li><a href="../classes/inputEx.DateField.html">inputEx.DateField</a></li>
+                                <li><a href="../classes/inputEx.DatePickerField.html">inputEx.DatePickerField</a></li>
+                                <li><a href="../classes/inputEx.DateSelectMonthField.html">inputEx.DateSelectMonthField</a></li>
+                                <li><a href="../classes/inputEx.DateSplitField.html">inputEx.DateSplitField</a></li>
+                                <li><a href="../classes/inputEx.DateTimeField.html">inputEx.DateTimeField</a></li>
+                                <li><a href="../classes/inputEx.DDListField.html">inputEx.DDListField</a></li>
+                                <li><a href="../classes/inputEx.DomainNameField.html">inputEx.DomainNameField</a></li>
+                                <li><a href="../classes/inputEx.DSSelectField.html">inputEx.DSSelectField</a></li>
+                                <li><a href="../classes/inputEx.EmailField.html">inputEx.EmailField</a></li>
+                                <li><a href="../classes/inputEx.FileField.html">inputEx.FileField</a></li>
+                                <li><a href="../classes/inputEx.Form.html">inputEx.Form</a></li>
+                                <li><a href="../classes/inputEx.Group.html">inputEx.Group</a></li>
+                                <li><a href="../classes/inputEx.HiddenField.html">inputEx.HiddenField</a></li>
+                                <li><a href="../classes/inputEx.ImageCropperField.html">inputEx.ImageCropperField</a></li>
+                                <li><a href="../classes/inputEx.InPlaceEdit.html">inputEx.InPlaceEdit</a></li>
+                                <li><a href="../classes/inputEx.IntegerField.html">inputEx.IntegerField</a></li>
+                                <li><a href="../classes/inputEx.IPv4Field.html">inputEx.IPv4Field</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.html">inputEx.JsonSchema</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.Builder.html">inputEx.JsonSchema.Builder</a></li>
+                                <li><a href="../classes/inputEx.KeyOpValueField.html">inputEx.KeyOpValueField</a></li>
+                                <li><a href="../classes/inputEx.KeyValueField.html">inputEx.KeyValueField</a></li>
+                                <li><a href="../classes/inputEx.Lens.html">inputEx.Lens</a></li>
+                                <li><a href="../classes/inputEx.LinkedComboField.html">inputEx.LinkedComboField</a></li>
+                                <li><a href="../classes/inputEx.ListField.html">inputEx.ListField</a></li>
+                                <li><a href="../classes/inputEx.MapField.html">inputEx.MapField</a></li>
+                                <li><a href="../classes/inputEx.MenuField.html">inputEx.MenuField</a></li>
+                                <li><a href="../classes/inputEx.mixin.html">inputEx.mixin</a></li>
+                                <li><a href="../classes/inputEx.mixin.choice.html">inputEx.mixin.choice</a></li>
+                                <li><a href="../classes/inputEx.MultiAutoComplete.html">inputEx.MultiAutoComplete</a></li>
+                                <li><a href="../classes/inputEx.MultiSelectField.html">inputEx.MultiSelectField</a></li>
+                                <li><a href="../classes/inputEx.NumberField.html">inputEx.NumberField</a></li>
+                                <li><a href="../classes/inputEx.ObjectField.html">inputEx.ObjectField</a></li>
+                                <li><a href="../classes/inputEx.Panel.html">inputEx.Panel</a></li>
+                                <li><a href="../classes/inputEx.PasswordField.html">inputEx.PasswordField</a></li>
+                                <li><a href="../classes/inputEx.PhoneField.html">inputEx.PhoneField</a></li>
+                                <li><a href="../classes/inputEx.Plugin.InputExDataTable.html">inputEx.Plugin.InputExDataTable</a></li>
+                                <li><a href="../classes/inputEx.RadioField.html">inputEx.RadioField</a></li>
+                                <li><a href="../classes/inputEx.RatingStars.html">inputEx.RatingStars</a></li>
+                                <li><a href="../classes/inputEx.RatingStarsForm.html">inputEx.RatingStarsForm</a></li>
+                                <li><a href="../classes/inputEx.RPC.html">inputEx.RPC</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.html">inputEx.RPC.Envelope</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON.html">inputEx.RPC.Envelope.JSON</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-1.0.html">inputEx.RPC.Envelope.JSON-RPC-1.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-2.0.html">inputEx.RPC.Envelope.JSON-RPC-2.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.PATH.html">inputEx.RPC.Envelope.PATH</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.URL.html">inputEx.RPC.Envelope.URL</a></li>
+                                <li><a href="../classes/inputEx.RPC.Service.html">inputEx.RPC.Service</a></li>
+                                <li><a href="../classes/inputEx.RPC.SMDTester.html">inputEx.RPC.SMDTester</a></li>
+                                <li><a href="../classes/inputEx.RPC.Transport.html">inputEx.RPC.Transport</a></li>
+                                <li><a href="../classes/inputEx.RTEField.html">inputEx.RTEField</a></li>
+                                <li><a href="../classes/inputEx.SelectField.html">inputEx.SelectField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.html">inputEx.SerializeField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.html">inputEx.SerializeField.serializers</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.json.html">inputEx.SerializeField.serializers.json</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.xml.html">inputEx.SerializeField.serializers.xml</a></li>
+                                <li><a href="../classes/inputEx.SliderField.html">inputEx.SliderField</a></li>
+                                <li><a href="../classes/inputEx.StringAvailability.html">inputEx.StringAvailability</a></li>
+                                <li><a href="../classes/inputEx.StringField.html">inputEx.StringField</a></li>
+                                <li><a href="../classes/inputEx.Textarea.html">inputEx.Textarea</a></li>
+                                <li><a href="../classes/inputEx.TextAutoTag.html">inputEx.TextAutoTag</a></li>
+                                <li><a href="../classes/inputEx.TimeField.html">inputEx.TimeField</a></li>
+                                <li><a href="../classes/inputEx.TimeIntervalField.html">inputEx.TimeIntervalField</a></li>
+                                <li><a href="../classes/inputEx.TinyMCEField.html">inputEx.TinyMCEField</a></li>
+                                <li><a href="../classes/inputEx.TreeField.html">inputEx.TreeField</a></li>
+                                <li><a href="../classes/inputEx.TypeField.html">inputEx.TypeField</a></li>
+                                <li><a href="../classes/inputEx.UneditableField.html">inputEx.UneditableField</a></li>
+                                <li><a href="../classes/inputEx.UpperCaseField.html">inputEx.UpperCaseField</a></li>
+                                <li><a href="../classes/inputEx.UrlField.html">inputEx.UrlField</a></li>
+                                <li><a href="../classes/inputEx.VectorField.html">inputEx.VectorField</a></li>
+                                <li><a href="../classes/inputEx.visus.html">inputEx.visus</a></li>
+                                <li><a href="../classes/inputEx.widget.html">inputEx.widget</a></li>
+                                <li><a href="../classes/inputEx.widget.Button.html">inputEx.widget.Button</a></li>
+                                <li><a href="../classes/inputEx.widget.JsonTreeInspector.html">inputEx.widget.JsonTreeInspector</a></li>
+                                <li><a href="../classes/Plugin.CalendarTodayHighlight.html">Plugin.CalendarTodayHighlight</a></li>
+                                <li><a href="../classes/Plugin.CalendarWeekNumber.html">Plugin.CalendarWeekNumber</a></li>
+                                <li><a href="../classes/Plugin.NodeMenuNavImproved.html">Plugin.NodeMenuNavImproved</a></li>
+                                <li><a href="../classes/Y.InputexAccentRemover.html">Y.InputexAccentRemover</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/checkbox-multi-state.html">checkbox-multi-state</a></li>
+                                <li><a href="../modules/inputex.html">inputex</a></li>
+                                <li><a href="../modules/inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); __ treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); __ treétree.html">inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); // treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); // treétree</a></li>
+                                <li><a href="../modules/inputex-autocomplete.html">inputex-autocomplete</a></li>
+                                <li><a href="../modules/inputex-base.html">inputex-base</a></li>
+                                <li><a href="../modules/inputex-button.html">inputex-button</a></li>
+                                <li><a href="../modules/inputex-checkbox.html">inputex-checkbox</a></li>
+                                <li><a href="../modules/inputex-choice.html">inputex-choice</a></li>
+                                <li><a href="../modules/inputex-color.html">inputex-color</a></li>
+                                <li><a href="../modules/inputex-combine.html">inputex-combine</a></li>
+                                <li><a href="../modules/inputex-datatable.html">inputex-datatable</a></li>
+                                <li><a href="../modules/inputex-date.html">inputex-date</a></li>
+                                <li><a href="../modules/inputex-datepicker.html">inputex-datepicker</a></li>
+                                <li><a href="../modules/inputex-dateselectmonth.html">inputex-dateselectmonth</a></li>
+                                <li><a href="../modules/inputex-datesplit.html">inputex-datesplit</a></li>
+                                <li><a href="../modules/inputex-datetime.html">inputex-datetime</a></li>
+                                <li><a href="../modules/inputex-ddlist.html">inputex-ddlist</a></li>
+                                <li><a href="../modules/inputex-dsselect.html">inputex-dsselect</a></li>
+                                <li><a href="../modules/inputex-email.html">inputex-email</a></li>
+                                <li><a href="../modules/inputex-field.html">inputex-field</a></li>
+                                <li><a href="../modules/inputex-file.html">inputex-file</a></li>
+                                <li><a href="../modules/inputex-form.html">inputex-form</a></li>
+                                <li><a href="../modules/inputex-group.html">inputex-group</a></li>
+                                <li><a href="../modules/inputex-hidden.html">inputex-hidden</a></li>
+                                <li><a href="../modules/inputex-imagecropper.html">inputex-imagecropper</a></li>
+                                <li><a href="../modules/inputex-inplaceedit.html">inputex-inplaceedit</a></li>
+                                <li><a href="../modules/inputex-integer.html">inputex-integer</a></li>
+                                <li><a href="../modules/inputex-ipv4.html">inputex-ipv4</a></li>
+                                <li><a href="../modules/inputex-jsonschema.html">inputex-jsonschema</a></li>
+                                <li><a href="../modules/inputex-jsontreeinspector.html">inputex-jsontreeinspector</a></li>
+                                <li><a href="../modules/inputex-keyopvalue.html">inputex-keyopvalue</a></li>
+                                <li><a href="../modules/inputex-keyvalue.html">inputex-keyvalue</a></li>
+                                <li><a href="../modules/inputex-lens.html">inputex-lens</a></li>
+                                <li><a href="../modules/inputex-linkedcombo.html">inputex-linkedcombo</a></li>
+                                <li><a href="../modules/inputex-list.html">inputex-list</a></li>
+                                <li><a href="../modules/inputex-map.html">inputex-map</a></li>
+                                <li><a href="../modules/inputex-menu.html">inputex-menu</a></li>
+                                <li><a href="../modules/inputex-multiautocomplete.html">inputex-multiautocomplete</a></li>
+                                <li><a href="../modules/inputex-multiselect.html">inputex-multiselect</a></li>
+                                <li><a href="../modules/inputex-number.html">inputex-number</a></li>
+                                <li><a href="../modules/inputex-object.html">inputex-object</a></li>
+                                <li><a href="../modules/inputex-panel.html">inputex-panel</a></li>
+                                <li><a href="../modules/inputex-password.html">inputex-password</a></li>
+                                <li><a href="../modules/inputex-phone.html">inputex-phone</a></li>
+                                <li><a href="../modules/inputex-radio.html">inputex-radio</a></li>
+                                <li><a href="../modules/inputex-ratingstars.html">inputex-ratingstars</a></li>
+                                <li><a href="../modules/inputex-ratingstarsform.html">inputex-ratingstarsform</a></li>
+                                <li><a href="../modules/inputex-rpc.html">inputex-rpc</a></li>
+                                <li><a href="../modules/inputex-rte.html">inputex-rte</a></li>
+                                <li><a href="../modules/inputex-select.html">inputex-select</a></li>
+                                <li><a href="../modules/inputex-serialize.html">inputex-serialize</a></li>
+                                <li><a href="../modules/inputex-slider.html">inputex-slider</a></li>
+                                <li><a href="../modules/inputex-smdtester.html">inputex-smdtester</a></li>
+                                <li><a href="../modules/inputex-string.html">inputex-string</a></li>
+                                <li><a href="../modules/inputex-stringavailability.html">inputex-stringavailability</a></li>
+                                <li><a href="../modules/inputex-textarea.html">inputex-textarea</a></li>
+                                <li><a href="../modules/inputex-textautotag.html">inputex-textautotag</a></li>
+                                <li><a href="../modules/inputex-time.html">inputex-time</a></li>
+                                <li><a href="../modules/inputex-timeinterval.html">inputex-timeinterval</a></li>
+                                <li><a href="../modules/inputex-timerange.html">inputex-timerange</a></li>
+                                <li><a href="../modules/inputex-tinymce.html">inputex-tinymce</a></li>
+                                <li><a href="../modules/inputex-tree.html">inputex-tree</a></li>
+                                <li><a href="../modules/inputex-type.html">inputex-type</a></li>
+                                <li><a href="../modules/inputex-uneditable.html">inputex-uneditable</a></li>
+                                <li><a href="../modules/inputex-uppercase.html">inputex-uppercase</a></li>
+                                <li><a href="../modules/inputex-url.html">inputex-url</a></li>
+                                <li><a href="../modules/inputex-vector.html">inputex-vector</a></li>
+                                <li><a href="../modules/inputex-visus.html">inputex-visus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/rpc/js/rpc.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module inputex-rpc
+ */
+  var lang = Y.Lang,
+      inputEx = Y.inputEx;
+
+/**
+ * inputEx RPC utility functions
+ * Implements SMD and create forms directly from services
+ * @class inputEx.RPC
+ * @static
+ */
+inputEx.RPC = {
+   
+   /**
+    * Build a form to run a service !
+    * @method generateServiceForm
+    * @static
+    * @param {function} method A method created through inputEx.RPC.Service
+    * @param {Object} formOpts
+    */
+   generateServiceForm: function(method, formOpts, callback) {
+   
+      var options = null;
+      if(lang.isObject(formOpts) &amp;&amp; lang.isArray(formOpts.fields) ) {
+         options = formOpts;
+      }
+      // create the form directly from the method params
+      else {
+         options = inputEx.RPC.formForMethod(method);
+         // Add user options from formOpts
+         Y.mix(options, formOpts, true);
+      }
+   
+      // Add buttons to launch the service
+      var methodName = method._methodName || method.name;
+      options.type = &quot;form&quot;;
+      if(!options.buttons) {
+         options.buttons = [
+            {type: &#x27;submit&#x27;, value: methodName, onClick: function() {
+               
+               form.showMask();
+               method(form.getValue(), {
+                  success: function(results) {
+                     form.hideMask();
+                     if(lang.isObject(callback) &amp;&amp; lang.isFunction(callback.success)) {
+                        callback.success.call(callback.scope || this, results);
+                     }
+                  },
+                  failure: function() {
+                     form.hideMask();
+                  }
+               });
+               return false; // do NOT send the browser submit event
+            }}
+         ];
+      }
+   
+      var form = inputEx(options);
+   
+      return form;
+   },
+
+   /**
+    * Return the inputEx form options from a method
+    * @method formForMethod
+    * @static
+    * @param {function} method A method created through inputEx.RPC.Service
+    */
+   formForMethod: function(method) {
+   
+      // convert the method parameters into a json-schema :
+      var schemaIdentifierMap = {};
+      var methodName = method._methodName || method.name;
+      schemaIdentifierMap[methodName] = {
+          id: methodName,
+          type:&#x27;object&#x27;,
+          properties:{}
+      };
+      for(var i = 0 ; i &lt; method._parameters.length ; i++) {
+         var p = method._parameters[i];
+         schemaIdentifierMap[methodName].properties[p.name] = p;
+      }
+   
+      // Use the builder to build an inputEx form from the json-schema
+      var builder = new inputEx.JsonSchema.Builder({
+        &#x27;schemaIdentifierMap&#x27;: schemaIdentifierMap,
+        &#x27;defaultOptions&#x27;:{
+           &#x27;showMsg&#x27;:true
+        }
+      });
+      var options = builder.schemaToInputEx(schemaIdentifierMap[methodName]);
+   
+      return options;
+   }
+   
+};
+
+   var rpc = inputEx.RPC;
+
+/**
+ * Provide SMD support 
+ * http://groups.google.com/group/json-schema/web/service-mapping-description-proposal
+ * Not implemented: REST envelope, TCP/IP transport
+ * Take a string as a url to retrieve an smd or an object that is an smd or partial smd to use 
+ * as a definition for the service
+ * @class inputEx.RPC.Service
+ * @constructor
+ */
+inputEx.RPC.Service = function(smd, callback) {
+
+   if( lang.isString(smd) ) {
+      this.smdUrl = smd;
+      this.fetch(smd, callback);
+   }
+   else if( lang.isObject(smd) ) {
+      this._smd = smd;
+      this.process(callback);
+   }
+   else {
+      throw new Error(&quot;smd should be an object or an url&quot;);
+   }
+   
+};
+
+
+inputEx.RPC.Service.prototype = {
+   
+   /**
+    * Generate the function from a service definition
+    * @method _generateService
+    * @param {String} serviceName
+    * @param {Method definition} method
+    */
+   _generateService: function(serviceName, method) {
+      
+      if(this[method]){
+         throw new Error(&quot;WARNING: &quot;+ serviceName+ &quot; already exists for service. Unable to generate function&quot;);
+      }
+      method.name = serviceName;
+      method._methodName = serviceName;
+   
+      var self = this;
+      var func = function(data, opts) {
+         var envelope = rpc.Envelope[method.envelope || self._smd.envelope];
+         var callback = {
+            success: function(o) {
+               var results = envelope.deserialize(o);
+               opts.success.call(opts.scope || self, results);
+            },
+            failure: function(o) {
+               if(lang.isFunction(opts.failure) ) {
+                  var results = envelope.deserialize(o);
+                  opts.failure.call(opts.scope || self, results);
+               }
+            },
+            scope: self
+         };
+         
+         
+         var params = {};
+         if(self._smd.additionalParameters &amp;&amp; lang.isArray(self._smd.parameters) ) {
+            for(var i = 0 ; i &lt; self._smd.parameters.length ; i++) {
+               var p = self._smd.parameters[i];
+               params[p.name] = p[&quot;default&quot;];
+            }
+         }
+         Y.mix(params, data, true);
+         
+         var url = method.target || self._smd.target;
+         var urlRegexp = /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?$/i;
+         if(!url.match(urlRegexp) &amp;&amp; url != self._smd.target) {
+            url = self._smd.target+url;
+         }
+         
+         if( !!this.smdUrl &amp;&amp; !url.match(urlRegexp) ) {
+            // URL is still relative !
+            var a=this.smdUrl.split(&#x27;/&#x27;);
+            a[a.length-1]=&quot;&quot;;
+            url = a.join(&quot;/&quot;)+url;
+         }
+         
+         
+         var r = {
+            target: url,
+            callback: callback,
+            data: params,
+            origData: data,
+            opts: opts,
+            callbackParamName: method.callbackParamName || self._smd.callbackParamName,
+            transport: method.transport || self._smd.transport
+         };
+         var serialized = envelope.serialize(self._smd, method, params);
+         Y.mix(r, serialized, true);
+         
+         rpc.Transport[r.transport].call(self, r ); 
+      };
+      
+      func.name = serviceName;
+      func._methodName = serviceName;
+      func.description = method.description;
+      func._parameters = method.parameters;
+      
+      return func;
+   },
+   
+   /**
+    * Process the SMD definition
+    * @method process
+    */
+   process: function(callback) {
+      
+      var serviceDefs = this._smd.services;
+      
+      // Generate the methods to this object
+      for(var serviceName in serviceDefs){
+         if( serviceDefs.hasOwnProperty(serviceName) ) {
+            
+            // Get the object that will contain the method.
+            // handles &quot;namespaced&quot; services by breaking apart by &#x27;.&#x27;
+            var current = this;
+            var pieces = serviceName.split(&quot;.&quot;); 
+            for(var i=0; i&lt; pieces.length-1; i++){
+               current = current[pieces[i]] || (current[pieces[i]] = {});
+            }
+            
+            current[pieces[pieces.length-1]] =   this._generateService(serviceName, serviceDefs[serviceName]);
+         }
+      }
+      
+      // call the success handler
+      if(lang.isObject(callback) &amp;&amp; lang.isFunction(callback.success)) {
+         callback.success.call(callback.scope || this);
+      }
+      
+   },
+   
+   /**
+    * Download the SMD at the given url
+    * @method fetch
+    * @param {String} Absolute or relative url
+    */
+   fetch: function(url, callback) {
+      
+      // TODO: if url is not in the same domain, we should use jsonp, or swf
+      
+      var cfg = {
+         method: &#x27;GET&#x27;,
+         on: {
+            success: function(req,o) {
+               try {
+                  this._smd = Y.JSON.parse(o.responseText);
+                  this.process(callback);
+               }
+               catch(ex) {
+                  if(lang.isObject(console) &amp;&amp; lang.isFunction(console.log))
+                     console.log(ex);
+                  if( lang.isFunction(callback.failure) ) {
+                     callback.failure.call(callback.scope || this, {error: ex});
+                  }
+               }
+            }, 
+            failure: function(req,o) {
+               if( lang.isFunction(callback.failure) ) {
+                  callback.failure.call(callback.scope || this, {error: &quot;unable to fetch url &quot;+url});
+               }
+            }
+         },
+         context: this
+      };
+      
+      Y.io(url, cfg);
+      
+   }
+   
+    
+};
+
+
+
+
+inputEx.RPC.Service._requestId = 1;
+
+
+/**
+ * inputEx.RPC.Transport
+ * @class inputEx.RPC.Transport
+ * @static
+ */
+inputEx.RPC.Transport = {
+   
+   /**
+    * Build a ajax request using &#x27;POST&#x27; method
+    * @method POST
+    * @param {Object} r Object specifying target, callback and data attributes
+    */
+   &quot;POST&quot;: function(r) {
+      return Y.io(r.target, {
+         method: &#x27;POST&#x27;, 
+         on: {
+            succes: r.callback
+         },
+         data: r.data 
+      });
+   },
+   
+   /**
+    * Build a ajax request using &#x27;GET&#x27; method
+    * @method GET
+    * @param {Object} r Object specifying target, callback and data attributes
+    */
+   &quot;GET&quot;: function(r) {
+      return Y.io(r.target + (r.data ? &#x27;?&#x27;+  r.data : &#x27;&#x27;), {
+         method: &#x27;GET&#x27;,
+         on: {
+            success: r.callback
+         }
+      });
+   },
+   
+   /**
+    * Build an ajax request using the right HTTP method
+    * @method REST
+    * @param {Object} r Object specifying target, callback and data attributes
+    */
+   &quot;REST&quot;: function(r) {
+      // TODO
+   },
+   
+   /**
+    * Receive data through JSONP (insert a script tag within the page)
+    * @method JSONP
+    * @param {Object} r Object specifying target, callback and data attributes
+    */
+   &quot;JSONP&quot;: function(r) {
+      
+      var url =  r.target + ((r.target.indexOf(&quot;?&quot;) == -1) ? &#x27;?&#x27; : &#x27;&amp;&#x27;) + r.data + &quot;&amp;&quot;+r.callbackParamName+&quot;={callback}&quot;;
+
+      Y.jsonp(url, function (response) {
+          
+          if(lang.isObject(r.callback) &amp;&amp; lang.isFunction(r.callback.success)) {
+             r.callback.success.call(r.callback.scope || this, response);
+          }
+          
+      });
+   },
+   
+   /**
+    * NOT implemented
+    * @method TCP/IP
+    */
+   &quot;TCP/IP&quot;: function(r) {
+      throw new Error(&quot;TCP/IP transport not implemented !&quot;);
+   }
+   
+};
+
+
+/**
+ * inputEx.RPC.Envelope
+ * @class inputEx.RPC.Envelope
+ * @static
+ */
+inputEx.RPC.Envelope = {
+   
+   /**
+    * URL envelope
+    * @class inputEx.RPC.Envelope.URL
+    * @static
+    */
+   &quot;URL&quot;:  {
+   
+         /**
+          * Serialize data into URI encoded parameters
+          * @method serialize
+          */
+         serialize: function(smd, method, data) {
+            var eURI = encodeURIComponent;
+            var params = [];
+            for(var name in data){
+               if(data.hasOwnProperty(name)){
+                  var value = data[name];
+                  if(lang.isArray(value)){
+                     for(var i=0; i &lt; value.length; i++){
+                        params.push(eURI(name)+&quot;=&quot;+eURI(value[i]));
+                     }
+                  }else{
+                     params.push(eURI(name)+&quot;=&quot;+eURI(value));
+                  }
+               }
+            }
+            return {
+               data: params.join(&quot;&amp;&quot;)
+            };   
+         },
+         /**
+          * Deserialize
+           * @method deserialize
+          */
+         deserialize: function(results) {
+            return results;
+         }
+   },
+
+   /**
+    * PATH envelope
+    * @class inputEx.RPC.Envelope.PATH
+    * @static
+    */
+   &quot;PATH&quot;: {
+        /**
+          * serialize
+         * @method serialize
+         */
+        serialize: function(smd, method, data) {
+              var target = method.target || smd.target, i;
+              if(lang.isArray(data)){
+                 for(i = 0; i &lt; data.length;i++){
+                    target += &#x27;/&#x27; + data[i];
+                 }
+              }else{
+                 for(i in data){
+                    if(data.hasOwnProperty(i)) {
+                       target += &#x27;/&#x27; + i + &#x27;/&#x27; + data[i];
+                    }
+                 }
+              }
+           return {
+              data: &#x27;&#x27;,
+              target: target
+           };   
+        },
+        /**
+          * deserialize
+         * @method deserialize
+         */
+        deserialize: function(results) {
+           return results;
+        }
+    },
+    
+   /**
+    * JSON envelope
+    * @class inputEx.RPC.Envelope.JSON
+    * @static
+    */
+   &quot;JSON&quot;: {
+       /**
+        * serialize
+        * @method serialize
+        */
+       serialize: function(smd, method, data) {
+          return {
+             data: Y.JSON.stringify(data)
+          };   
+       },
+        /**
+        * deserialize
+        * @method deserialize
+        */
+       deserialize: function(results) {
+          return results;
+       }
+    },
+   
+   /**
+    * JSON-RPC-1.0 envelope
+    * @class inputEx.RPC.Envelope.JSON-RPC-1.0
+    * @static
+    */
+   &quot;JSON-RPC-1.0&quot;:  {
+       /**
+        * serialize
+        * @method serialize
+        */
+       serialize: function(smd, method, data) {
+         var methodName = method.name || method._methodName;
+          return {
+             data: Y.JSON.stringify({
+                &quot;id&quot;: rpc.Service._requestId++,
+                &quot;method&quot;: methodName,
+                &quot;params&quot;: data
+             })
+          };   
+       },
+        /**
+        * deserialize
+        * @method deserialize
+        */
+       deserialize: function(results) {
+          return Y.JSON.parse(results.responseText);
+       }
+    },
+
+   /**
+    * JSON-RPC-2.0 envelope
+    * @class inputEx.RPC.Envelope.JSON-RPC-2.0
+    * @static
+    */
+   &quot;JSON-RPC-2.0&quot;: {
+      /**
+           * serialize
+           * @method serialize
+       */
+      serialize: function(smd, method, data) {
+        var methodName = method.name || method._methodName;
+         return {
+            data: Y.JSON.stringify({
+               &quot;id&quot;: rpc.Service._requestId++,
+               &quot;method&quot;: methodName,
+               &quot;version&quot;: &quot;json-rpc-2.0&quot;,
+               &quot;params&quot;: data
+            })
+         };   
+      },
+      /**
+         * serialize
+         * @method deserialize
+       */
+      deserialize: function(results) {
+         return Y.JSON.parse(results.responseText);
+      }
+   }
+   
+};
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

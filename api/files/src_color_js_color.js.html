@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/color/js/color.js - InputEx</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="InputEx" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 4.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/inputEx.html">inputEx</a></li>
+                                <li><a href="../classes/inputEx.AutoComplete.html">inputEx.AutoComplete</a></li>
+                                <li><a href="../classes/inputEx.Base.html">inputEx.Base</a></li>
+                                <li><a href="../classes/inputEx.CheckBox.html">inputEx.CheckBox</a></li>
+                                <li><a href="../classes/inputEx.CheckboxMultiState.html">inputEx.CheckboxMultiState</a></li>
+                                <li><a href="../classes/inputEx.ColorField.html">inputEx.ColorField</a></li>
+                                <li><a href="../classes/inputEx.CombineField.html">inputEx.CombineField</a></li>
+                                <li><a href="../classes/inputEx.constructor.html">inputEx.constructor</a></li>
+                                <li><a href="../classes/inputEx.DateField.html">inputEx.DateField</a></li>
+                                <li><a href="../classes/inputEx.DatePickerField.html">inputEx.DatePickerField</a></li>
+                                <li><a href="../classes/inputEx.DateSelectMonthField.html">inputEx.DateSelectMonthField</a></li>
+                                <li><a href="../classes/inputEx.DateSplitField.html">inputEx.DateSplitField</a></li>
+                                <li><a href="../classes/inputEx.DateTimeField.html">inputEx.DateTimeField</a></li>
+                                <li><a href="../classes/inputEx.DDListField.html">inputEx.DDListField</a></li>
+                                <li><a href="../classes/inputEx.DomainNameField.html">inputEx.DomainNameField</a></li>
+                                <li><a href="../classes/inputEx.DSSelectField.html">inputEx.DSSelectField</a></li>
+                                <li><a href="../classes/inputEx.EmailField.html">inputEx.EmailField</a></li>
+                                <li><a href="../classes/inputEx.FileField.html">inputEx.FileField</a></li>
+                                <li><a href="../classes/inputEx.Form.html">inputEx.Form</a></li>
+                                <li><a href="../classes/inputEx.Group.html">inputEx.Group</a></li>
+                                <li><a href="../classes/inputEx.HiddenField.html">inputEx.HiddenField</a></li>
+                                <li><a href="../classes/inputEx.ImageCropperField.html">inputEx.ImageCropperField</a></li>
+                                <li><a href="../classes/inputEx.InPlaceEdit.html">inputEx.InPlaceEdit</a></li>
+                                <li><a href="../classes/inputEx.IntegerField.html">inputEx.IntegerField</a></li>
+                                <li><a href="../classes/inputEx.IPv4Field.html">inputEx.IPv4Field</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.html">inputEx.JsonSchema</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.Builder.html">inputEx.JsonSchema.Builder</a></li>
+                                <li><a href="../classes/inputEx.KeyOpValueField.html">inputEx.KeyOpValueField</a></li>
+                                <li><a href="../classes/inputEx.KeyValueField.html">inputEx.KeyValueField</a></li>
+                                <li><a href="../classes/inputEx.Lens.html">inputEx.Lens</a></li>
+                                <li><a href="../classes/inputEx.LinkedComboField.html">inputEx.LinkedComboField</a></li>
+                                <li><a href="../classes/inputEx.ListField.html">inputEx.ListField</a></li>
+                                <li><a href="../classes/inputEx.MapField.html">inputEx.MapField</a></li>
+                                <li><a href="../classes/inputEx.MenuField.html">inputEx.MenuField</a></li>
+                                <li><a href="../classes/inputEx.mixin.html">inputEx.mixin</a></li>
+                                <li><a href="../classes/inputEx.mixin.choice.html">inputEx.mixin.choice</a></li>
+                                <li><a href="../classes/inputEx.MultiAutoComplete.html">inputEx.MultiAutoComplete</a></li>
+                                <li><a href="../classes/inputEx.MultiSelectField.html">inputEx.MultiSelectField</a></li>
+                                <li><a href="../classes/inputEx.NumberField.html">inputEx.NumberField</a></li>
+                                <li><a href="../classes/inputEx.ObjectField.html">inputEx.ObjectField</a></li>
+                                <li><a href="../classes/inputEx.Panel.html">inputEx.Panel</a></li>
+                                <li><a href="../classes/inputEx.PasswordField.html">inputEx.PasswordField</a></li>
+                                <li><a href="../classes/inputEx.PhoneField.html">inputEx.PhoneField</a></li>
+                                <li><a href="../classes/inputEx.Plugin.InputExDataTable.html">inputEx.Plugin.InputExDataTable</a></li>
+                                <li><a href="../classes/inputEx.RadioField.html">inputEx.RadioField</a></li>
+                                <li><a href="../classes/inputEx.RatingStars.html">inputEx.RatingStars</a></li>
+                                <li><a href="../classes/inputEx.RatingStarsForm.html">inputEx.RatingStarsForm</a></li>
+                                <li><a href="../classes/inputEx.RPC.html">inputEx.RPC</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.html">inputEx.RPC.Envelope</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON.html">inputEx.RPC.Envelope.JSON</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-1.0.html">inputEx.RPC.Envelope.JSON-RPC-1.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-2.0.html">inputEx.RPC.Envelope.JSON-RPC-2.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.PATH.html">inputEx.RPC.Envelope.PATH</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.URL.html">inputEx.RPC.Envelope.URL</a></li>
+                                <li><a href="../classes/inputEx.RPC.Service.html">inputEx.RPC.Service</a></li>
+                                <li><a href="../classes/inputEx.RPC.SMDTester.html">inputEx.RPC.SMDTester</a></li>
+                                <li><a href="../classes/inputEx.RPC.Transport.html">inputEx.RPC.Transport</a></li>
+                                <li><a href="../classes/inputEx.RTEField.html">inputEx.RTEField</a></li>
+                                <li><a href="../classes/inputEx.SelectField.html">inputEx.SelectField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.html">inputEx.SerializeField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.html">inputEx.SerializeField.serializers</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.json.html">inputEx.SerializeField.serializers.json</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.xml.html">inputEx.SerializeField.serializers.xml</a></li>
+                                <li><a href="../classes/inputEx.SliderField.html">inputEx.SliderField</a></li>
+                                <li><a href="../classes/inputEx.StringAvailability.html">inputEx.StringAvailability</a></li>
+                                <li><a href="../classes/inputEx.StringField.html">inputEx.StringField</a></li>
+                                <li><a href="../classes/inputEx.Textarea.html">inputEx.Textarea</a></li>
+                                <li><a href="../classes/inputEx.TextAutoTag.html">inputEx.TextAutoTag</a></li>
+                                <li><a href="../classes/inputEx.TimeField.html">inputEx.TimeField</a></li>
+                                <li><a href="../classes/inputEx.TimeIntervalField.html">inputEx.TimeIntervalField</a></li>
+                                <li><a href="../classes/inputEx.TinyMCEField.html">inputEx.TinyMCEField</a></li>
+                                <li><a href="../classes/inputEx.TreeField.html">inputEx.TreeField</a></li>
+                                <li><a href="../classes/inputEx.TypeField.html">inputEx.TypeField</a></li>
+                                <li><a href="../classes/inputEx.UneditableField.html">inputEx.UneditableField</a></li>
+                                <li><a href="../classes/inputEx.UpperCaseField.html">inputEx.UpperCaseField</a></li>
+                                <li><a href="../classes/inputEx.UrlField.html">inputEx.UrlField</a></li>
+                                <li><a href="../classes/inputEx.VectorField.html">inputEx.VectorField</a></li>
+                                <li><a href="../classes/inputEx.visus.html">inputEx.visus</a></li>
+                                <li><a href="../classes/inputEx.widget.html">inputEx.widget</a></li>
+                                <li><a href="../classes/inputEx.widget.Button.html">inputEx.widget.Button</a></li>
+                                <li><a href="../classes/inputEx.widget.JsonTreeInspector.html">inputEx.widget.JsonTreeInspector</a></li>
+                                <li><a href="../classes/Plugin.CalendarTodayHighlight.html">Plugin.CalendarTodayHighlight</a></li>
+                                <li><a href="../classes/Plugin.CalendarWeekNumber.html">Plugin.CalendarWeekNumber</a></li>
+                                <li><a href="../classes/Plugin.NodeMenuNavImproved.html">Plugin.NodeMenuNavImproved</a></li>
+                                <li><a href="../classes/Y.InputexAccentRemover.html">Y.InputexAccentRemover</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/checkbox-multi-state.html">checkbox-multi-state</a></li>
+                                <li><a href="../modules/inputex.html">inputex</a></li>
+                                <li><a href="../modules/inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); __ treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); __ treétree.html">inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); // treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); // treétree</a></li>
+                                <li><a href="../modules/inputex-autocomplete.html">inputex-autocomplete</a></li>
+                                <li><a href="../modules/inputex-base.html">inputex-base</a></li>
+                                <li><a href="../modules/inputex-button.html">inputex-button</a></li>
+                                <li><a href="../modules/inputex-checkbox.html">inputex-checkbox</a></li>
+                                <li><a href="../modules/inputex-choice.html">inputex-choice</a></li>
+                                <li><a href="../modules/inputex-color.html">inputex-color</a></li>
+                                <li><a href="../modules/inputex-combine.html">inputex-combine</a></li>
+                                <li><a href="../modules/inputex-datatable.html">inputex-datatable</a></li>
+                                <li><a href="../modules/inputex-date.html">inputex-date</a></li>
+                                <li><a href="../modules/inputex-datepicker.html">inputex-datepicker</a></li>
+                                <li><a href="../modules/inputex-dateselectmonth.html">inputex-dateselectmonth</a></li>
+                                <li><a href="../modules/inputex-datesplit.html">inputex-datesplit</a></li>
+                                <li><a href="../modules/inputex-datetime.html">inputex-datetime</a></li>
+                                <li><a href="../modules/inputex-ddlist.html">inputex-ddlist</a></li>
+                                <li><a href="../modules/inputex-dsselect.html">inputex-dsselect</a></li>
+                                <li><a href="../modules/inputex-email.html">inputex-email</a></li>
+                                <li><a href="../modules/inputex-field.html">inputex-field</a></li>
+                                <li><a href="../modules/inputex-file.html">inputex-file</a></li>
+                                <li><a href="../modules/inputex-form.html">inputex-form</a></li>
+                                <li><a href="../modules/inputex-group.html">inputex-group</a></li>
+                                <li><a href="../modules/inputex-hidden.html">inputex-hidden</a></li>
+                                <li><a href="../modules/inputex-imagecropper.html">inputex-imagecropper</a></li>
+                                <li><a href="../modules/inputex-inplaceedit.html">inputex-inplaceedit</a></li>
+                                <li><a href="../modules/inputex-integer.html">inputex-integer</a></li>
+                                <li><a href="../modules/inputex-ipv4.html">inputex-ipv4</a></li>
+                                <li><a href="../modules/inputex-jsonschema.html">inputex-jsonschema</a></li>
+                                <li><a href="../modules/inputex-jsontreeinspector.html">inputex-jsontreeinspector</a></li>
+                                <li><a href="../modules/inputex-keyopvalue.html">inputex-keyopvalue</a></li>
+                                <li><a href="../modules/inputex-keyvalue.html">inputex-keyvalue</a></li>
+                                <li><a href="../modules/inputex-lens.html">inputex-lens</a></li>
+                                <li><a href="../modules/inputex-linkedcombo.html">inputex-linkedcombo</a></li>
+                                <li><a href="../modules/inputex-list.html">inputex-list</a></li>
+                                <li><a href="../modules/inputex-map.html">inputex-map</a></li>
+                                <li><a href="../modules/inputex-menu.html">inputex-menu</a></li>
+                                <li><a href="../modules/inputex-multiautocomplete.html">inputex-multiautocomplete</a></li>
+                                <li><a href="../modules/inputex-multiselect.html">inputex-multiselect</a></li>
+                                <li><a href="../modules/inputex-number.html">inputex-number</a></li>
+                                <li><a href="../modules/inputex-object.html">inputex-object</a></li>
+                                <li><a href="../modules/inputex-panel.html">inputex-panel</a></li>
+                                <li><a href="../modules/inputex-password.html">inputex-password</a></li>
+                                <li><a href="../modules/inputex-phone.html">inputex-phone</a></li>
+                                <li><a href="../modules/inputex-radio.html">inputex-radio</a></li>
+                                <li><a href="../modules/inputex-ratingstars.html">inputex-ratingstars</a></li>
+                                <li><a href="../modules/inputex-ratingstarsform.html">inputex-ratingstarsform</a></li>
+                                <li><a href="../modules/inputex-rpc.html">inputex-rpc</a></li>
+                                <li><a href="../modules/inputex-rte.html">inputex-rte</a></li>
+                                <li><a href="../modules/inputex-select.html">inputex-select</a></li>
+                                <li><a href="../modules/inputex-serialize.html">inputex-serialize</a></li>
+                                <li><a href="../modules/inputex-slider.html">inputex-slider</a></li>
+                                <li><a href="../modules/inputex-smdtester.html">inputex-smdtester</a></li>
+                                <li><a href="../modules/inputex-string.html">inputex-string</a></li>
+                                <li><a href="../modules/inputex-stringavailability.html">inputex-stringavailability</a></li>
+                                <li><a href="../modules/inputex-textarea.html">inputex-textarea</a></li>
+                                <li><a href="../modules/inputex-textautotag.html">inputex-textautotag</a></li>
+                                <li><a href="../modules/inputex-time.html">inputex-time</a></li>
+                                <li><a href="../modules/inputex-timeinterval.html">inputex-timeinterval</a></li>
+                                <li><a href="../modules/inputex-timerange.html">inputex-timerange</a></li>
+                                <li><a href="../modules/inputex-tinymce.html">inputex-tinymce</a></li>
+                                <li><a href="../modules/inputex-tree.html">inputex-tree</a></li>
+                                <li><a href="../modules/inputex-type.html">inputex-type</a></li>
+                                <li><a href="../modules/inputex-uneditable.html">inputex-uneditable</a></li>
+                                <li><a href="../modules/inputex-uppercase.html">inputex-uppercase</a></li>
+                                <li><a href="../modules/inputex-url.html">inputex-url</a></li>
+                                <li><a href="../modules/inputex-vector.html">inputex-vector</a></li>
+                                <li><a href="../modules/inputex-visus.html">inputex-visus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/color/js/color.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module inputex-color
+ */
+   var inputEx = Y.inputEx;
+   
+/**
+ * Create a Color picker input field
+ * @class inputEx.ColorField
+ * @extends inputEx.Field
+ * @constructor
+ * @param {Object} options Added options for ColorField:
+ * &lt;ul&gt;
+ *   &lt;li&gt;colors: list of colors to load as palette&lt;/li&gt;
+ *   &lt;li&gt;palette: default palette to be used (if colors option not provided)&lt;/li&gt;
+ *   &lt;li&gt;cellPerLine: how many colored cells in a row on the palette&lt;/li&gt;
+ *   &lt;li&gt;ratio: screen-like ratio to display the palette, syntax: [with,height], default: [16,9] (if cellPerLine not provided)&lt;/li&gt;
+ *   &lt;li&gt;zIndex: zIndex of the overlay&lt;/li&gt;
+ * &lt;/ul&gt;
+ */
+inputEx.ColorField = function (options) {
+   inputEx.ColorField.superclass.constructor.call(this,options);
+};
+Y.extend(inputEx.ColorField, inputEx.Field, {
+   
+   /**
+    * Adds the &#x27;inputEx-ColorField&#x27; default className
+    * @method setOptions
+    * @param {Object} options Options object as passed to the constructor
+    */
+   setOptions: function (options) {
+      inputEx.ColorField.superclass.setOptions.call(this, options);
+      
+      // Overwrite options
+      this.options.className = options.className ? options.className : &#x27;inputEx-Field inputEx-ColorField&#x27;;
+      this.options.zIndex = options.zIndex || 4;
+      
+      // Added options
+      this.options.palette = options.palette;
+      this.options.colors = options.colors;
+      
+      if (options.ratio) { this.options.ratio = options.ratio;}
+      if (options.cellPerLine) { this.options.cellPerLine = options.cellPerLine;}
+   },
+   
+   /**
+    * @method renderOverlay
+    */
+   renderOverlay: function () {
+      
+      // Create overlay
+      this.oOverlay = new Y.Overlay({
+         visible:false,
+         zIndex: this.options.zIndex
+      });
+      this.oOverlay.render(this.fieldContainer);
+      
+      this.oOverlay.on(&#x27;visibleChange&#x27;, function (e) {
+         
+         if (e.newVal) { // show
+            // align
+            this.oOverlay.set(&quot;align&quot;, {node:this.buttonWrapper,  points:[Y.WidgetPositionAlign.TL, Y.WidgetPositionAlign.BL]});
+            
+            // Activate outside event handler
+            this.outsideHandler = this.oOverlay.get(&#x27;boundingBox&#x27;).on(&#x27;mousedownoutside&#x27;, function (e) {
+               // hide the overlay if
+               //   - the target is not the button, and
+               //   - the target is not the colorEl
+               if (e.target !== this.button &amp;&amp; e.target._node !== this.colorEl){
+                  this.oOverlay.hide();
+               }
+            }, this);
+         }
+         else { // hide
+            this.outsideHandler.detach();
+         }
+         
+      }, this);
+   },
+   
+   /**
+    * @method _toggleOverlay
+    * @private
+    */
+   _toggleOverlay: function (e) {
+       // PreventDefault to prevent submit in a form
+       e.preventDefault();
+       
+       // palette may not have been rendered yet
+       this.renderPalette();
+       
+       this.oOverlay[this.oOverlay.get(&#x27;visible&#x27;) ? &#x27;hide&#x27; : &#x27;show&#x27;]();
+   },
+   
+   /**
+    * Render the color button and the colorpicker popup
+    * @method renderComponent
+    */
+   renderComponent: function () {
+      
+      // A hidden input field to store the color code
+      this.el = inputEx.cn(&#x27;input&#x27;, {
+         type: &#x27;hidden&#x27;,
+         name: this.options.name || &#x27;&#x27;,
+         value: this.options.value || &#x27;#FFFFFF&#x27;
+      });
+      
+      // Create a colored area
+      this.colorEl = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-ColorField-colorArea&#x27;}, {backgroundColor: this.el.value});
+      
+      // This element wraps the input node in a float: none div
+      this.wrapEl = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-ColorField-Wrapper&#x27;});
+      this.wrapEl.appendChild(this.el);
+      this.wrapEl.appendChild(this.colorEl);
+      
+      
+      // Create button + wrapper
+      this.buttonWrapper = Y.Node.create(&#x27;&lt;span class=&quot;inputEx-ColorField-ButtonWrapper&quot;&gt;&#x27; +
+                                            &#x27;&lt;button type=&quot;button&quot; class=&quot;inputEx-ColorField-Button&quot;&gt;&#x27; +
+                                            &#x27;&lt;/button&gt;&#x27; +
+                                         &#x27;&lt;/span&gt;&#x27;);
+      
+      this.buttonWrapper.appendTo(this.wrapEl);
+      
+      // get a reference to the &lt;button&gt; element
+      this.button = this.buttonWrapper.one(&#x27;.inputEx-ColorField-Button&#x27;);
+      
+      // toggle Menu when clicking on the button
+      this.button.on(&#x27;click&#x27;,this._toggleOverlay, this, true);
+      
+      // toggle Menu when clicking on colorEl
+      Y.one(this.colorEl).on(&#x27;click&#x27;,this._toggleOverlay,this,true);
+      
+      // Elements are bound to divEl
+      this.fieldContainer.appendChild(this.wrapEl);
+   },
+   
+   /**
+    * @method renderPalette
+    */
+   renderPalette: function () {
+      
+      if (!this.oOverlay) {
+         this.renderOverlay();
+      }
+      
+      // render once !
+      if (this.paletteRendered) { return; }
+      
+      var defaultPalette;
+
+      // set default palette to be used
+      defaultPalette = this.options.palette || 1;
+
+      // set colors available
+      this.colors = this.options.colors || this.setDefaultColors(defaultPalette);
+      this.length = this.colors.length;
+
+      // set PopUp size ratio (default 16/9 ratio)
+      this.ratio = this.options.ratio || [16,9];
+
+      // set color grid dimensions
+      this.cellPerLine = this.options.cellPerLine || Math.ceil(Math.sqrt(this.length*this.ratio[0]/this.ratio[1]));
+      this.cellPerColumn = Math.ceil(this.length/this.cellPerLine);
+
+      // Render the color grid
+      this.colorGrid = this.renderColorGrid();
+      this.oOverlay.set(&#x27;bodyContent&#x27;, this.colorGrid);
+
+      this.paletteRendered = true;
+      
+      // Select the square in the created palette from the value
+      // This must be done after &quot;this.paletteRendered = true&quot;.
+      this.markSelectedColor();
+   },
+   
+   /**
+    * Set the colors to set in the picker
+    * @method setDefaultColors
+    * @param {int} index Index of the palette to use
+    * @return {Array} List of colors to choose from
+    */
+   setDefaultColors: function (index) {
+      return inputEx.ColorField.palettes[index-1];
+   },
+         
+   /**
+    * This creates a color grid
+    * @method renderColorGrid
+    */
+   renderColorGrid: function () {
+      
+      var gridEl, gridNode, square, i;
+      
+      // remember squares
+      this.squares = [];
+   
+      // container
+      gridEl = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-ColorField-Grid&#x27;});
+            
+      for (i = 0 ; i &lt; this.length ; i++) {
+         
+         square = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-ColorField-square&#x27;},{backgroundColor: this.colors[i] });
+         gridEl.appendChild(square);
+         
+         this.squares.push(square);
+         
+         // &lt;br clear=&#x27;both&#x27;/&gt; insertion to end a line
+         // ( + always after the last colored square)
+         if (i % this.cellPerLine === this.cellPerLine - 1 || i === this.length - 1) {
+            gridEl.appendChild(inputEx.cn(&#x27;br&#x27;,{clear:&#x27;both&#x27;}));
+         }
+      }
+      
+      gridNode = Y.one(gridEl);
+      
+      // click event delegation
+      gridNode.delegate(&quot;click&quot;, Y.bind(this.onColorClick, this), &quot;div.inputEx-ColorField-square&quot;);
+        
+      return gridNode;
+   },
+      
+   /**
+    * Handle a color selection
+    * @method onColorClick
+    * @param {Event} e The original click event
+    */
+   onColorClick: function (e) {
+      
+      var color, hexaColor;
+      
+      // Stop the event to prevent a selection
+      e.halt();
+      
+      // Overlay closure
+      this.oOverlay.hide();
+       
+      // SetValue
+      color     = e.currentTarget.getStyle(&#x27;backgroundColor&#x27;);
+      hexaColor = inputEx.ColorField.ensureHexa(color);
+      
+      this.setValue(hexaColor);
+   },
+   
+   /**
+    * Set the value
+    * @method setValue
+    * @param {String} value Color to set
+    * @param {boolean} [sendUpdatedEvt] (optional) Wether this setValue should fire the &#x27;updated&#x27; event or not
+    *                                             (default is true, pass false to NOT send the event)
+    */
+   setValue: function (value, sendUpdatedEvt) {
+      
+      this.el.value = value;
+   
+      this.markSelectedColor(value);
+
+      // Call Field.setValue to set class and fire updated event
+      inputEx.ColorField.superclass.setValue.call(this,value, sendUpdatedEvt);
+   },
+      
+   /**
+    * Return the color value
+    * @method getValue
+    * @return {String} Color value
+    */
+   getValue: function () {
+      return this.el.value;
+   },
+   
+   /**
+    * Call overlay when field is removed
+    * @method close
+    */
+   close: function () {
+      if (this.oOverlay) {
+         this.oOverlay.hide();
+      }
+   },
+   
+   /**
+    * Purge all event listeners and remove the component from the dom
+    * @method destroy
+    */
+   destroy: function () {
+      
+      this.button.purge();
+      
+      Y.one(this.colorEl).purge();
+      
+      if (this.colorGrid) {
+         this.colorGrid.purge();
+      }
+      
+      inputEx.ColorField.superclass.destroy.call(this);
+      
+   },
+   
+   /**
+    * @method markSelectedColor
+    */
+   markSelectedColor: function (value) {
+      
+      var i;
+      
+      value = value || this.getValue();
+      
+      // mark the colored square in the palette as &#x27;selected&#x27;
+      if (!!value &amp;&amp; this.paletteRendered) {
+         
+         value = value.toLowerCase(); // normalize case for following test
+         
+         for (i=0; i&lt;this.length; i++) {
+            
+            // test color in lower case
+            if (this.colors[i].toLowerCase() === value) {
+               Y.one(this.squares[i]).addClass(&#x27;selected&#x27;);
+            } else {
+               Y.one(this.squares[i]).removeClass(&#x27;selected&#x27;);
+            }
+            
+         }
+         
+      }
+      
+      // set background color on colorEl
+      Y.one(this.colorEl).setStyle(&#x27;backgroundColor&#x27;, this.el.value);
+      
+   }
+   
+});
+
+/**
+ * Default palettes
+ * @property palettes
+ */
+inputEx.ColorField.palettes = [
+   [&quot;#FFEA99&quot;,&quot;#FFFF66&quot;,&quot;#FFCC99&quot;,&quot;#FFCAB2&quot;,&quot;#FF99AD&quot;,&quot;#FFD6FF&quot;,&quot;#FF6666&quot;,&quot;#E8EEF7&quot;,
+    &quot;#ADC2FF&quot;,&quot;#ADADFF&quot;,&quot;#CCFFFF&quot;,&quot;#D6EAAD&quot;,&quot;#B5EDBC&quot;,&quot;#CCFF99&quot;],
+   [&quot;#DEDFDE&quot;,&quot;#FFFF6B&quot;,&quot;#EFCB7B&quot;,&quot;#FFBE94&quot;,&quot;#FFB6B5&quot;,&quot;#A5E3FF&quot;,&quot;#A5CBFF&quot;,&quot;#99ABEF&quot;,
+   &quot;#EFB2E7&quot;,&quot;#FF9AAD&quot;,&quot;#94E7C6&quot;,&quot;#A5FFD6&quot;,&quot;#CEFFA5&quot;,&quot;#E7EF9C&quot;,&quot;#FFE38C&quot;],
+   [&quot;#000000&quot;,&quot;#993300&quot;,&quot;#333300&quot;,&quot;#003300&quot;,&quot;#003366&quot;,&quot;#000080&quot;,&quot;#333399&quot;,&quot;#333333&quot;,
+    &quot;#800000&quot;,&quot;#FF6600&quot;,&quot;#808000&quot;,&quot;#008000&quot;,&quot;#008080&quot;,&quot;#0000FF&quot;,&quot;#666699&quot;,&quot;#808080&quot;,
+    &quot;#FF0000&quot;,&quot;#FF9900&quot;,&quot;#99CC00&quot;,&quot;#339966&quot;,&quot;#33CCCC&quot;,&quot;#3366FF&quot;,&quot;#800080&quot;,&quot;#969696&quot;,
+    &quot;#FF00FF&quot;,&quot;#FFCC00&quot;,&quot;#FFFF00&quot;,&quot;#00FF00&quot;,&quot;#00FFFF&quot;,&quot;#00CCFF&quot;,&quot;#993366&quot;,&quot;#C0C0C0&quot;,
+    &quot;#FF99CC&quot;,&quot;#FFCC99&quot;,&quot;#FFFF99&quot;,&quot;#CCFFCC&quot;,&quot;#CCFFFF&quot;,&quot;#99CCFF&quot;,&quot;#CC99FF&quot;,&quot;#F0F0F0&quot;],
+   [&quot;#FFFFCC&quot;,&quot;#FFFF99&quot;,&quot;#CCFFCC&quot;,&quot;#CCFF66&quot;,&quot;#99FFCC&quot;,&quot;#CCFFFF&quot;,&quot;#66CCCC&quot;,&quot;#CCCCFF&quot;,
+    &quot;#99CCFF&quot;,&quot;#9999FF&quot;,&quot;#6666CC&quot;,&quot;#9966CC&quot;,&quot;#CC99FF&quot;,&quot;#FFCCFF&quot;,&quot;#FF99FF&quot;,&quot;#CC66CC&quot;,
+    &quot;#FFCCCC&quot;,&quot;#FF99CC&quot;,&quot;#FFCCCC&quot;,&quot;#CC6699&quot;,&quot;#FF9999&quot;,&quot;#FF9966&quot;,&quot;#FFCC99&quot;,&quot;#FFFFCC&quot;,
+    &quot;#FFCC66&quot;,&quot;#FFFF99&quot;,&quot;#CCCC66&quot;],
+   [&quot;#D0D0D0&quot;,&quot;#31A8FA&quot;,&quot;#8EC1E5&quot;,&quot;#58D7CF&quot;,&quot;#89E2BB&quot;,&quot;#A7F7F8&quot;,&quot;#F6B77C&quot;,&quot;#FE993F&quot;,
+    &quot;#FE6440&quot;,&quot;#F56572&quot;,&quot;#FA9AA3&quot;,&quot;#F7B1CA&quot;,&quot;#E584AF&quot;,&quot;#D1C3EF&quot;,&quot;#AB77B8&quot;,&quot;#C69FE7&quot;,
+    &quot;#90D28A&quot;,&quot;#C2F175&quot;,&quot;#EDEA9A&quot;,&quot;#F3DF70&quot;,&quot;#F8D1AE&quot;,&quot;#F98064&quot;,&quot;#F54F5E&quot;,&quot;#EC9099&quot;,
+    &quot;#F0B5BA&quot;,&quot;#EDA0BB&quot;,&quot;#D375AC&quot;,&quot;#BC8DBE&quot;,&quot;#8C77B8&quot;],
+   // idem in pastel tone (colors above with opacity 0.6 on white background)
+   [&quot;#EEEEEE&quot;,&quot;#84CBFC&quot;,&quot;#BCDAF0&quot;,&quot;#9BE7E3&quot;,&quot;#B9EED7&quot;,&quot;#CBFBFB&quot;,&quot;#FAD4B1&quot;,&quot;#FFC28C&quot;,
+    &quot;#FFA28D&quot;,&quot;#F9A3AB&quot;,&quot;#FCC3C8&quot;,&quot;#FBD1E0&quot;,&quot;#F0B6CF&quot;,&quot;#E4DBF6&quot;,&quot;#CDAED5&quot;,&quot;#DDC6F1&quot;,
+    &quot;#BDE4B9&quot;,&quot;#DBF7AD&quot;,&quot;#F5F3C3&quot;,&quot;#F8ECAA&quot;,&quot;#FBE4CF&quot;,&quot;#FCB3A2&quot;,&quot;#F9969F&quot;,&quot;#F4BDC2&quot;,
+    &quot;#F6D3D6&quot;,&quot;#F5C6D7&quot;,&quot;#E5ADCE&quot;,&quot;#D7BBD8&quot;,&quot;#BAAED5&quot;]
+];
+
+//  -&gt; ensure color has hexadecimal format like &quot;#FF8E00&quot;
+inputEx.ColorField.ensureHexa = function (color) {
+   
+   var rgb, hexaColor, decToHex;
+   
+   // remove spaces
+   color = color.replace(/\s/g, &quot;&quot;);
+   
+   // Firefox, Safari
+   //   -&gt; format &quot;rgb(255,143,28)&quot;
+   if (!!color.match(/^rgb\((?:\d{1,3},){2}\d{1,3}\)$/)) {
+      
+      // Convert integer (int or string) to hexadecimal (2 chars)
+      //   ex: &quot;214&quot; -&gt; &quot;d6&quot;
+      decToHex = function (dec) {
+         var r = parseInt(dec, 10).toString(16);
+         if (r.length === 1) { r = &quot;0&quot; + r; }
+         return r;
+      };
+      
+      rgb = color.split(/([(,)])/);
+      hexaColor = &#x27;#&#x27; + decToHex(rgb[2]) + decToHex(rgb[4]) + decToHex(rgb[6]);
+      
+   // IE, Opera
+   //   -&gt; format &quot;#FE6D34&quot;
+   } else if (!!color.match(/^#[\da-fA-F]{6}$/)) {
+      hexaColor = color;
+      
+   } else {
+      // defaults to white if invalid color
+      hexaColor = &quot;#FFFFFF&quot;;
+   }
+   
+   return hexaColor;
+};
+
+// Register this class as &quot;color&quot; type
+inputEx.registerType(&quot;color&quot;, inputEx.ColorField, []);
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

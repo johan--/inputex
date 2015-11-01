@@ -1,10 +1,15 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "Plugin.CalendarTodayHighlight",
+        "Plugin.CalendarWeekNumber",
+        "Plugin.NodeMenuNavImproved",
+        "Y.InputexAccentRemover",
         "inputEx",
         "inputEx.AutoComplete",
         "inputEx.Base",
         "inputEx.CheckBox",
+        "inputEx.CheckboxMultiState",
         "inputEx.ColorField",
         "inputEx.CombineField",
         "inputEx.DDListField",
@@ -14,8 +19,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "inputEx.DateSelectMonthField",
         "inputEx.DateSplitField",
         "inputEx.DateTimeField",
+        "inputEx.DomainNameField",
         "inputEx.EmailField",
-        "inputEx.Field",
         "inputEx.FileField",
         "inputEx.Form",
         "inputEx.Group",
@@ -39,6 +44,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "inputEx.ObjectField",
         "inputEx.Panel",
         "inputEx.PasswordField",
+        "inputEx.PhoneField",
         "inputEx.Plugin.InputExDataTable",
         "inputEx.RPC",
         "inputEx.RPC.Envelope",
@@ -73,6 +79,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "inputEx.UpperCaseField",
         "inputEx.UrlField",
         "inputEx.VectorField",
+        "inputEx.constructor",
         "inputEx.mixin",
         "inputEx.mixin.choice",
         "inputEx.visus",
@@ -81,7 +88,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "inputEx.widget.JsonTreeInspector"
     ],
     "modules": [
+        "checkbox-multi-state",
         "inputex",
+        "inputex-accent-remover\n\nAs you may guess, this module will help you on the way you will handle your accent.\nThere is a by instance configuration and you can easilly change it. see the example below\n\nex:\n\n var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for 'e' below\n var myAccentRemover2 = new Y.inputEx.AccentRemover();\n myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp\n\n myAccentRemover1.removeAccents(\"treétreè\"); __ treetree\n myAccentRemover2.removeAccents(\"treétreè\"); __ treétree",
         "inputex-autocomplete",
         "inputex-base",
         "inputex-button",
@@ -122,6 +131,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "inputex-object",
         "inputex-panel",
         "inputex-password",
+        "inputex-phone",
         "inputex-radio",
         "inputex-ratingstars",
         "inputex-ratingstarsform",
@@ -149,9 +159,17 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "allModules": [
         {
+            "displayName": "checkbox-multi-state",
+            "name": "checkbox-multi-state"
+        },
+        {
             "displayName": "inputex",
             "name": "inputex",
             "description": "The inputEx Library"
+        },
+        {
+            "displayName": "inputex-accent-remover\n\nAs you may guess, this module will help you on the way you will handle your accent.\nThere is a by instance configuration and you can easilly change it. see the example below\n\nex:\n\n var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for 'e' below\n var myAccentRemover2 = new Y.inputEx.AccentRemover();\n myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp\n\n myAccentRemover1.removeAccents(\"treétreè\"); // treetree\n myAccentRemover2.removeAccents(\"treétreè\"); // treétree",
+            "name": "inputex-accent-remover\n\nAs you may guess, this module will help you on the way you will handle your accent.\nThere is a by instance configuration and you can easilly change it. see the example below\n\nex:\n\n var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for 'e' below\n var myAccentRemover2 = new Y.inputEx.AccentRemover();\n myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp\n\n myAccentRemover1.removeAccents(\"treétreè\"); __ treetree\n myAccentRemover2.removeAccents(\"treétreè\"); __ treétree"
         },
         {
             "displayName": "inputex-autocomplete",
@@ -318,6 +336,10 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "inputex-password"
         },
         {
+            "displayName": "inputex-phone",
+            "name": "inputex-phone"
+        },
+        {
             "displayName": "inputex-radio",
             "name": "inputex-radio"
         },
@@ -415,6 +437,7 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "inputex-visus",
             "description": "Used by InPlaceEdit and Uneditable fields"
         }
-    ]
+    ],
+    "elements": []
 } };
 });

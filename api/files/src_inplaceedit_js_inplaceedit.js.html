@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/inplaceedit/js/inplaceedit.js - InputEx</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="InputEx" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 4.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/inputEx.html">inputEx</a></li>
+                                <li><a href="../classes/inputEx.AutoComplete.html">inputEx.AutoComplete</a></li>
+                                <li><a href="../classes/inputEx.Base.html">inputEx.Base</a></li>
+                                <li><a href="../classes/inputEx.CheckBox.html">inputEx.CheckBox</a></li>
+                                <li><a href="../classes/inputEx.CheckboxMultiState.html">inputEx.CheckboxMultiState</a></li>
+                                <li><a href="../classes/inputEx.ColorField.html">inputEx.ColorField</a></li>
+                                <li><a href="../classes/inputEx.CombineField.html">inputEx.CombineField</a></li>
+                                <li><a href="../classes/inputEx.constructor.html">inputEx.constructor</a></li>
+                                <li><a href="../classes/inputEx.DateField.html">inputEx.DateField</a></li>
+                                <li><a href="../classes/inputEx.DatePickerField.html">inputEx.DatePickerField</a></li>
+                                <li><a href="../classes/inputEx.DateSelectMonthField.html">inputEx.DateSelectMonthField</a></li>
+                                <li><a href="../classes/inputEx.DateSplitField.html">inputEx.DateSplitField</a></li>
+                                <li><a href="../classes/inputEx.DateTimeField.html">inputEx.DateTimeField</a></li>
+                                <li><a href="../classes/inputEx.DDListField.html">inputEx.DDListField</a></li>
+                                <li><a href="../classes/inputEx.DomainNameField.html">inputEx.DomainNameField</a></li>
+                                <li><a href="../classes/inputEx.DSSelectField.html">inputEx.DSSelectField</a></li>
+                                <li><a href="../classes/inputEx.EmailField.html">inputEx.EmailField</a></li>
+                                <li><a href="../classes/inputEx.FileField.html">inputEx.FileField</a></li>
+                                <li><a href="../classes/inputEx.Form.html">inputEx.Form</a></li>
+                                <li><a href="../classes/inputEx.Group.html">inputEx.Group</a></li>
+                                <li><a href="../classes/inputEx.HiddenField.html">inputEx.HiddenField</a></li>
+                                <li><a href="../classes/inputEx.ImageCropperField.html">inputEx.ImageCropperField</a></li>
+                                <li><a href="../classes/inputEx.InPlaceEdit.html">inputEx.InPlaceEdit</a></li>
+                                <li><a href="../classes/inputEx.IntegerField.html">inputEx.IntegerField</a></li>
+                                <li><a href="../classes/inputEx.IPv4Field.html">inputEx.IPv4Field</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.html">inputEx.JsonSchema</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.Builder.html">inputEx.JsonSchema.Builder</a></li>
+                                <li><a href="../classes/inputEx.KeyOpValueField.html">inputEx.KeyOpValueField</a></li>
+                                <li><a href="../classes/inputEx.KeyValueField.html">inputEx.KeyValueField</a></li>
+                                <li><a href="../classes/inputEx.Lens.html">inputEx.Lens</a></li>
+                                <li><a href="../classes/inputEx.LinkedComboField.html">inputEx.LinkedComboField</a></li>
+                                <li><a href="../classes/inputEx.ListField.html">inputEx.ListField</a></li>
+                                <li><a href="../classes/inputEx.MapField.html">inputEx.MapField</a></li>
+                                <li><a href="../classes/inputEx.MenuField.html">inputEx.MenuField</a></li>
+                                <li><a href="../classes/inputEx.mixin.html">inputEx.mixin</a></li>
+                                <li><a href="../classes/inputEx.mixin.choice.html">inputEx.mixin.choice</a></li>
+                                <li><a href="../classes/inputEx.MultiAutoComplete.html">inputEx.MultiAutoComplete</a></li>
+                                <li><a href="../classes/inputEx.MultiSelectField.html">inputEx.MultiSelectField</a></li>
+                                <li><a href="../classes/inputEx.NumberField.html">inputEx.NumberField</a></li>
+                                <li><a href="../classes/inputEx.ObjectField.html">inputEx.ObjectField</a></li>
+                                <li><a href="../classes/inputEx.Panel.html">inputEx.Panel</a></li>
+                                <li><a href="../classes/inputEx.PasswordField.html">inputEx.PasswordField</a></li>
+                                <li><a href="../classes/inputEx.PhoneField.html">inputEx.PhoneField</a></li>
+                                <li><a href="../classes/inputEx.Plugin.InputExDataTable.html">inputEx.Plugin.InputExDataTable</a></li>
+                                <li><a href="../classes/inputEx.RadioField.html">inputEx.RadioField</a></li>
+                                <li><a href="../classes/inputEx.RatingStars.html">inputEx.RatingStars</a></li>
+                                <li><a href="../classes/inputEx.RatingStarsForm.html">inputEx.RatingStarsForm</a></li>
+                                <li><a href="../classes/inputEx.RPC.html">inputEx.RPC</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.html">inputEx.RPC.Envelope</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON.html">inputEx.RPC.Envelope.JSON</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-1.0.html">inputEx.RPC.Envelope.JSON-RPC-1.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-2.0.html">inputEx.RPC.Envelope.JSON-RPC-2.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.PATH.html">inputEx.RPC.Envelope.PATH</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.URL.html">inputEx.RPC.Envelope.URL</a></li>
+                                <li><a href="../classes/inputEx.RPC.Service.html">inputEx.RPC.Service</a></li>
+                                <li><a href="../classes/inputEx.RPC.SMDTester.html">inputEx.RPC.SMDTester</a></li>
+                                <li><a href="../classes/inputEx.RPC.Transport.html">inputEx.RPC.Transport</a></li>
+                                <li><a href="../classes/inputEx.RTEField.html">inputEx.RTEField</a></li>
+                                <li><a href="../classes/inputEx.SelectField.html">inputEx.SelectField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.html">inputEx.SerializeField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.html">inputEx.SerializeField.serializers</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.json.html">inputEx.SerializeField.serializers.json</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.xml.html">inputEx.SerializeField.serializers.xml</a></li>
+                                <li><a href="../classes/inputEx.SliderField.html">inputEx.SliderField</a></li>
+                                <li><a href="../classes/inputEx.StringAvailability.html">inputEx.StringAvailability</a></li>
+                                <li><a href="../classes/inputEx.StringField.html">inputEx.StringField</a></li>
+                                <li><a href="../classes/inputEx.Textarea.html">inputEx.Textarea</a></li>
+                                <li><a href="../classes/inputEx.TextAutoTag.html">inputEx.TextAutoTag</a></li>
+                                <li><a href="../classes/inputEx.TimeField.html">inputEx.TimeField</a></li>
+                                <li><a href="../classes/inputEx.TimeIntervalField.html">inputEx.TimeIntervalField</a></li>
+                                <li><a href="../classes/inputEx.TinyMCEField.html">inputEx.TinyMCEField</a></li>
+                                <li><a href="../classes/inputEx.TreeField.html">inputEx.TreeField</a></li>
+                                <li><a href="../classes/inputEx.TypeField.html">inputEx.TypeField</a></li>
+                                <li><a href="../classes/inputEx.UneditableField.html">inputEx.UneditableField</a></li>
+                                <li><a href="../classes/inputEx.UpperCaseField.html">inputEx.UpperCaseField</a></li>
+                                <li><a href="../classes/inputEx.UrlField.html">inputEx.UrlField</a></li>
+                                <li><a href="../classes/inputEx.VectorField.html">inputEx.VectorField</a></li>
+                                <li><a href="../classes/inputEx.visus.html">inputEx.visus</a></li>
+                                <li><a href="../classes/inputEx.widget.html">inputEx.widget</a></li>
+                                <li><a href="../classes/inputEx.widget.Button.html">inputEx.widget.Button</a></li>
+                                <li><a href="../classes/inputEx.widget.JsonTreeInspector.html">inputEx.widget.JsonTreeInspector</a></li>
+                                <li><a href="../classes/Plugin.CalendarTodayHighlight.html">Plugin.CalendarTodayHighlight</a></li>
+                                <li><a href="../classes/Plugin.CalendarWeekNumber.html">Plugin.CalendarWeekNumber</a></li>
+                                <li><a href="../classes/Plugin.NodeMenuNavImproved.html">Plugin.NodeMenuNavImproved</a></li>
+                                <li><a href="../classes/Y.InputexAccentRemover.html">Y.InputexAccentRemover</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/checkbox-multi-state.html">checkbox-multi-state</a></li>
+                                <li><a href="../modules/inputex.html">inputex</a></li>
+                                <li><a href="../modules/inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); __ treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); __ treétree.html">inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); // treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); // treétree</a></li>
+                                <li><a href="../modules/inputex-autocomplete.html">inputex-autocomplete</a></li>
+                                <li><a href="../modules/inputex-base.html">inputex-base</a></li>
+                                <li><a href="../modules/inputex-button.html">inputex-button</a></li>
+                                <li><a href="../modules/inputex-checkbox.html">inputex-checkbox</a></li>
+                                <li><a href="../modules/inputex-choice.html">inputex-choice</a></li>
+                                <li><a href="../modules/inputex-color.html">inputex-color</a></li>
+                                <li><a href="../modules/inputex-combine.html">inputex-combine</a></li>
+                                <li><a href="../modules/inputex-datatable.html">inputex-datatable</a></li>
+                                <li><a href="../modules/inputex-date.html">inputex-date</a></li>
+                                <li><a href="../modules/inputex-datepicker.html">inputex-datepicker</a></li>
+                                <li><a href="../modules/inputex-dateselectmonth.html">inputex-dateselectmonth</a></li>
+                                <li><a href="../modules/inputex-datesplit.html">inputex-datesplit</a></li>
+                                <li><a href="../modules/inputex-datetime.html">inputex-datetime</a></li>
+                                <li><a href="../modules/inputex-ddlist.html">inputex-ddlist</a></li>
+                                <li><a href="../modules/inputex-dsselect.html">inputex-dsselect</a></li>
+                                <li><a href="../modules/inputex-email.html">inputex-email</a></li>
+                                <li><a href="../modules/inputex-field.html">inputex-field</a></li>
+                                <li><a href="../modules/inputex-file.html">inputex-file</a></li>
+                                <li><a href="../modules/inputex-form.html">inputex-form</a></li>
+                                <li><a href="../modules/inputex-group.html">inputex-group</a></li>
+                                <li><a href="../modules/inputex-hidden.html">inputex-hidden</a></li>
+                                <li><a href="../modules/inputex-imagecropper.html">inputex-imagecropper</a></li>
+                                <li><a href="../modules/inputex-inplaceedit.html">inputex-inplaceedit</a></li>
+                                <li><a href="../modules/inputex-integer.html">inputex-integer</a></li>
+                                <li><a href="../modules/inputex-ipv4.html">inputex-ipv4</a></li>
+                                <li><a href="../modules/inputex-jsonschema.html">inputex-jsonschema</a></li>
+                                <li><a href="../modules/inputex-jsontreeinspector.html">inputex-jsontreeinspector</a></li>
+                                <li><a href="../modules/inputex-keyopvalue.html">inputex-keyopvalue</a></li>
+                                <li><a href="../modules/inputex-keyvalue.html">inputex-keyvalue</a></li>
+                                <li><a href="../modules/inputex-lens.html">inputex-lens</a></li>
+                                <li><a href="../modules/inputex-linkedcombo.html">inputex-linkedcombo</a></li>
+                                <li><a href="../modules/inputex-list.html">inputex-list</a></li>
+                                <li><a href="../modules/inputex-map.html">inputex-map</a></li>
+                                <li><a href="../modules/inputex-menu.html">inputex-menu</a></li>
+                                <li><a href="../modules/inputex-multiautocomplete.html">inputex-multiautocomplete</a></li>
+                                <li><a href="../modules/inputex-multiselect.html">inputex-multiselect</a></li>
+                                <li><a href="../modules/inputex-number.html">inputex-number</a></li>
+                                <li><a href="../modules/inputex-object.html">inputex-object</a></li>
+                                <li><a href="../modules/inputex-panel.html">inputex-panel</a></li>
+                                <li><a href="../modules/inputex-password.html">inputex-password</a></li>
+                                <li><a href="../modules/inputex-phone.html">inputex-phone</a></li>
+                                <li><a href="../modules/inputex-radio.html">inputex-radio</a></li>
+                                <li><a href="../modules/inputex-ratingstars.html">inputex-ratingstars</a></li>
+                                <li><a href="../modules/inputex-ratingstarsform.html">inputex-ratingstarsform</a></li>
+                                <li><a href="../modules/inputex-rpc.html">inputex-rpc</a></li>
+                                <li><a href="../modules/inputex-rte.html">inputex-rte</a></li>
+                                <li><a href="../modules/inputex-select.html">inputex-select</a></li>
+                                <li><a href="../modules/inputex-serialize.html">inputex-serialize</a></li>
+                                <li><a href="../modules/inputex-slider.html">inputex-slider</a></li>
+                                <li><a href="../modules/inputex-smdtester.html">inputex-smdtester</a></li>
+                                <li><a href="../modules/inputex-string.html">inputex-string</a></li>
+                                <li><a href="../modules/inputex-stringavailability.html">inputex-stringavailability</a></li>
+                                <li><a href="../modules/inputex-textarea.html">inputex-textarea</a></li>
+                                <li><a href="../modules/inputex-textautotag.html">inputex-textautotag</a></li>
+                                <li><a href="../modules/inputex-time.html">inputex-time</a></li>
+                                <li><a href="../modules/inputex-timeinterval.html">inputex-timeinterval</a></li>
+                                <li><a href="../modules/inputex-timerange.html">inputex-timerange</a></li>
+                                <li><a href="../modules/inputex-tinymce.html">inputex-tinymce</a></li>
+                                <li><a href="../modules/inputex-tree.html">inputex-tree</a></li>
+                                <li><a href="../modules/inputex-type.html">inputex-type</a></li>
+                                <li><a href="../modules/inputex-uneditable.html">inputex-uneditable</a></li>
+                                <li><a href="../modules/inputex-uppercase.html">inputex-uppercase</a></li>
+                                <li><a href="../modules/inputex-url.html">inputex-url</a></li>
+                                <li><a href="../modules/inputex-vector.html">inputex-vector</a></li>
+                                <li><a href="../modules/inputex-visus.html">inputex-visus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/inplaceedit/js/inplaceedit.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module inputex-inplaceedit
+ */
+   var lang = Y.Lang,
+       inputEx = Y.inputEx,
+       CSS_PREFIX = &quot;inputEx-&quot;;
+
+/**
+ * Meta field providing in place editing (the editor appears when you click on the formatted value).
+ * @class inputEx.InPlaceEdit
+ * @extends inputEx.Field
+ * @constructor
+ * @param {Object} options Added options:
+ * &lt;ul&gt;
+ *   &lt;li&gt;visu&lt;/li&gt;
+ *   &lt;li&gt;editorField&lt;/li&gt;
+ *   &lt;li&gt;animColors&lt;/li&gt;
+ * &lt;/ul&gt;
+ */
+inputEx.InPlaceEdit = function(options) {
+   inputEx.InPlaceEdit.superclass.constructor.call(this, options);
+   this.publish(&#x27;openEditor&#x27;);
+   this.publish(&#x27;closeEditor&#x27;);
+};
+
+Y.extend(inputEx.InPlaceEdit, inputEx.Field, {
+   /**
+    * Set the default values of the options
+    * @method setOptions
+    * @param {Object} options Options object as passed to the constructor
+    */
+   setOptions: function(options) {
+
+      var that = this, buttonConfigs, buttonConfigsLength, i, item;
+
+
+      inputEx.InPlaceEdit.superclass.setOptions.call(this, options);
+      
+      //I18N
+      this.messages = Y.mix(this.messages, Y.Intl.get(&quot;inputex-inplaceedit&quot;));
+      
+      this.options.visu = options.visu;
+      
+      this.options.editorField = options.editorField;
+      
+      //this.options.buttonTypes = options.buttonTypes || {ok:&quot;submit&quot;,cancel:&quot;link&quot;};
+
+      if (!options.buttonConfigs) {
+          // Default
+          this.options.buttonConfigs = [{
+              type: &quot;submit&quot;,
+              value: this.messages.okEditor,
+              className: &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;OkButton&#x27;,
+              onClick: {
+                  fn: this.onOkEditor,
+                  scope: this
+              }
+          }, {
+              type: &quot;link&quot;,
+              value: this.messages.cancelEditor,
+              className: &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;CancelLink&#x27;,
+              onClick: {
+                  fn: this.onCancelEditor,
+                  scope: this
+              }
+          }];
+
+      } else {
+          // Custumized buttons
+          buttonConfigs = options.buttonConfigs;
+          buttonConfigsLength = buttonConfigs.length;
+
+          for (i = 0 ; i &lt; buttonConfigsLength ; i++){
+            item = buttonConfigs[i];
+ 
+              if (item.isOkButton) {
+                  item.value = item.value || that.messages.okEditor;
+                  item.className ? item.className += &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;OkButton&#x27; : &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;OkButton&#x27;;
+                  item.onClick ? item.onClick : item.onClick = {
+                      fn: that.onOkEditor,
+                      scope: that
+                  };
+              } else {
+                  item.value = item.value || that.messages.cancelEditor;
+                  item.className ? item.className += &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;CancelLink&#x27; : &quot;inputEx-Button &quot; + CSS_PREFIX + &#x27;CancelLink&#x27;;
+                  item.onClick ? item.onClick : item.onClick = {
+                      fn: that.onCancelEditor,
+                      scope: that
+                };
+              }
+          }
+
+          this.options.buttonConfigs = buttonConfigs;
+
+      }
+ 
+      this.options.animColors = options.animColors || null;
+   },
+   
+   /**
+    * Override renderComponent to create 2 divs: the visualization one, and the edit in place form
+    * @method renderComponent
+    */
+   renderComponent: function() {
+      this.renderVisuDiv();
+     this.renderEditor();
+   },
+   
+   /**
+    * Render the editor
+    * @method renderEditor
+    */
+   renderEditor: function() {
+      var i,
+         editorFieldEl,
+         config;
+
+      this.editorContainer = inputEx.cn(&#x27;div&#x27;, {className: CSS_PREFIX+&#x27;editor&#x27;}, {display: &#x27;none&#x27;});
+      
+      // Render the editor field
+      if(!this.options.editorField){
+        throw new Error(&quot;Missing &#x27;editorField&#x27; property in options&quot;);
+      }
+      this.editorField = inputEx(this.options.editorField,this);
+      editorFieldEl = this.editorField.getEl();
+      
+      this.editorContainer.appendChild( editorFieldEl );
+      Y.one(editorFieldEl).addClass(CSS_PREFIX+&#x27;editorDiv&#x27;);
+      this.buttons = [];
+      for (i = 0; i &lt; this.options.buttonConfigs.length ; i++){
+        config = this.options.buttonConfigs[i];
+        config.parentEl = this.editorContainer;
+        this.buttons.push(new inputEx.widget.Button(config));
+      }
+      
+      // Line breaker ()
+      this.editorContainer.appendChild( inputEx.cn(&#x27;div&#x27;,null, {clear: &#x27;both&#x27;}) );
+      
+      this.fieldContainer.appendChild(this.editorContainer);
+      
+   },
+   
+   /**
+    * Set the color when hovering the field
+    * @method onVisuMouseOver
+    * @param {Event} e The original mouseover event
+    */
+   onVisuMouseOver: function() {
+      // to totally disable the visual effect on mouse enter, you should change css options inputEx-InPlaceEdit-visu:hover
+      if(this.disabled) {
+         return;
+      }
+      
+      if(this.colorAnim) {
+         this.colorAnim.stop(true);
+      }
+      inputEx.sn(this.formattedContainer, null, {backgroundColor: this.options.animColors.from });
+   },
+   
+   /**
+    * Start the color animation when hovering the field
+    * @method onVisuMouseOut
+    * @param {Event} e The original mouseout event
+    */
+   onVisuMouseOut: function() {
+      var optionsAnim, that;
+      if(this.disabled) {
+         return;
+      }
+      
+      // Start animation
+      if(this.colorAnim) {
+         this.colorAnim.stop(true);
+      }
+      if(!this.options.animColors) {
+         return;
+      }
+
+      optionsAnim =  {
+        node: this.formattedContainer
+      };
+
+      if(this.options.animColors.from){
+        optionsAnim.from = {
+          backgroundColor : this.options.animColors.from
+        };
+      }
+      if(this.options.animColors.from){
+        optionsAnim.to = {
+          backgroundColor : this.options.animColors.to
+        };
+      }
+      this.colorAnim = new Y.Anim(optionsAnim);
+      that = this;
+      this.colorAnim.on(&quot;end&quot;,function() {
+        Y.one(that.formattedContainer).setStyle(&#x27;backgroundColor&#x27;, &#x27;&#x27;);
+      });
+      this.colorAnim.run();
+      
+   },
+   
+   /**
+    * Create the div that will contain the visualization of the value
+    * @method renderVisuDiv
+    */
+   renderVisuDiv: function() {
+      this.formattedContainer = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-InPlaceEdit-visu&#x27;});
+      
+      if( lang.isFunction(this.options.formatDom) ) {
+         this.formattedContainer.appendChild( this.options.formatDom(this.options.value) );
+      }
+      else if( lang.isFunction(this.options.formatValue) ) {
+         this.formattedContainer.innerHTML = this.options.formatValue(this.options.value);
+      }
+      else {
+         this.formattedContainer.innerHTML = lang.isUndefined(this.options.value) ? this.messages.emptyInPlaceEdit: this.options.value;
+      }
+      
+      this.fieldContainer.appendChild(this.formattedContainer);
+      
+   },
+
+   /**
+    * Adds the events for the editor and color animations
+    * @method initEvents
+    */
+   initEvents: function() {
+      Y.one(this.formattedContainer).on(&quot;click&quot;, this.openEditor, this, true);
+            
+      // For color animation (if specified)
+      if (this.options.animColors) {
+         Y.one(this.formattedContainer).on(&#x27;mouseover&#x27;, this.onVisuMouseOver, this);
+         Y.one(this.formattedContainer).on(&#x27;mouseout&#x27;, this.onVisuMouseOut, this);
+      }
+      
+      if(this.editorField.el) {
+         var that = this;
+         // Register some listeners
+         Y.on(&quot;keyup&quot;, function(e){ that.onKeyUp(e); },&quot;#&quot;+Y.one(this.editorField.el).get(&quot;id&quot;));
+         Y.on(&quot;keydown&quot;, function(e){ that.onKeyDown(e); },&quot;#&quot;+Y.one(this.editorField.el).get(&quot;id&quot;));
+      }
+   },
+   
+   /**
+    * Handle some keys events to close the editor
+    * @method onKeyUp
+    * @param {Event} e The original keyup event
+    */
+   onKeyUp: function(e) {
+      // Enter
+      if( e.keyCode === 13) {
+         this.onOkEditor(e);
+      }
+      // Escape
+      if( e.keyCode === 27) {
+         this.onCancelEditor(e);
+      }
+   },
+   
+   /**
+    * Handle the tabulation key to close the editor
+    * @method onKeyDown
+    * @param {Event} e The original keydown event
+    */
+   onKeyDown: function(e) {
+      // Tab
+      if(e.keyCode === 9) {
+         this.onOkEditor(e);
+      }
+   },
+   
+   /**
+    * Validate the editor (ok button, enter key or tabulation key)
+    * @method onOkEditor
+    */
+   onOkEditor: function(e) {
+
+      var newValue, that;
+
+      if(e) {
+         e.halt();
+      }
+      
+      newValue = this.editorField.getValue();
+      this.setValue(newValue);
+      this.closeEditor();
+      
+      that = this;
+      setTimeout(function() {that.fire(&quot;updated&quot;,newValue);}, 50);
+   },
+
+   
+   /**
+    * Close the editor on cancel (cancel button, blur event or escape key)
+    * @method onCancelEditor
+    * @param {Event} e The original event (click, blur or keydown)
+    */
+   onCancelEditor: function(e) {
+      if(e) {
+         e.halt();
+      }
+      this.closeEditor();
+   },
+   
+   /**
+    * Close the editor on cancel (cancel button, blur event or escape key)
+    * @method closeEditor
+    * @param {Event} e The original event (click, blur or keydown)
+    */
+   closeEditor: function() {
+      this.editorContainer.style.display = &#x27;none&#x27;;
+      this.formattedContainer.style.display = &#x27;&#x27;;
+      this.fire(&quot;closeEditor&quot;);
+   },
+       
+   /**
+    * Override enable to Enable openEditor
+    * @method enable
+    */
+    enable: function(){
+      inputEx.sn(this.formattedContainer, {className: &#x27;inputEx-InPlaceEdit-visu&#x27;});
+      return inputEx.InPlaceEdit.superclass.enable.call(this);
+    },
+    
+   /**
+    * Override disable to Disable openEditor
+    * @method disable
+    */
+    disable: function(){
+      inputEx.sn(this.formattedContainer, {className: &#x27;inputEx-InPlaceEdit-visu-disable&#x27;});
+      return inputEx.InPlaceEdit.superclass.disable.call(this);
+    },
+    
+   /**
+    * Display the editor
+    * @method openEditor
+    */
+   openEditor: function() {
+      if(this.disabled) {
+         return;
+      }
+
+      var value = this.getValue();
+      this.editorContainer.style.display = &#x27;&#x27;;
+      this.formattedContainer.style.display = &#x27;none&#x27;;
+   
+      if(!lang.isUndefined(value)) {
+         this.editorField.setValue(value);
+      }
+      
+      // Set focus in the element !
+      this.editorField.focus();
+   
+      // Select the content
+      if(this.editorField.el &amp;&amp; lang.isFunction(this.editorField.el.setSelectionRange) &amp;&amp; (!!value &amp;&amp; !!value.length)) {
+         this.editorField.el.setSelectionRange(0,value.length);
+      }
+      this.fire(&quot;openEditor&quot;);
+   },
+   
+   /**
+    * Returned the previously stored value
+    * @method getValue
+    * @return {Any} The value of the subfield
+    */
+   getValue: function() {
+      var editorOpened = (this.editorContainer.style.display === &#x27;&#x27;);
+      return editorOpened ? this.editorField.getValue() : this.value;
+   },
+
+   /**
+    * Set the value and update the display
+    * @method setValue
+    * @param {Any} value The value to set
+    * @param {boolean} [sendUpdatedEvt] (optional) Wether this setValue should fire the &#x27;updated&#x27;
+    * event or not (default is true, pass false to NOT send the event)
+    */
+   setValue: function(value, sendUpdatedEvt) {
+      // Store the value
+     this.value = value;
+   
+      if(lang.isUndefined(value) || value === &quot;&quot;) {
+         inputEx.renderVisu(this.options.visu, this.messages.emptyInPlaceEdit, this.formattedContainer);
+      }
+      else {
+         inputEx.renderVisu(this.options.visu, this.value, this.formattedContainer);
+      }
+      
+      // If the editor is opened, update it
+      if(this.editorContainer.style.display === &#x27;&#x27;) {
+         this.editorField.setValue(value);
+      }
+      
+      inputEx.InPlaceEdit.superclass.setValue.call(this, value, sendUpdatedEvt);
+   },
+   
+   /**
+    * Close the editor when calling the close function on this field
+    * @method close
+    */
+   close: function() {
+      this.editorContainer.style.display = &#x27;none&#x27;;
+      this.formattedContainer.style.display = &#x27;&#x27;;
+      this.fire(&quot;openEditor&quot;);
+  }
+
+});
+  
+// Register this class as &quot;inplaceedit&quot; type
+inputEx.registerType(&quot;inplaceedit&quot;, inputEx.InPlaceEdit, [
+   { type:&#x27;type&#x27;, label: &#x27;Editor&#x27;, name: &#x27;editorField&#x27;}
+]);
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

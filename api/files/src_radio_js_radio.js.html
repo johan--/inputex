@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/radio/js/radio.js - InputEx</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="InputEx" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 4.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/inputEx.html">inputEx</a></li>
+                                <li><a href="../classes/inputEx.AutoComplete.html">inputEx.AutoComplete</a></li>
+                                <li><a href="../classes/inputEx.Base.html">inputEx.Base</a></li>
+                                <li><a href="../classes/inputEx.CheckBox.html">inputEx.CheckBox</a></li>
+                                <li><a href="../classes/inputEx.CheckboxMultiState.html">inputEx.CheckboxMultiState</a></li>
+                                <li><a href="../classes/inputEx.ColorField.html">inputEx.ColorField</a></li>
+                                <li><a href="../classes/inputEx.CombineField.html">inputEx.CombineField</a></li>
+                                <li><a href="../classes/inputEx.constructor.html">inputEx.constructor</a></li>
+                                <li><a href="../classes/inputEx.DateField.html">inputEx.DateField</a></li>
+                                <li><a href="../classes/inputEx.DatePickerField.html">inputEx.DatePickerField</a></li>
+                                <li><a href="../classes/inputEx.DateSelectMonthField.html">inputEx.DateSelectMonthField</a></li>
+                                <li><a href="../classes/inputEx.DateSplitField.html">inputEx.DateSplitField</a></li>
+                                <li><a href="../classes/inputEx.DateTimeField.html">inputEx.DateTimeField</a></li>
+                                <li><a href="../classes/inputEx.DDListField.html">inputEx.DDListField</a></li>
+                                <li><a href="../classes/inputEx.DomainNameField.html">inputEx.DomainNameField</a></li>
+                                <li><a href="../classes/inputEx.DSSelectField.html">inputEx.DSSelectField</a></li>
+                                <li><a href="../classes/inputEx.EmailField.html">inputEx.EmailField</a></li>
+                                <li><a href="../classes/inputEx.FileField.html">inputEx.FileField</a></li>
+                                <li><a href="../classes/inputEx.Form.html">inputEx.Form</a></li>
+                                <li><a href="../classes/inputEx.Group.html">inputEx.Group</a></li>
+                                <li><a href="../classes/inputEx.HiddenField.html">inputEx.HiddenField</a></li>
+                                <li><a href="../classes/inputEx.ImageCropperField.html">inputEx.ImageCropperField</a></li>
+                                <li><a href="../classes/inputEx.InPlaceEdit.html">inputEx.InPlaceEdit</a></li>
+                                <li><a href="../classes/inputEx.IntegerField.html">inputEx.IntegerField</a></li>
+                                <li><a href="../classes/inputEx.IPv4Field.html">inputEx.IPv4Field</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.html">inputEx.JsonSchema</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.Builder.html">inputEx.JsonSchema.Builder</a></li>
+                                <li><a href="../classes/inputEx.KeyOpValueField.html">inputEx.KeyOpValueField</a></li>
+                                <li><a href="../classes/inputEx.KeyValueField.html">inputEx.KeyValueField</a></li>
+                                <li><a href="../classes/inputEx.Lens.html">inputEx.Lens</a></li>
+                                <li><a href="../classes/inputEx.LinkedComboField.html">inputEx.LinkedComboField</a></li>
+                                <li><a href="../classes/inputEx.ListField.html">inputEx.ListField</a></li>
+                                <li><a href="../classes/inputEx.MapField.html">inputEx.MapField</a></li>
+                                <li><a href="../classes/inputEx.MenuField.html">inputEx.MenuField</a></li>
+                                <li><a href="../classes/inputEx.mixin.html">inputEx.mixin</a></li>
+                                <li><a href="../classes/inputEx.mixin.choice.html">inputEx.mixin.choice</a></li>
+                                <li><a href="../classes/inputEx.MultiAutoComplete.html">inputEx.MultiAutoComplete</a></li>
+                                <li><a href="../classes/inputEx.MultiSelectField.html">inputEx.MultiSelectField</a></li>
+                                <li><a href="../classes/inputEx.NumberField.html">inputEx.NumberField</a></li>
+                                <li><a href="../classes/inputEx.ObjectField.html">inputEx.ObjectField</a></li>
+                                <li><a href="../classes/inputEx.Panel.html">inputEx.Panel</a></li>
+                                <li><a href="../classes/inputEx.PasswordField.html">inputEx.PasswordField</a></li>
+                                <li><a href="../classes/inputEx.PhoneField.html">inputEx.PhoneField</a></li>
+                                <li><a href="../classes/inputEx.Plugin.InputExDataTable.html">inputEx.Plugin.InputExDataTable</a></li>
+                                <li><a href="../classes/inputEx.RadioField.html">inputEx.RadioField</a></li>
+                                <li><a href="../classes/inputEx.RatingStars.html">inputEx.RatingStars</a></li>
+                                <li><a href="../classes/inputEx.RatingStarsForm.html">inputEx.RatingStarsForm</a></li>
+                                <li><a href="../classes/inputEx.RPC.html">inputEx.RPC</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.html">inputEx.RPC.Envelope</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON.html">inputEx.RPC.Envelope.JSON</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-1.0.html">inputEx.RPC.Envelope.JSON-RPC-1.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-2.0.html">inputEx.RPC.Envelope.JSON-RPC-2.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.PATH.html">inputEx.RPC.Envelope.PATH</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.URL.html">inputEx.RPC.Envelope.URL</a></li>
+                                <li><a href="../classes/inputEx.RPC.Service.html">inputEx.RPC.Service</a></li>
+                                <li><a href="../classes/inputEx.RPC.SMDTester.html">inputEx.RPC.SMDTester</a></li>
+                                <li><a href="../classes/inputEx.RPC.Transport.html">inputEx.RPC.Transport</a></li>
+                                <li><a href="../classes/inputEx.RTEField.html">inputEx.RTEField</a></li>
+                                <li><a href="../classes/inputEx.SelectField.html">inputEx.SelectField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.html">inputEx.SerializeField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.html">inputEx.SerializeField.serializers</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.json.html">inputEx.SerializeField.serializers.json</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.xml.html">inputEx.SerializeField.serializers.xml</a></li>
+                                <li><a href="../classes/inputEx.SliderField.html">inputEx.SliderField</a></li>
+                                <li><a href="../classes/inputEx.StringAvailability.html">inputEx.StringAvailability</a></li>
+                                <li><a href="../classes/inputEx.StringField.html">inputEx.StringField</a></li>
+                                <li><a href="../classes/inputEx.Textarea.html">inputEx.Textarea</a></li>
+                                <li><a href="../classes/inputEx.TextAutoTag.html">inputEx.TextAutoTag</a></li>
+                                <li><a href="../classes/inputEx.TimeField.html">inputEx.TimeField</a></li>
+                                <li><a href="../classes/inputEx.TimeIntervalField.html">inputEx.TimeIntervalField</a></li>
+                                <li><a href="../classes/inputEx.TinyMCEField.html">inputEx.TinyMCEField</a></li>
+                                <li><a href="../classes/inputEx.TreeField.html">inputEx.TreeField</a></li>
+                                <li><a href="../classes/inputEx.TypeField.html">inputEx.TypeField</a></li>
+                                <li><a href="../classes/inputEx.UneditableField.html">inputEx.UneditableField</a></li>
+                                <li><a href="../classes/inputEx.UpperCaseField.html">inputEx.UpperCaseField</a></li>
+                                <li><a href="../classes/inputEx.UrlField.html">inputEx.UrlField</a></li>
+                                <li><a href="../classes/inputEx.VectorField.html">inputEx.VectorField</a></li>
+                                <li><a href="../classes/inputEx.visus.html">inputEx.visus</a></li>
+                                <li><a href="../classes/inputEx.widget.html">inputEx.widget</a></li>
+                                <li><a href="../classes/inputEx.widget.Button.html">inputEx.widget.Button</a></li>
+                                <li><a href="../classes/inputEx.widget.JsonTreeInspector.html">inputEx.widget.JsonTreeInspector</a></li>
+                                <li><a href="../classes/Plugin.CalendarTodayHighlight.html">Plugin.CalendarTodayHighlight</a></li>
+                                <li><a href="../classes/Plugin.CalendarWeekNumber.html">Plugin.CalendarWeekNumber</a></li>
+                                <li><a href="../classes/Plugin.NodeMenuNavImproved.html">Plugin.NodeMenuNavImproved</a></li>
+                                <li><a href="../classes/Y.InputexAccentRemover.html">Y.InputexAccentRemover</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/checkbox-multi-state.html">checkbox-multi-state</a></li>
+                                <li><a href="../modules/inputex.html">inputex</a></li>
+                                <li><a href="../modules/inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); __ treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); __ treétree.html">inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); // treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); // treétree</a></li>
+                                <li><a href="../modules/inputex-autocomplete.html">inputex-autocomplete</a></li>
+                                <li><a href="../modules/inputex-base.html">inputex-base</a></li>
+                                <li><a href="../modules/inputex-button.html">inputex-button</a></li>
+                                <li><a href="../modules/inputex-checkbox.html">inputex-checkbox</a></li>
+                                <li><a href="../modules/inputex-choice.html">inputex-choice</a></li>
+                                <li><a href="../modules/inputex-color.html">inputex-color</a></li>
+                                <li><a href="../modules/inputex-combine.html">inputex-combine</a></li>
+                                <li><a href="../modules/inputex-datatable.html">inputex-datatable</a></li>
+                                <li><a href="../modules/inputex-date.html">inputex-date</a></li>
+                                <li><a href="../modules/inputex-datepicker.html">inputex-datepicker</a></li>
+                                <li><a href="../modules/inputex-dateselectmonth.html">inputex-dateselectmonth</a></li>
+                                <li><a href="../modules/inputex-datesplit.html">inputex-datesplit</a></li>
+                                <li><a href="../modules/inputex-datetime.html">inputex-datetime</a></li>
+                                <li><a href="../modules/inputex-ddlist.html">inputex-ddlist</a></li>
+                                <li><a href="../modules/inputex-dsselect.html">inputex-dsselect</a></li>
+                                <li><a href="../modules/inputex-email.html">inputex-email</a></li>
+                                <li><a href="../modules/inputex-field.html">inputex-field</a></li>
+                                <li><a href="../modules/inputex-file.html">inputex-file</a></li>
+                                <li><a href="../modules/inputex-form.html">inputex-form</a></li>
+                                <li><a href="../modules/inputex-group.html">inputex-group</a></li>
+                                <li><a href="../modules/inputex-hidden.html">inputex-hidden</a></li>
+                                <li><a href="../modules/inputex-imagecropper.html">inputex-imagecropper</a></li>
+                                <li><a href="../modules/inputex-inplaceedit.html">inputex-inplaceedit</a></li>
+                                <li><a href="../modules/inputex-integer.html">inputex-integer</a></li>
+                                <li><a href="../modules/inputex-ipv4.html">inputex-ipv4</a></li>
+                                <li><a href="../modules/inputex-jsonschema.html">inputex-jsonschema</a></li>
+                                <li><a href="../modules/inputex-jsontreeinspector.html">inputex-jsontreeinspector</a></li>
+                                <li><a href="../modules/inputex-keyopvalue.html">inputex-keyopvalue</a></li>
+                                <li><a href="../modules/inputex-keyvalue.html">inputex-keyvalue</a></li>
+                                <li><a href="../modules/inputex-lens.html">inputex-lens</a></li>
+                                <li><a href="../modules/inputex-linkedcombo.html">inputex-linkedcombo</a></li>
+                                <li><a href="../modules/inputex-list.html">inputex-list</a></li>
+                                <li><a href="../modules/inputex-map.html">inputex-map</a></li>
+                                <li><a href="../modules/inputex-menu.html">inputex-menu</a></li>
+                                <li><a href="../modules/inputex-multiautocomplete.html">inputex-multiautocomplete</a></li>
+                                <li><a href="../modules/inputex-multiselect.html">inputex-multiselect</a></li>
+                                <li><a href="../modules/inputex-number.html">inputex-number</a></li>
+                                <li><a href="../modules/inputex-object.html">inputex-object</a></li>
+                                <li><a href="../modules/inputex-panel.html">inputex-panel</a></li>
+                                <li><a href="../modules/inputex-password.html">inputex-password</a></li>
+                                <li><a href="../modules/inputex-phone.html">inputex-phone</a></li>
+                                <li><a href="../modules/inputex-radio.html">inputex-radio</a></li>
+                                <li><a href="../modules/inputex-ratingstars.html">inputex-ratingstars</a></li>
+                                <li><a href="../modules/inputex-ratingstarsform.html">inputex-ratingstarsform</a></li>
+                                <li><a href="../modules/inputex-rpc.html">inputex-rpc</a></li>
+                                <li><a href="../modules/inputex-rte.html">inputex-rte</a></li>
+                                <li><a href="../modules/inputex-select.html">inputex-select</a></li>
+                                <li><a href="../modules/inputex-serialize.html">inputex-serialize</a></li>
+                                <li><a href="../modules/inputex-slider.html">inputex-slider</a></li>
+                                <li><a href="../modules/inputex-smdtester.html">inputex-smdtester</a></li>
+                                <li><a href="../modules/inputex-string.html">inputex-string</a></li>
+                                <li><a href="../modules/inputex-stringavailability.html">inputex-stringavailability</a></li>
+                                <li><a href="../modules/inputex-textarea.html">inputex-textarea</a></li>
+                                <li><a href="../modules/inputex-textautotag.html">inputex-textautotag</a></li>
+                                <li><a href="../modules/inputex-time.html">inputex-time</a></li>
+                                <li><a href="../modules/inputex-timeinterval.html">inputex-timeinterval</a></li>
+                                <li><a href="../modules/inputex-timerange.html">inputex-timerange</a></li>
+                                <li><a href="../modules/inputex-tinymce.html">inputex-tinymce</a></li>
+                                <li><a href="../modules/inputex-tree.html">inputex-tree</a></li>
+                                <li><a href="../modules/inputex-type.html">inputex-type</a></li>
+                                <li><a href="../modules/inputex-uneditable.html">inputex-uneditable</a></li>
+                                <li><a href="../modules/inputex-uppercase.html">inputex-uppercase</a></li>
+                                <li><a href="../modules/inputex-url.html">inputex-url</a></li>
+                                <li><a href="../modules/inputex-vector.html">inputex-vector</a></li>
+                                <li><a href="../modules/inputex-visus.html">inputex-visus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/radio/js/radio.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * @module inputex-radio
+ */
+var lang = Y.Lang,
+    inputEx = Y.inputEx;
+
+/**
+ * Create a radio button. Here are the added options :
+ * &lt;ul&gt;
+ *   &lt;li&gt;choices: list of choices (array of string)&lt;/li&gt;
+ *   &lt;li&gt;values: list of returned values (array )&lt;/li&gt;
+ *   &lt;li&gt;allowAny: add an option with a string field&lt;/li&gt;
+ * &lt;/ul&gt;
+ * @class inputEx.RadioField
+ * @extends inputEx.Field
+ * @constructor
+ * @param {Object} options inputEx.Field options object
+ */
+inputEx.RadioField = function (options) {
+   inputEx.RadioField.superclass.constructor.call(this,options);
+};
+
+Y.extend(inputEx.RadioField, inputEx.Field, {
+   
+   /**
+    * Adds the Radio button specific options
+    * @method setOptions
+    * @param {Object} options Options object as passed to the constructor
+    */
+   setOptions: function (options) {
+      
+      var i, length;
+      
+      inputEx.RadioField.superclass.setOptions.call(this, options);
+      
+      // Display mode
+      this.options.display = options.display === &quot;vertically&quot; ? &quot;vertically&quot; : &quot;inline&quot;; // default &quot;inline&quot;
+      
+      // Classname
+      this.options.className = options.className ? options.className : &#x27;inputEx-Field inputEx-RadioField&#x27;;
+      if (this.options.display === &quot;vertically&quot;) {
+         this.options.className +=  &#x27; inputEx-RadioField-Vertically&#x27;;
+      }
+      
+      // Choices creation
+      
+      // Retro-compatibility with old pattern (DEPRECATED since 2010-06-30)
+      if (lang.isArray(options.values)) {
+         
+         this.options.choices = [];
+         
+         for (i = 0, length = options.values.length; i &lt; length; i += 1) {
+            this.options.choices.push({ value: options.values[i], label: options.choices[i] });
+         }
+      
+      // New pattern to define choices
+      } else {
+         
+         this.options.choices = options.choices; // [&#x27;val1&#x27;,&#x27;val2&#x27;] or [{ value: &#x27;val1&#x27;, label: &#x27;1st Choice&#x27; }, etc.]
+         
+      }
+      
+      if (lang.isUndefined(options.allowAny) || options.allowAny === false ) {
+         this.options.allowAny = false;
+      } else {
+         this.options.allowAny = {};
+         if (lang.isArray(options.allowAny.separators)) { this.options.allowAny.separators = options.allowAny.separators;}
+         this.options.allowAny.validator = lang.isFunction(options.allowAny.validator) ? options.allowAny.validator : function () {return true;};
+         this.options.allowAny.value = !lang.isUndefined(options.allowAny.value) ? options.allowAny.value : &quot;&quot;;
+         this.options.allowAny.field = lang.isUndefined(options.allowAny.field) ? { type: &quot;string&quot;, value: this.options.allowAny.value } : options.allowAny.field;
+      }
+
+   },
+   
+   /**
+    * Render the checkbox and the hidden field
+    * @method renderComponent
+    */
+   renderComponent: function () {
+      
+      var choices, length, i, sep;
+      
+      this.choicesList = [];
+      
+      choices = this.options.choices;
+      
+      if(!choices){
+         throw new Error(&quot;Missing &#x27;choices&#x27; property in options&quot;);
+      }
+
+      for (i = 0, length = choices.length ; i &lt; length ; i += 1 ) {
+         
+         this.addChoice(choices[i]);
+         
+      }
+      
+      // Build a &quot;any&quot; radio combined with a StringField
+      if (this.options.allowAny) {
+         
+         this.allowAnyChoice = this.addChoice({ value: this.options.allowAny.value, label:&#x27;&#x27; });
+         
+         this.radioAny = this.allowAnyChoice.node.firstChild;
+         
+         this.anyField = new inputEx(this.options.allowAny.field);
+         this.anyField.disable();
+         
+         Y.one(this.radioAny).setStyle(&quot;float&quot;,&quot;left&quot;);
+         Y.one(this.anyField.getEl()).setStyle(&quot;float&quot;,&quot;left&quot;);
+         
+         // Hack for firefox 3.5+
+         if (Y.UA.gecko &gt;= 1.91) { Y.one(this.radioAny).setStyle( &quot;marginTop&quot;,&quot;0.2em&quot;); }
+         
+         
+         if (this.options.allowAny.separators) {
+            sep = inputEx.cn(&quot;div&quot;,null,{marginRight:&quot;3px&quot;},this.options.allowAny.separators[0] || &#x27;&#x27;);
+            Y.one(sep).setStyle( &quot;float&quot;,&quot;left&quot;);
+            this.allowAnyChoice.node.appendChild(sep);
+         }
+         
+         this.allowAnyChoice.node.appendChild(this.anyField.getEl());
+         
+         if (this.options.allowAny.separators) {
+            sep = inputEx.cn(&quot;div&quot;,null,{marginLeft:&quot;3px&quot;},this.options.allowAny.separators[1] || &#x27;&#x27;);
+            Y.one(sep).setStyle( &quot;float&quot;,&quot;left&quot;);
+            this.allowAnyChoice.node.appendChild(sep);
+         }
+         
+      }
+      
+   },
+   
+   /**
+    * Listen for change events on all radios
+    * @method initEvents
+    */
+   initEvents: function () {
+      
+      // Delegate event listening because list of choices is dynamic
+      // so we can&#x27;t listen on each &lt;input type=&quot;radio&quot; class=&#x27;inputEx-RadioField-radio&#x27; /&gt;
+      
+      var fieldContainer = Y.one(this.fieldContainer), that = this;
+      
+      // Change event (IE does not fire &quot;change&quot; event, so listen to click instead)
+      fieldContainer.delegate(Y.UA.ie ? &quot;click&quot; : &quot;change&quot;, function(e/*, matchedEl, container */) {
+         that.onChange(e);
+      }, &quot;.inputEx-RadioField-radio&quot;, &quot;input&quot;);
+      
+      // Focus / Blur events
+      fieldContainer.delegate(&quot;focusin&quot;, function(e/*, matchedEl, container */) {
+         that.onFocus(e);
+      }, &quot;.inputEx-RadioField-radio&quot;, &quot;input&quot;);
+      
+      fieldContainer.delegate(&quot;focusout&quot;, function(e/*, matchedEl, container */) {
+         that.onBlur(e);
+      }, &quot;.inputEx-RadioField-radio&quot;, &quot;input&quot;);
+      
+      // AnyField events
+      if (this.allowAnyChoice) {
+         
+         this.anyField.on(&#x27;updated&#x27;, function (e, params) {
+            
+            var value = params[0];
+            this.radioAny.value = value;
+            
+            this.setClassFromState();
+            
+            inputEx.RadioField.superclass.onChange.call(this,e);
+            
+         }, this, true);
+         
+         // Update radio field style after editing anyField content !
+         if(this.anyField.el) {
+            Y.one(this.anyField.el).on(&#x27;blur&#x27;, this.onBlur, this, true);
+         }
+      }
+   },
+   
+   /**
+    * Add an additional class to the currently selected inputEx-RadioField-choice
+    * @method setSelectedClass
+    */
+   setSelectedClass: function () {
+      
+      var i, length;
+      
+      for (i = 0, length = this.choicesList.length ; i &lt; length ; i += 1) {
+         
+         if (this.choicesList[i].node.firstChild.checked) {
+            Y.one(this.choicesList[i].node).addClass(&quot;inputEx-selected&quot;);
+         } else {
+            Y.one(this.choicesList[i].node).removeClass(&quot;inputEx-selected&quot;);
+         }
+         
+      }
+   },
+   
+   /**
+    * @method setClassFromState
+    */
+   setClassFromState: function (state) {
+      
+      // call superclass method (will fire updated event)
+      inputEx.RadioField.superclass.setClassFromState.call(this, state);
+      
+      this.setSelectedClass();
+      
+   },
+   
+   /**
+    * Function called when the checkbox is toggled
+    * @method onChange
+    * @param {Event} e The original &#x27;change&#x27; event
+    */
+   onChange: function (e) {
+      var target = e.target._node;
+      
+      // Enable/disable the &quot;any&quot; field
+      if (this.allowAnyChoice) {
+         
+         var clickedOnAllowAnyChoice = inputEx.indexOf(target, this.choicesList, function(el,arrEl) { return el === arrEl.node.firstChild; }) !== -1 &amp;&amp; this.radioAny === target;
+         
+         // if clicked another choice than allowAnyChoice
+         if (!clickedOnAllowAnyChoice) {
+            this.anyField.disable();
+         } else {
+            this.anyField.enable();
+            lang.later( 50 , this.anyField , &quot;focus&quot;);
+         }
+         
+      }
+      
+      this.setSelectedClass();
+      
+      // call superclass method (will fire updated event)
+      inputEx.RadioField.superclass.onChange.call(this,e);
+   },
+   
+   /**
+    * Get the field value
+    * @method getValue
+    * @return {Any} 
+    */
+   getValue: function () {
+      
+      var i, length, radioInput;
+      
+      for (i = 0, length = this.choicesList.length ; i &lt; length ; i += 1) {
+         
+         radioInput = this.choicesList[i].node.firstChild;
+
+         if (radioInput.checked) {
+            
+            if (this.radioAny &amp;&amp; this.radioAny == radioInput) {
+               return this.anyField.getValue();
+            }
+            
+            return this.choicesList[i].value;
+         }
+      }
+      
+      return &quot;&quot;;
+   },
+   
+   /**
+    * Set the value of the Radio
+    * @method setValue
+    * @param {Any} value The value schould be one of this.options.values (which defaults to this.options.choices if missing) if allowAny option not true.
+    * @param {boolean} [sendUpdatedEvt] (optional) Wether this setValue should fire the updated event or not (default is true, pass false to NOT send the event)
+    */
+   setValue: function (value, sendUpdatedEvt) {
+      
+      var checkAny = true, valueFound = false, i, length;
+      
+      // With IE 7 and below, the radio inputs need to be in the doc
+      // for the value to be applied, so wait for it to happen!
+      if (Y.UA.ie &amp;&amp; Y.UA.ie &lt;= 7 &amp;&amp; !this._ieFirstValueSet) {
+
+         // retry counter (avoid to loop forever in case the radio is never attached to doc)
+         this._ieFirstValueRetries = (this._ieFirstValueRetries || 0) + 1;
+
+         // if not in the doc (and less than 40 retries)
+         if (!Y.DOM.inDoc(this.divEl) &amp;&amp; this._ieFirstValueRetries &lt; 40) {
+
+            // try to set value later
+            Y.later(50, this, function () {
+               // important to check again because a successful
+               // setValue may have happened in between... so this
+               // value shouldn&#x27;t be set (it&#x27;s stale).
+               if (!this._ieFirstValueSet) {
+                  this.setValue(value, sendUpdatedEvt);
+               }
+            });
+
+         } else {
+            this._ieFirstValueSet = true;
+         }
+      }
+
+      for (i = 0, length = this.choicesList.length ; i &lt; length ; i += 1) {
+         
+         // valueFound is a useful when &quot;real&quot; choice has a value equal to allowAny choice default value
+         // so we check only the first value-matching radio button
+         if (value === this.choicesList[i].value &amp;&amp; !valueFound) {
+            
+            // check the radio
+            this.choicesList[i].node.firstChild.checked = true;
+            
+            // radioAny should not be checked (unless current choice is radioAny !)
+            checkAny = this.radioAny &amp;&amp; (i === length - 1) ? true : false;
+            
+            // raise valueFound flag, all other radios should be unchecked now
+            valueFound = true;
+            
+         } else {
+            this.choicesList[i].node.firstChild.checked = false;
+         }
+         
+      }
+      
+      // Option allowAny
+      if (this.radioAny) {
+         
+         if (checkAny) {
+            this.radioAny.checked = true;
+            this.radioAny.value = value;
+            this.anyField.enable();
+            this.anyField.setValue(value, false);
+         } else {
+            this.anyField.disable();
+         }
+      }
+      
+      // call parent class method to set style and fire updated event
+      inputEx.RadioField.superclass.setValue.call(this, value, sendUpdatedEvt);
+   },
+   
+   /**
+    * Clear the field by setting the field value to this.options.value
+    * @method clear
+    * @param {boolean} [sendUpdatedEvt] (optional) Wether this clear should fire the updated event or not (default is true, pass false to NOT send the event)
+    */
+   clear: function (sendUpdatedEvt) {
+      
+      if (this.radioAny){
+         this.anyField.setValue(this.options.allowAny.value, false);
+      }
+   
+      inputEx.RadioField.superclass.clear.call(this, sendUpdatedEvt);
+   },
+   
+   /**
+    * Should return true if empty
+    * @method isEmpty
+    */
+   isEmpty: function () {
+      
+      var i, length, radioInput;
+      
+      for (i = 0, length = this.choicesList.length ; i &lt; length ; i += 1) {
+         
+         radioInput = this.choicesList[i].node.firstChild;
+         
+         if (radioInput.checked) {
+            
+            // if &quot;any&quot; option checked...
+            if (this.radioAny &amp;&amp; this.radioAny == radioInput) {
+               
+               // ... and not empty
+               return this.anyField.isEmpty();
+               
+            } else {
+               
+               // not empty because a choice has been made
+               // warning: should return false (=not empty) even if this radio&#x27;s value is &quot;&quot;
+               return false;
+               
+            }
+         }
+      }
+      
+      return true;
+      
+   },
+   
+   /**
+    * Add extra validation if allowAny.validator is provided
+    * @method validate
+    */
+   validate: function () {
+      
+      var i, length, radioInput, anyVal;
+
+      // basic field validation (e.g. required + empty)
+      if (!inputEx.RadioField.superclass.validate.call(this)) {
+         return false;
+      }
+      
+      // extra validation for allowAny field (when checked)
+      if (this.options.allowAny) {
+         
+         for (i = 0, length = this.choicesList.length ; i &lt; length ; i += 1) {
+            
+            radioInput = this.choicesList[i].node.firstChild;
+            
+            if (radioInput.checked) {
+               
+               // if &quot;any&quot; option checked
+               if (this.radioAny &amp;&amp; this.radioAny == radioInput) {
+                  anyVal = this.anyField.getValue();
+                  return this.anyField.validate() &amp;&amp; this.options.allowAny.validator(anyVal);
+               }
+            }
+         }
+      }
+      
+      return true;
+   },
+   
+   /**
+    * Disable the field
+    * @method disable
+    */
+   disable: function () {
+      
+      var i, length;
+      
+      for (i = 0, length = this.choicesList.length; i &lt; length; i += 1) {
+         this.disableChoice(this.choicesList[i], false);
+      }
+      
+      return inputEx.RadioField.superclass.disable.call(this);
+
+   },
+
+   /**
+    * Enable the field
+    * @method enable
+    */
+   enable: function () {
+      
+      var i, length;
+      
+      for (i = 0, length = this.choicesList.length; i &lt; length; i += 1) {
+         this.enableChoice(this.choicesList[i]);
+      }
+    
+      return inputEx.RadioField.superclass.enable.call(this);
+  
+   },
+   
+   /**
+    * @method createChoiceNode
+    */
+   createChoiceNode: function (choice) {
+      
+      var div, radioId, radioNode, labelNode;
+      
+      div = inputEx.cn(&#x27;div&#x27;, {className: &#x27;inputEx-RadioField-choice&#x27;});
+      
+      // radioId MUST be different for each option, to allow click on label (with for:id trick)
+      if(!inputEx.RadioField._idCounter) {
+         inputEx.RadioField._idCounter = 0;
+      }
+      radioId = &quot;_inputex_radioId&quot;+inputEx.RadioField._idCounter;
+      inputEx.RadioField._idCounter++;
+      
+      radioNode = inputEx.cn(&#x27;input&#x27;, { id: radioId, type: &#x27;radio&#x27;, name: this.options.name, value: choice.value, className: &#x27;inputEx-RadioField-radio&#x27; });
+      div.appendChild(radioNode);
+      
+      if (choice.label.length &gt; 0) {
+         labelNode = inputEx.cn(&#x27;label&#x27;, {&quot;for&quot;: radioId, className: &#x27;inputEx-RadioField-rightLabel&#x27;}, null, &quot;&quot;+choice.label);
+         div.appendChild(labelNode);
+      }
+      
+      return div;
+      
+   },
+   
+   /**
+    * @method removeChoiceNode
+    */
+   removeChoiceNode: function (node) {
+      
+      // remove from selector
+      //
+      //   -&gt; style.display = &#x27;none&#x27; would work only on FF (when node is an &lt;option&gt;)
+      //   -&gt; other browsers (IE, Chrome...) require to remove &lt;option&gt; node from DOM
+      //
+      this.fieldContainer.removeChild(node);
+      
+   },
+   
+   /**
+    * @method disableChoiceNode
+    */
+   disableChoiceNode: function (node) {
+      
+      //node.firstChild.disabled = &quot;disabled&quot;;
+      node.firstChild.disabled = true;
+   },
+   
+   /**
+    * @method enableChoiceNode
+    */
+   enableChoiceNode: function (node) {
+      
+      //node.firstChild.removeAttribute(&quot;disabled&quot;);
+      node.firstChild.disabled = false;
+      
+   },
+   
+   /**
+    * Attach an &lt;option&gt; node to the &lt;select&gt; at the specified position
+    * @method appendChoiceNode
+    * @param {HTMLElement} node The &lt;option&gt; node to attach to the &lt;select&gt;
+    * @param {Int} position The position of the choice in choicesList (may not be the &quot;real&quot; position in DOM)
+    */
+   appendChoiceNode: function (node, position) {
+      
+      var domPosition, i;
+      
+      // Compute real DOM position (since previous choices in choicesList may be hidden)
+      domPosition = 0;
+      
+      for (i = 0; i &lt; position; i += 1) {
+         
+         if (this.choicesList[i].visible) {
+            
+            domPosition += 1;
+            
+         }
+         
+      }
+      
+      // Insert in DOM
+      if (domPosition &lt; this.fieldContainer.childNodes.length) {
+         Y.one(this.fieldContainer).insertBefore(node, this.fieldContainer.childNodes[domPosition]);
+      } else {
+         
+         this.fieldContainer.appendChild(node);
+         
+      }
+   }
+   
+});
+
+// Augment prototype with choice mixin (functions : addChoice, removeChoice, etc.)
+Y.mix(inputEx.RadioField.prototype, inputEx.mixin.choice);
+
+
+// Register this class as &quot;radio&quot; type
+inputEx.registerType(&quot;radio&quot;, inputEx.RadioField, [
+   {
+      type: &#x27;list&#x27;,
+      name: &#x27;choices&#x27;,
+      label: &#x27;Choices&#x27;,
+      elementType: {
+         type: &#x27;group&#x27;,
+         fields: [
+            { label: &#x27;Value&#x27;, name: &#x27;value&#x27;, value: &#x27;&#x27; }, // not required to allow &#x27;&#x27; value (which is default)
+            { label: &#x27;Label&#x27;, name: &#x27;label&#x27; } // optional : if left empty, label is not created
+         ]
+      },
+      value: [],
+      required: true
+   },
+   {type: &#x27;boolean&#x27;, label: &#x27;Allow custom value&#x27;, name: &#x27;allowAny&#x27;, value: false  }
+]);
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

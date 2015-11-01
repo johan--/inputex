@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/calendar-week-number-plugin/js/calendar-week-number-plugin.js - InputEx</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="InputEx" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 4.0.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/inputEx.html">inputEx</a></li>
+                                <li><a href="../classes/inputEx.AutoComplete.html">inputEx.AutoComplete</a></li>
+                                <li><a href="../classes/inputEx.Base.html">inputEx.Base</a></li>
+                                <li><a href="../classes/inputEx.CheckBox.html">inputEx.CheckBox</a></li>
+                                <li><a href="../classes/inputEx.CheckboxMultiState.html">inputEx.CheckboxMultiState</a></li>
+                                <li><a href="../classes/inputEx.ColorField.html">inputEx.ColorField</a></li>
+                                <li><a href="../classes/inputEx.CombineField.html">inputEx.CombineField</a></li>
+                                <li><a href="../classes/inputEx.constructor.html">inputEx.constructor</a></li>
+                                <li><a href="../classes/inputEx.DateField.html">inputEx.DateField</a></li>
+                                <li><a href="../classes/inputEx.DatePickerField.html">inputEx.DatePickerField</a></li>
+                                <li><a href="../classes/inputEx.DateSelectMonthField.html">inputEx.DateSelectMonthField</a></li>
+                                <li><a href="../classes/inputEx.DateSplitField.html">inputEx.DateSplitField</a></li>
+                                <li><a href="../classes/inputEx.DateTimeField.html">inputEx.DateTimeField</a></li>
+                                <li><a href="../classes/inputEx.DDListField.html">inputEx.DDListField</a></li>
+                                <li><a href="../classes/inputEx.DomainNameField.html">inputEx.DomainNameField</a></li>
+                                <li><a href="../classes/inputEx.DSSelectField.html">inputEx.DSSelectField</a></li>
+                                <li><a href="../classes/inputEx.EmailField.html">inputEx.EmailField</a></li>
+                                <li><a href="../classes/inputEx.FileField.html">inputEx.FileField</a></li>
+                                <li><a href="../classes/inputEx.Form.html">inputEx.Form</a></li>
+                                <li><a href="../classes/inputEx.Group.html">inputEx.Group</a></li>
+                                <li><a href="../classes/inputEx.HiddenField.html">inputEx.HiddenField</a></li>
+                                <li><a href="../classes/inputEx.ImageCropperField.html">inputEx.ImageCropperField</a></li>
+                                <li><a href="../classes/inputEx.InPlaceEdit.html">inputEx.InPlaceEdit</a></li>
+                                <li><a href="../classes/inputEx.IntegerField.html">inputEx.IntegerField</a></li>
+                                <li><a href="../classes/inputEx.IPv4Field.html">inputEx.IPv4Field</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.html">inputEx.JsonSchema</a></li>
+                                <li><a href="../classes/inputEx.JsonSchema.Builder.html">inputEx.JsonSchema.Builder</a></li>
+                                <li><a href="../classes/inputEx.KeyOpValueField.html">inputEx.KeyOpValueField</a></li>
+                                <li><a href="../classes/inputEx.KeyValueField.html">inputEx.KeyValueField</a></li>
+                                <li><a href="../classes/inputEx.Lens.html">inputEx.Lens</a></li>
+                                <li><a href="../classes/inputEx.LinkedComboField.html">inputEx.LinkedComboField</a></li>
+                                <li><a href="../classes/inputEx.ListField.html">inputEx.ListField</a></li>
+                                <li><a href="../classes/inputEx.MapField.html">inputEx.MapField</a></li>
+                                <li><a href="../classes/inputEx.MenuField.html">inputEx.MenuField</a></li>
+                                <li><a href="../classes/inputEx.mixin.html">inputEx.mixin</a></li>
+                                <li><a href="../classes/inputEx.mixin.choice.html">inputEx.mixin.choice</a></li>
+                                <li><a href="../classes/inputEx.MultiAutoComplete.html">inputEx.MultiAutoComplete</a></li>
+                                <li><a href="../classes/inputEx.MultiSelectField.html">inputEx.MultiSelectField</a></li>
+                                <li><a href="../classes/inputEx.NumberField.html">inputEx.NumberField</a></li>
+                                <li><a href="../classes/inputEx.ObjectField.html">inputEx.ObjectField</a></li>
+                                <li><a href="../classes/inputEx.Panel.html">inputEx.Panel</a></li>
+                                <li><a href="../classes/inputEx.PasswordField.html">inputEx.PasswordField</a></li>
+                                <li><a href="../classes/inputEx.PhoneField.html">inputEx.PhoneField</a></li>
+                                <li><a href="../classes/inputEx.Plugin.InputExDataTable.html">inputEx.Plugin.InputExDataTable</a></li>
+                                <li><a href="../classes/inputEx.RadioField.html">inputEx.RadioField</a></li>
+                                <li><a href="../classes/inputEx.RatingStars.html">inputEx.RatingStars</a></li>
+                                <li><a href="../classes/inputEx.RatingStarsForm.html">inputEx.RatingStarsForm</a></li>
+                                <li><a href="../classes/inputEx.RPC.html">inputEx.RPC</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.html">inputEx.RPC.Envelope</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON.html">inputEx.RPC.Envelope.JSON</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-1.0.html">inputEx.RPC.Envelope.JSON-RPC-1.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.JSON-RPC-2.0.html">inputEx.RPC.Envelope.JSON-RPC-2.0</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.PATH.html">inputEx.RPC.Envelope.PATH</a></li>
+                                <li><a href="../classes/inputEx.RPC.Envelope.URL.html">inputEx.RPC.Envelope.URL</a></li>
+                                <li><a href="../classes/inputEx.RPC.Service.html">inputEx.RPC.Service</a></li>
+                                <li><a href="../classes/inputEx.RPC.SMDTester.html">inputEx.RPC.SMDTester</a></li>
+                                <li><a href="../classes/inputEx.RPC.Transport.html">inputEx.RPC.Transport</a></li>
+                                <li><a href="../classes/inputEx.RTEField.html">inputEx.RTEField</a></li>
+                                <li><a href="../classes/inputEx.SelectField.html">inputEx.SelectField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.html">inputEx.SerializeField</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.html">inputEx.SerializeField.serializers</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.json.html">inputEx.SerializeField.serializers.json</a></li>
+                                <li><a href="../classes/inputEx.SerializeField.serializers.xml.html">inputEx.SerializeField.serializers.xml</a></li>
+                                <li><a href="../classes/inputEx.SliderField.html">inputEx.SliderField</a></li>
+                                <li><a href="../classes/inputEx.StringAvailability.html">inputEx.StringAvailability</a></li>
+                                <li><a href="../classes/inputEx.StringField.html">inputEx.StringField</a></li>
+                                <li><a href="../classes/inputEx.Textarea.html">inputEx.Textarea</a></li>
+                                <li><a href="../classes/inputEx.TextAutoTag.html">inputEx.TextAutoTag</a></li>
+                                <li><a href="../classes/inputEx.TimeField.html">inputEx.TimeField</a></li>
+                                <li><a href="../classes/inputEx.TimeIntervalField.html">inputEx.TimeIntervalField</a></li>
+                                <li><a href="../classes/inputEx.TinyMCEField.html">inputEx.TinyMCEField</a></li>
+                                <li><a href="../classes/inputEx.TreeField.html">inputEx.TreeField</a></li>
+                                <li><a href="../classes/inputEx.TypeField.html">inputEx.TypeField</a></li>
+                                <li><a href="../classes/inputEx.UneditableField.html">inputEx.UneditableField</a></li>
+                                <li><a href="../classes/inputEx.UpperCaseField.html">inputEx.UpperCaseField</a></li>
+                                <li><a href="../classes/inputEx.UrlField.html">inputEx.UrlField</a></li>
+                                <li><a href="../classes/inputEx.VectorField.html">inputEx.VectorField</a></li>
+                                <li><a href="../classes/inputEx.visus.html">inputEx.visus</a></li>
+                                <li><a href="../classes/inputEx.widget.html">inputEx.widget</a></li>
+                                <li><a href="../classes/inputEx.widget.Button.html">inputEx.widget.Button</a></li>
+                                <li><a href="../classes/inputEx.widget.JsonTreeInspector.html">inputEx.widget.JsonTreeInspector</a></li>
+                                <li><a href="../classes/Plugin.CalendarTodayHighlight.html">Plugin.CalendarTodayHighlight</a></li>
+                                <li><a href="../classes/Plugin.CalendarWeekNumber.html">Plugin.CalendarWeekNumber</a></li>
+                                <li><a href="../classes/Plugin.NodeMenuNavImproved.html">Plugin.NodeMenuNavImproved</a></li>
+                                <li><a href="../classes/Y.InputexAccentRemover.html">Y.InputexAccentRemover</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/checkbox-multi-state.html">checkbox-multi-state</a></li>
+                                <li><a href="../modules/inputex.html">inputex</a></li>
+                                <li><a href="../modules/inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); __ check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = _[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]_gi; __ we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); __ treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); __ treétree.html">inputex-accent-remover
+                
+                As you may guess, this module will help you on the way you will handle your accent.
+                There is a by instance configuration and you can easilly change it. see the example below
+                
+                ex:
+                
+                 var myAccentRemover1 = new Y.inputEx.AccentRemover(); // check the default configuration for &#x27;e&#x27; below
+                 var myAccentRemover2 = new Y.inputEx.AccentRemover();
+                 myAccentRemover2.conf.e.regexp = /[èêẽēĕėëẻěȅȇẹȩęḙḛềếễểḕḗệḝǝɛ]/gi; // we remove the é in the regexp
+                
+                 myAccentRemover1.removeAccents(&quot;treétreè&quot;); // treetree
+                 myAccentRemover2.removeAccents(&quot;treétreè&quot;); // treétree</a></li>
+                                <li><a href="../modules/inputex-autocomplete.html">inputex-autocomplete</a></li>
+                                <li><a href="../modules/inputex-base.html">inputex-base</a></li>
+                                <li><a href="../modules/inputex-button.html">inputex-button</a></li>
+                                <li><a href="../modules/inputex-checkbox.html">inputex-checkbox</a></li>
+                                <li><a href="../modules/inputex-choice.html">inputex-choice</a></li>
+                                <li><a href="../modules/inputex-color.html">inputex-color</a></li>
+                                <li><a href="../modules/inputex-combine.html">inputex-combine</a></li>
+                                <li><a href="../modules/inputex-datatable.html">inputex-datatable</a></li>
+                                <li><a href="../modules/inputex-date.html">inputex-date</a></li>
+                                <li><a href="../modules/inputex-datepicker.html">inputex-datepicker</a></li>
+                                <li><a href="../modules/inputex-dateselectmonth.html">inputex-dateselectmonth</a></li>
+                                <li><a href="../modules/inputex-datesplit.html">inputex-datesplit</a></li>
+                                <li><a href="../modules/inputex-datetime.html">inputex-datetime</a></li>
+                                <li><a href="../modules/inputex-ddlist.html">inputex-ddlist</a></li>
+                                <li><a href="../modules/inputex-dsselect.html">inputex-dsselect</a></li>
+                                <li><a href="../modules/inputex-email.html">inputex-email</a></li>
+                                <li><a href="../modules/inputex-field.html">inputex-field</a></li>
+                                <li><a href="../modules/inputex-file.html">inputex-file</a></li>
+                                <li><a href="../modules/inputex-form.html">inputex-form</a></li>
+                                <li><a href="../modules/inputex-group.html">inputex-group</a></li>
+                                <li><a href="../modules/inputex-hidden.html">inputex-hidden</a></li>
+                                <li><a href="../modules/inputex-imagecropper.html">inputex-imagecropper</a></li>
+                                <li><a href="../modules/inputex-inplaceedit.html">inputex-inplaceedit</a></li>
+                                <li><a href="../modules/inputex-integer.html">inputex-integer</a></li>
+                                <li><a href="../modules/inputex-ipv4.html">inputex-ipv4</a></li>
+                                <li><a href="../modules/inputex-jsonschema.html">inputex-jsonschema</a></li>
+                                <li><a href="../modules/inputex-jsontreeinspector.html">inputex-jsontreeinspector</a></li>
+                                <li><a href="../modules/inputex-keyopvalue.html">inputex-keyopvalue</a></li>
+                                <li><a href="../modules/inputex-keyvalue.html">inputex-keyvalue</a></li>
+                                <li><a href="../modules/inputex-lens.html">inputex-lens</a></li>
+                                <li><a href="../modules/inputex-linkedcombo.html">inputex-linkedcombo</a></li>
+                                <li><a href="../modules/inputex-list.html">inputex-list</a></li>
+                                <li><a href="../modules/inputex-map.html">inputex-map</a></li>
+                                <li><a href="../modules/inputex-menu.html">inputex-menu</a></li>
+                                <li><a href="../modules/inputex-multiautocomplete.html">inputex-multiautocomplete</a></li>
+                                <li><a href="../modules/inputex-multiselect.html">inputex-multiselect</a></li>
+                                <li><a href="../modules/inputex-number.html">inputex-number</a></li>
+                                <li><a href="../modules/inputex-object.html">inputex-object</a></li>
+                                <li><a href="../modules/inputex-panel.html">inputex-panel</a></li>
+                                <li><a href="../modules/inputex-password.html">inputex-password</a></li>
+                                <li><a href="../modules/inputex-phone.html">inputex-phone</a></li>
+                                <li><a href="../modules/inputex-radio.html">inputex-radio</a></li>
+                                <li><a href="../modules/inputex-ratingstars.html">inputex-ratingstars</a></li>
+                                <li><a href="../modules/inputex-ratingstarsform.html">inputex-ratingstarsform</a></li>
+                                <li><a href="../modules/inputex-rpc.html">inputex-rpc</a></li>
+                                <li><a href="../modules/inputex-rte.html">inputex-rte</a></li>
+                                <li><a href="../modules/inputex-select.html">inputex-select</a></li>
+                                <li><a href="../modules/inputex-serialize.html">inputex-serialize</a></li>
+                                <li><a href="../modules/inputex-slider.html">inputex-slider</a></li>
+                                <li><a href="../modules/inputex-smdtester.html">inputex-smdtester</a></li>
+                                <li><a href="../modules/inputex-string.html">inputex-string</a></li>
+                                <li><a href="../modules/inputex-stringavailability.html">inputex-stringavailability</a></li>
+                                <li><a href="../modules/inputex-textarea.html">inputex-textarea</a></li>
+                                <li><a href="../modules/inputex-textautotag.html">inputex-textautotag</a></li>
+                                <li><a href="../modules/inputex-time.html">inputex-time</a></li>
+                                <li><a href="../modules/inputex-timeinterval.html">inputex-timeinterval</a></li>
+                                <li><a href="../modules/inputex-timerange.html">inputex-timerange</a></li>
+                                <li><a href="../modules/inputex-tinymce.html">inputex-tinymce</a></li>
+                                <li><a href="../modules/inputex-tree.html">inputex-tree</a></li>
+                                <li><a href="../modules/inputex-type.html">inputex-type</a></li>
+                                <li><a href="../modules/inputex-uneditable.html">inputex-uneditable</a></li>
+                                <li><a href="../modules/inputex-uppercase.html">inputex-uppercase</a></li>
+                                <li><a href="../modules/inputex-url.html">inputex-url</a></li>
+                                <li><a href="../modules/inputex-vector.html">inputex-vector</a></li>
+                                <li><a href="../modules/inputex-visus.html">inputex-visus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/calendar-week-number-plugin/js/calendar-week-number-plugin.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+// number representing one day, in milliseconds
+var one_day_ms = 1000*60*60*24;
+
+/**
+ * A plugin class which adds week numbers to Calendar.
+ *
+ * @class CalendarWeekNumber
+ * @extends Plugin.Base
+ * @namespace Plugin
+ */
+function CalendarWeekNumber () {
+    CalendarWeekNumber.superclass.constructor.apply(this, arguments);
+}
+
+/**
+ * The namespace for the plugin. This will be the property on the widget, which will
+ * reference the plugin instance, when it&#x27;s plugged in.
+ *
+ * @property NS
+ * @static
+ * @type String
+ * @default &quot;week_number&quot;
+ */
+CalendarWeekNumber.NS = &quot;weekNumber&quot;;
+
+CalendarWeekNumber.ATTRS = {
+    strings: {
+        valueFn: function () {
+            return Y.Intl.get(&quot;inputex-calendar-week-number-plugin&quot;);
+        }
+    }
+};
+
+
+Y.extend(CalendarWeekNumber, Y.Plugin.Base, {
+    
+    /**
+     * The initializer lifecycle implementation. Modifies the host widget&#x27;s
+     * render to add navigation controls.
+     *
+     * @method initializer
+     * @param {Object} config The user configuration for the plugin
+     */
+    initializer: function () {
+        
+        var host = this.get(&#x27;host&#x27;);
+        
+        // re-render week numbers every time we re-render a calendar pane
+        this._rerenderHandle = this.beforeHostMethod(&#x27;_rerenderCalendarPane&#x27;, this._rerenderWeekNumbers);
+        
+        // render week numbers after the first rendering
+        if (!host.get(&#x27;rendered&#x27;)) {
+            
+            this.afterHostMethod(&#x27;renderUI&#x27;, function () {
+                host.get(&#x27;boundingBox&#x27;).addClass(&#x27;yui3-calendar-with-week-numbers&#x27;);
+                this._initWeekNumbers();
+                host._afterDateChange();
+            });
+            
+        } else {
+            host.get(&#x27;boundingBox&#x27;).addClass(&#x27;yui3-calendar-with-week-numbers&#x27;);
+            this._initWeekNumbers();
+            host._afterDateChange();
+        }
+        
+    },
+    
+    /**
+     * The initializer destructor implementation. Responsible for destroying the initialized
+     * control mechanisms.
+     *
+     * @method destructor
+     */
+    destructor : function () {
+        
+        this._rerenderHandle.detach();
+        
+        if (this.get(&#x27;host&#x27;).get(&#x27;rendered&#x27;)) {
+            
+            var host = this.get(&#x27;host&#x27;),
+                calendarPanes = host.get(&#x27;contentBox&#x27;).all(&quot;.yui3-calendar-grid&quot;);
+            
+            calendarPanes.each(function (pane) {
+                pane.all(&#x27;.yui3-calendar-week-number-spacer&#x27;).remove();
+                pane.all(&#x27;.yui3-calendar-week-number&#x27;).remove();
+            });
+            
+            host.get(&#x27;boundingBox&#x27;).removeClass(&#x27;yui3-calendar-with-week-numbers&#x27;);
+        }
+    },
+    
+    _initWeekNumbers: function () {
+        
+        var host = this.get(&#x27;host&#x27;),
+            calendarPanes = host.get(&#x27;contentBox&#x27;).all(&quot;.yui3-calendar-grid&quot;);
+            
+        calendarPanes.each(function (pane) {
+            pane.one(&#x27;.yui3-calendar-weekdayrow&#x27;).prepend(Y.Node.create(&#x27;&lt;th class=&quot;yui3-calendar-week-number-spacer&quot;&gt;&lt;/th&gt;&#x27;));
+            pane.all(&#x27;.yui3-calendar-row&#x27;).each(function (row) {
+                row.prepend(&#x27;&lt;th class=&quot;yui3-calendar-week-number&quot;&gt;&lt;/th&gt;&#x27;);
+            });
+        });
+        
+    },
+    
+    _rerenderWeekNumbers: function (newDate, pane) {
+        
+        var plugin       = this,
+            host         = plugin.get(&#x27;host&#x27;),
+            weekDayCells = pane.all(&quot;.yui3-calendar-week-number&quot;),
+            startDay     = host.get(&#x27;strings.first_weekday&#x27;),
+            workingDate  = newDate,
+            preMonthDays, weekNumber, weekNumberStr;
+            
+        // some computation to get the first date displayed (maybe from previous month)
+        preMonthDays = workingDate.getDay();
+        
+        if (startDay &gt; 0) {
+            preMonthDays -= startDay;
+        }
+        
+        if (preMonthDays &lt; 0) {
+            preMonthDays += 7;
+        }
+        
+        workingDate = Y.Date.addDays(workingDate, -preMonthDays);
+        
+        // Hide the pane before making DOM changes to speed them up
+        // NOTE: will be made visible again by _rerenderCalendarPane
+        pane.setStyle(&quot;visibility&quot;, &quot;hidden&quot;);
+        
+        // iterate over weekDay cells to fill them
+        weekDayCells.each(function () {
+            
+            weekNumber = plugin.getWeekNumber(workingDate, startDay, plugin.get(&#x27;strings.week_one_jan_date&#x27;));
+            
+            // format week number on 2 chars
+            weekNumberStr = (weekNumber &lt; 10 ? &quot;&amp;nbsp;&quot; : &quot;&quot;) + weekNumber;
+            
+            this.set(&#x27;innerHTML&#x27;, weekNumberStr);
+            
+            // next date
+            workingDate = Y.Date.addDays(workingDate, 7);
+        });
+        
+    },
+    
+    
+    /**
+    * Calculates the week number for the given date. Can currently support standard
+    * U.S. week numbers, based on Jan 1st defining the 1st week of the year, and
+    * ISO8601 week numbers, based on Jan 4th defining the 1st week of the year.
+    *
+    * @method getWeekNumber
+    * @param {Date} date The JavaScript date for which to find the week number
+    * @param {Number} firstDayOfWeek The index of the first day of the week (0 = Sun, 1 = Mon ... 6 = Sat).
+    * Defaults to 0
+    * @param {Number} janDate The date in the first week of January which defines week one for the year
+    * Defaults to the value of CalendarWeekNumber.WEEK_ONE_JAN_DATE, which is 1 (Jan 1st).
+    * For the U.S, this is normally Jan 1st. ISO8601 uses Jan 4th to define the first week of the year.
+    *
+    * @return {Number} The number of the week containing the given date.
+    */
+    getWeekNumber: function (date, firstDayOfWeek, janDate) {
+        
+        // Setup Defaults
+        firstDayOfWeek = firstDayOfWeek || 0;
+        janDate = janDate || 1;
+        
+        var targetDate = this.clearTime(date),
+            startOfWeek,
+            endOfWeek;
+            
+        if (targetDate.getDay() === firstDayOfWeek) {
+            startOfWeek = targetDate;
+        } else {
+            startOfWeek = this.getFirstDayOfWeek(targetDate, firstDayOfWeek);
+        }
+        
+        var startYear = startOfWeek.getFullYear();
+        
+        // DST shouldn&#x27;t be a problem here, math is quicker than setDate();
+        endOfWeek = new Date(startOfWeek.getTime() + 6 * one_day_ms);
+        
+        var weekNum;
+        if (startYear !== endOfWeek.getFullYear() &amp;&amp; endOfWeek.getDate() &gt;= janDate) {
+            // If years don&#x27;t match, endOfWeek is in Jan. and if the
+            // week has WEEK_ONE_JAN_DATE in it, it&#x27;s week one by definition.
+            weekNum = 1;
+        } else {
+            // Get the 1st day of the 1st week, and
+            // find how many days away we are from it.
+            var weekOne = this.clearTime(this.getDate(startYear, 0, janDate)),
+                weekOneDayOne = this.getFirstDayOfWeek(weekOne, firstDayOfWeek);
+                
+            // Round days to smoothen out 1 hr DST diff
+            var daysDiff  = Math.round((targetDate.getTime() - weekOneDayOne.getTime()) / one_day_ms);
+            
+            // Calc. Full Weeks
+            var rem = daysDiff % 7;
+            var weeksDiff = (daysDiff - rem)/7;
+            weekNum = weeksDiff + 1;
+        }
+        return weekNum;
+    },
+    
+    /**
+    * Clears the time fields from a given date, effectively setting the time to 12 noon.
+    * @method clearTime
+    * @param {Date} date The JavaScript Date for which the time fields will be cleared
+    * @return {Date}  The JavaScript Date cleared of all time fields
+    */
+    clearTime: function (date) {
+        date.setHours(12,0,0,0);
+        return date;
+    },
+    
+    /**
+     * Returns a new JavaScript Date object, representing the given year, month and date. Time fields (hr, min, sec, ms) on the new Date object
+     * are set to 0. The method allows Date instances to be created with the a year less than 100. &quot;new Date(year, month, date)&quot; implementations
+     * set the year to 19xx if a year (xx) which is less than 100 is provided.
+     * &lt;p&gt;
+     * &lt;em&gt;NOTE:&lt;/em&gt;Validation on argument values is not performed. It is the caller&#x27;s responsibility to ensure
+     * arguments are valid as per the ECMAScript-262 Date object specification for the new Date(year, month[, date]) constructor.
+     * &lt;/p&gt;
+     * @method getDate
+     * @param {Number} y Year.
+     * @param {Number} m Month index from 0 (Jan) to 11 (Dec).
+     * @param {Number} d (optional) Date from 1 to 31. If not provided, defaults to 1.
+     * @return {Date} The JavaScript date object with year, month, date set as provided.
+     */
+    getDate: function (y, m, d) {
+        var dt = null;
+        if (typeof d === &quot;undefined&quot;) {
+            d = 1;
+        }
+        if (y &gt;= 100) {
+            dt = new Date(y, m, d);
+        } else {
+            dt = new Date();
+            dt.setFullYear(y);
+            dt.setMonth(m);
+            dt.setDate(d);
+            dt.setHours(0,0,0,0);
+        }
+        return dt;
+    },
+    
+    /**
+     * Get the first day of the week, for the given date.
+     * @method getFirstDayOfWeek
+     * @param {Date} dt The date in the week for which the first day is required.
+     * @param {Number} startOfWeek The index for the first day of the week, 0 = Sun, 1 = Mon ... 6 = Sat (defaults to 0)
+     * @return {Date} The first day of the week
+     */
+    getFirstDayOfWeek: function (dt, startOfWeek) {
+        startOfWeek = startOfWeek || 0;
+        var dayOfWeekIndex = dt.getDay(),
+            dayOfWeek = (dayOfWeekIndex - startOfWeek + 7) % 7;
+            
+        return Y.Date.addDays(dt, -dayOfWeek);
+    }
+    
+});
+
+Y.namespace(&quot;Plugin&quot;).CalendarWeekNumber = CalendarWeekNumber;
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
