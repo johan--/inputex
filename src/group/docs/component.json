@@ -1,0 +1,30 @@
+{
+   "name": "inputex-group",
+   "displayName": "inputex-group",
+   "description": "inputex-group",
+   "author": "neyric",
+   "tags": [
+      "inputex-group"
+   ],
+   "use": [
+      "inputex-field"
+   ],
+   "examples": [
+      {
+         "name"       : "group",
+         "displayName": "Basic group field creation",
+         "description": "How to create a group field.",
+         "modules"    : ["inputex-group"],
+         "tags"       : ["group"],
+         "hideTableOfContents": true
+      },
+      {
+           "name"       : "interactions",
+           "displayName": "Group interactions",
+           "description": "How to create a group with interactions.",
+           "modules"    : ["inputex-group"],
+           "tags"       : ["group"],
+           "hideTableOfContents": true
+        }
+   ]
+}

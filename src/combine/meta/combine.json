@@ -1,0 +1,9 @@
+{
+	"inputex-combine": {
+		"requires": [
+		  "inputex-group"
+		],
+		"ix_provides": "combine",
+      "skinnable" : true
+	}
+}

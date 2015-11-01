@@ -1,0 +1,10 @@
+{
+   "inputex-slider": {
+      "requires": [
+         "inputex-field",
+         "slider"
+      ],
+      "ix_provides": "slider",
+      "skinnable" : true
+   }
+}

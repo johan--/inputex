@@ -1,0 +1,8 @@
+{
+   "inputex-keyopvalue": {
+      "requires": [
+         "inputex-keyvalue"
+      ],
+      "ix_provides": "keyopvalue"
+   }
+}

@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-ratingstars_it",function(e){e.Intl.add("inputex-ratingstars","it",{ratingMsg:"Rating:% (% voti)",sendingRate:"Invio il tasso ...",thanksRate:"Grazie per il voto!"})},"@VERSION@");

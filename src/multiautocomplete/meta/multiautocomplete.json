@@ -1,0 +1,10 @@
+{
+   "inputex-multiautocomplete": {
+      "requires": [
+         "inputex-autocomplete",
+         "json",
+         "inputex-ddlist"
+      ],
+      "ix_provides": "multiautocomplete"
+   }
+}

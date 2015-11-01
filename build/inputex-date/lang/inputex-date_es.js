@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-date_es",function(e){e.Intl.add("inputex-date","es",{dayPlaceholder:"D\u00eda",defaultDateFormat:"d/m/Y",invalidDate:"Fecha no v\u00e1lida, ej: 25/01/2007",monthPlaceholder:"Mes",selectMonth:"- Seleccione un mes -",yearPlaceholder:"A\u00f1o"})},"@VERSION@");

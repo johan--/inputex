@@ -1,0 +1,25 @@
+{
+   "inputex-datatable": {
+      "requires": [
+         "intl",
+         "node-event-delegate",
+         "inputex-group",
+         "inputex-panel",
+         "datatable",
+         "overlay"
+      ],
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

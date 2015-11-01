@@ -1,0 +1,24 @@
+{
+   "name": "inputex-list",
+   "displayName": "inputex-list",
+   "description": "inputex-list",
+   "author": "neyric",
+   "tags": [
+      "inputex-list"
+   ],
+   "use": [
+      "inputex-field",
+      "anim-base",
+      "anim-color"
+   ],
+   "examples": [
+      {
+         "name"       : "list",
+         "displayName": "Basic list creation",
+         "description": "How to create a list.",
+         "modules"    : ["inputex-list"],
+         "tags"       : ["list"],
+         "hideTableOfContents": true
+      }
+   ]
+}

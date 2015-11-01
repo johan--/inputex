@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-datesplit_fr",function(e){e.Intl.add("inputex-datesplit","fr",{dayPlaceholder:"Jour",defaultDateFormat:"d/m/Y",monthPlaceholder:"Mois",yearPlaceholder:"Ann\u00e9e"})},"@VERSION@");

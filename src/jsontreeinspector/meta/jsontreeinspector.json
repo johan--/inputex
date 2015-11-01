@@ -1,0 +1,8 @@
+{
+   "inputex-jsontreeinspector": {
+      "requires": [
+         "inputex"
+      ],
+      "skinnable": true
+   }
+}

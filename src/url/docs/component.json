@@ -1,0 +1,22 @@
+{
+   "name": "inputex-url",
+   "displayName": "inputex-url",
+   "description": "inputex-url",
+   "author": "neyric",
+   "tags": [
+      "inputex-url"
+   ],
+   "use": [
+      "inputex-string"
+   ],
+   "examples": [
+                                   {
+                                     "name"       : "url",
+                                     "displayName": "Basic url field creation",
+                                     "description": "How to create a url field.",
+                                     "modules"    : ["inputex-url"],
+                                     "tags"       : ["url"],
+                                     "hideTableOfContents": true
+                                   }
+                              ]
+}

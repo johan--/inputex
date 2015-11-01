@@ -1,0 +1,23 @@
+{
+   "inputex-stringavailability": {
+      "requires": [
+         "inputex-string",
+         "event-key",
+         "io-base",
+         "json-parse"
+      ],
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

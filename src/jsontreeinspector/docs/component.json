@@ -1,0 +1,22 @@
+{
+   "name": "inputex-jsontreeinspector",
+   "displayName": "inputex-jsontreeinspector",
+   "description": "inputex-jsontreeinspector",
+   "author": "neyric",
+   "tags": [
+      "inputex-jsontreeinspector"
+   ],
+   "use": [
+      "inputex"
+   ],
+   "examples": [
+      {
+         "name"       : "jsontreeinspector",
+         "displayName": "Basic jsontreeinspector field creation",
+         "description": "How to create a jsontreeinspector field.",
+         "modules"    : ["inputex-jsontreeinspector"],
+         "tags"       : ["jsontreeinspector"],
+         "hideTableOfContents": true
+      }
+   ]
+}

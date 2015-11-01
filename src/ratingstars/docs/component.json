@@ -1,0 +1,22 @@
+{
+   "name": "inputex-ratingstars",
+   "displayName": "inputex-ratingstars",
+   "description": "inputex-ratingstars",
+   "author": "neyric",
+   "tags": [
+      "inputex-ratingstars"
+   ],
+   "use": [
+      "inputex-field"
+   ],
+   "examples": [
+           {
+             "name"       : "ratingstars",
+             "displayName": "Basic ratingstars field creation",
+             "description": "How to create a ratingstars field.",
+             "modules"    : ["inputex-ratingstars"],
+             "tags"       : ["ratingstars"],
+             "hideTableOfContents": true
+           }
+      ]
+}

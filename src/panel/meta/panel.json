@@ -1,0 +1,9 @@
+{
+   "inputex-panel": {
+      "requires": [
+         "inputex",
+         "panel",
+         "inputex-base"
+      ]
+   }
+}

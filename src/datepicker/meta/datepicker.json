@@ -1,0 +1,13 @@
+{
+	"inputex-datepicker": {
+		"requires": [
+		  "inputex-date",
+		  "event-outside",
+ 		  "node-event-delegate",
+		  "overlay",
+		  "calendar"
+		],
+		"ix_provides": "datepicker",
+        "skinnable" : true
+	}
+}

@@ -1,0 +1,8 @@
+{
+   "inputex-vector": {
+      "requires": [
+         "inputex-combine"
+      ],
+      "ix_provides": "vector"
+   }
+}

@@ -1,0 +1,22 @@
+{
+   "name": "inputex-vector",
+   "displayName": "inputex-vector",
+   "description": "inputex-vector",
+   "author": "neyric",
+   "tags": [
+      "inputex-vector"
+   ],
+   "use": [
+      "inputex-combine"
+   ],
+   "examples": [
+                                      {
+                                        "name"       : "vector",
+                                        "displayName": "Basic vector field creation",
+                                        "description": "How to create a vector field.",
+                                        "modules"    : ["inputex-vector"],
+                                        "tags"       : ["vector"],
+                                        "hideTableOfContents": true
+                                      }
+                                 ]
+}

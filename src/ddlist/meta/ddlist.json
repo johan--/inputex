@@ -1,0 +1,10 @@
+{
+	"inputex-ddlist": {
+		"requires": [
+		  "inputex-field",
+		  "array-extras",
+		  "sortable"
+		],
+      "skinnable" : true
+	}
+}

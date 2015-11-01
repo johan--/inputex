@@ -1,0 +1,8 @@
+{
+   "inputex-smdtester": {
+      "requires": [
+         "inputex-rpc",
+         "inputex-jsontreeinspector"
+      ]
+   }
+}

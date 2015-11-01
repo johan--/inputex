@@ -1,0 +1,34 @@
+{
+   "name": "inputex-rpc",
+   "displayName": "inputex-rpc",
+   "description": "inputex-rpc",
+   "author": "neyric",
+   "tags": [
+      "inputex-rpc"
+   ],
+   "use": [
+      "json",
+      "inputex",
+      "io",
+      "inputex-jsonschema",
+      "jsonp"
+   ],
+   "examples": [
+   {
+        "name"       : "yahoo-answers",
+        "displayName": "yahoo-answers",
+        "description": "yahoo-answers",
+        "modules"    : ["inputex-rpc"],
+        "tags"       : ["rpc"],
+        "hideTableOfContents": true
+      },
+           {
+             "name"       : "smdtester",
+             "displayName": "smdtester",
+             "description": "smdtester",
+             "modules"    : ["inputex-rpc"],
+             "tags"       : ["rpc"],
+             "hideTableOfContents": true
+           }
+      ]
+}

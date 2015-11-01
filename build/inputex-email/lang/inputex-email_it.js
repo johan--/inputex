@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-email_it",function(e){e.Intl.add("inputex-email","it",{didYouMean:"Forse intendevi:",disposableEmail:"Indirizzo e-mail usa e getta non consentita con il dominio:",invalidEmail:"Email non valida, es: antonio.rossi@fai.it"})},"@VERSION@");

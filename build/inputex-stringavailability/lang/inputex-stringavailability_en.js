@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-stringavailability_en",function(e){e.Intl.add("inputex-stringavailability","en",{errorDataText:"an error occurred",stringAvailable:"This resource is available",stringLoading:"Checking if available ...",stringUnAvailable:"This resource is not available"})},"@VERSION@");

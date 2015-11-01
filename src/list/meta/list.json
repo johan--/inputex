@@ -1,0 +1,23 @@
+{
+   "inputex-list": {
+      "requires": [
+         "inputex-field",
+         "anim-base",
+         "anim-color"
+      ],
+      "skinnable": true,
+      "ix_provides": "list",
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

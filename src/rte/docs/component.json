@@ -1,0 +1,23 @@
+{
+   "name": "inputex-rte",
+   "displayName": "inputex-rte",
+   "description": "inputex-rte",
+   "author": "neyric",
+   "tags": [
+      "inputex-rte"
+   ],
+   "use": [
+      "inputex-field",
+      "yui2-editor"
+   ],
+   "examples": [
+        {
+          "name"       : "rte",
+          "displayName": "Basic rte field creation",
+          "description": "How to create a rte field.",
+          "modules"    : ["inputex-rte"],
+          "tags"       : ["rte"],
+          "hideTableOfContents": true
+        }
+   ]
+}

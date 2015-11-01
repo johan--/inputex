@@ -1,0 +1,23 @@
+{
+   "name": "inputex-linkedcombo",
+   "displayName": "inputex-linkedcombo",
+   "description": "inputex-linkedcombo",
+   "author": "neyric",
+   "tags": [
+      "inputex-linkedcombo"
+   ],
+   "use": [
+      "inputex-select",
+      "inputex-choice"
+   ],
+   "examples": [
+      {
+         "name"       : "linkedcombo",
+         "displayName": "Basic linkedcombo creation",
+         "description": "How to create a linkedcombo.",
+         "modules"    : ["inputex-linkedcombo"],
+         "tags"       : ["linkedcombo"],
+         "hideTableOfContents": true
+      }
+   ]
+}

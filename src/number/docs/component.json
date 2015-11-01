@@ -1,0 +1,22 @@
+{
+   "name": "inputex-number",
+   "displayName": "inputex-number",
+   "description": "inputex-number",
+   "author": "neyric",
+   "tags": [
+      "inputex-number"
+   ],
+   "use": [
+      "inputex-string"
+   ],
+   "examples": [
+      {
+         "name"       : "number",
+         "displayName": "Basic number creation",
+         "description": "How to create a number.",
+         "modules"    : ["inputex-number"],
+         "tags"       : ["number"],
+         "hideTableOfContents": true
+      }
+   ]
+}

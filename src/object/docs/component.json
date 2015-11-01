@@ -1,0 +1,24 @@
+{
+   "name": "inputex-object",
+   "displayName": "inputex-object",
+   "description": "inputex-object",
+   "author": "neyric",
+   "tags": [
+      "inputex-object"
+   ],
+   "use": [
+      "inputex-list",
+      "inputex-combine",
+      "inputex-string"
+   ],
+   "examples": [
+      {
+         "name"       : "object",
+         "displayName": "Basic object creation",
+         "description": "How to create a object.",
+         "modules"    : ["inputex-object"],
+         "tags"       : ["object"],
+         "hideTableOfContents": true
+      }
+   ]
+}

@@ -1,0 +1,9 @@
+{
+   "inputex-time": {
+      "requires": [
+         "inputex-combine",
+         "inputex-select"
+      ],
+      "ix_provides": "time"
+   }
+}

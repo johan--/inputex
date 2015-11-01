@@ -1,0 +1,7 @@
+{
+   "inputex-jsonschema": {
+      "requires": [
+         "inputex"
+      ]
+   }
+}

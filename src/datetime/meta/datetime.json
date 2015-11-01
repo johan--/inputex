@@ -1,0 +1,10 @@
+{
+	"inputex-datetime": {
+   	 	"requires": [
+		  "inputex-datepicker",
+		  "inputex-combine",
+		  "inputex-time"
+		],
+		"ix_provides": "datetime"
+	}
+}

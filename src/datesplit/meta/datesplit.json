@@ -1,0 +1,21 @@
+{
+   "inputex-datesplit": {
+      "requires": [
+         "inputex-combine",
+         "inputex-integer"
+      ],
+      "ix_provides": "datesplit",
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

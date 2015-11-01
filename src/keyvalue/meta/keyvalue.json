@@ -1,0 +1,8 @@
+{
+   "inputex-keyvalue": {
+      "requires": [
+         "inputex-combine"
+      ],
+      "ix_provides": "keyvalue"
+   }
+}

@@ -1,0 +1,23 @@
+{
+   "inputex-menu": {
+      "requires": [
+         "inputex-field",
+         "node-event-delegate",
+         "node-menunav-improved"
+      ],
+      "skinnable": true,
+      "ix_provides": "menu",
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

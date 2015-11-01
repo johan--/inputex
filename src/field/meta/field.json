@@ -1,0 +1,21 @@
+{
+   "inputex-field": {
+      "requires": [
+         "inputex",
+         "intl"
+      ],
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

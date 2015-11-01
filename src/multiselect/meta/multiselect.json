@@ -1,0 +1,9 @@
+{
+   "inputex-multiselect": {
+      "requires": [
+         "inputex-select",
+         "inputex-ddlist"
+      ],
+      "ix_provides": "multiselect"
+   }
+}

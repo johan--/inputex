@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Basic radio field creation</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.4.1/build/cssgrids/grids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
+    <script src="../../build/inputex-loader/inputex-loader.js"></script>
+    <script>YUI_config.groups.inputex.base = '../../build/';</script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<a href="https://github.com/clicrdv/inputex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"> Example: Basic radio field creation</h1>
+    </div>
+    
+
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+<p>
+How to create a radio field.
+</p>
+</div>
+
+<div class="example">
+
+
+<h2>Basic RadioField creation</h2>
+<p>Use the following code to create a basic inputEx RadioField.</p>
+<div class='demoContainer' id='container1'></div>
+
+
+<h2>Differentiate choices' labels and values</h2>
+<p>Use the following code to create choices with labels different from values</p>
+<div class='demoContainer' id='container2'></div>
+
+
+<h2>Updated event</h2>
+<p>How to listen to the updated event :</p>
+<div class='demoContainer' id='container3'></div>
+
+
+
+<h2>Styling RadioField</h2>
+
+<p>Display the choices vertically, style currently selected choice...</p>
+
+<div class='demoContainer' id='container4'></div>
+
+<style>
+  #container4 .inputEx-RadioField .inputEx-selected label { text-decoration: underline; }
+</style>
+
+
+
+<h2>Basic allowAny option</h2>
+<p>The "allowAny" option adds a radio associated to a StringField to let the user enter any value.</p>
+<div class='demoContainer' id='container5'></div>
+
+
+
+<h2>Advanced allowAny option</h2>
+
+<p>More options with allowAny (separators, default value, validator, etc.)</p>
+
+<style>
+#container6 div.inputEx-StringField-wrapper input {width: 25px;}
+</style>
+
+<div class='demoContainer' id='container6'></div>
+
+
+<h2>Advanced allowAny option 2</h2>
+
+<p>Use a custom field in allowAny</p>
+
+<style>
+#container6bis div.inputEx-StringField-wrapper input {width: 25px;}
+</style>
+
+<div class='demoContainer' id='container7'></div>
+
+
+
+
+<h2>Disable RadioField</h2>
+<p>Disable the field (to disable radio inputs individually, see another example below)</p>
+<div class='demoContainer' id='container8'></div>
+
+
+
+
+<h2>addChoice</h2>
+<p>Add choices dynamically</p>
+<div class='demoContainer' id='container9'></div>
+
+
+
+
+<h2>removeChoice</h2>
+<p>Remove choices dynamically</p>
+<div class='demoContainer' id='container10'></div>
+
+
+<h2>Hide / Show / Disable / Enable choice</h2>
+<p>Hide, show, disable or enable an choice in the selector, without removing it totally, and keeping the original choice's order</p>
+<p style="font-size:90%;padding-top:3px;">Note : disableChoice and enableChoice methods have no effect with IE &lt; 8 because it did not support disabled="disabled" attribute.</p>
+<div class='demoContainer' id='container11'></div>
+
+
+
+
+<script>
+YUI().use('inputex-radio', 'inputex-time', 'inputex-integer', 'inputex-timeinterval', function(Y) { 
+
+   // Example 1
+
+   new Y.inputEx.RadioField({
+      label: 'Where did you learn about inputEx ?',
+      name: 'example1',
+      choices: [                    // choices: [       <- alternative syntax (shorter)
+         { value: 'Ajaxian' },     //    'Ajaxian',    <-
+         { value: 'YUI blog' },    //    'YUI blog',   <-
+         { value: 'Other' }        //    'Other'       <-
+      ],                            // ],               <-
+      value:'Ajaxian',
+      parentEl: 'container1'
+   });
+      
+   // Example 2
+
+   new Y.inputEx.RadioField({
+      label: 'Where are you from ?',
+      name: 'example2',
+      choices: [                                                // no alternative syntax
+         { value: 'us', label: 'United States of America' },
+         { value: 'fr', label: 'France' }
+      ],
+      parentEl: 'container2'
+   });
+
+   // Example 3
+
+   var element, field0, button0, val0, logDiv0;
+   
+   element = Y.one('#container3');
+   field0 = new Y.inputEx.RadioField({ name: 'example3', label: 'Where are you from ?', choices: [{ value: 'us', label: 'United States of America' }, { value: 'fr', label: 'France' }], parentEl: element });
+   
+   button0 = Y.inputEx.cn('button', null, null, "SetValue with 'us'");
+   element.appendChild(button0);
+   
+   val0 = 'us';
+   
+   Y.one(button0).on("click" ,function() {
+      field0.setValue(val0);
+      val0 = (val0 == 'fr') ? 'us' : 'fr';
+      button0.innerHTML = "SetValue with '"+val0+"'";
+   });
+   
+   logDiv0 = Y.inputEx.cn('div', null, null, "Log :");
+   element.appendChild(logDiv0);
+   
+   field0.on('updated', function(value) {
+      logDiv0.innerHTML += "Updated at "+(new Date())+" with value \""+value+"\"";
+      logDiv0.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   
+   // Example 4
+   
+   new Y.inputEx.RadioField({
+      label: 'Where did you learn about inputEx ?',
+      display:'vertically',  // instead of default implicit "display:'inline'"
+      name: 'example4',
+      choices: ['Ajaxian','YUI blog','Other'],
+      parentEl: 'container4'
+   });
+   
+   // + CSS : underline selected choice
+   //
+   // <style>
+   //   .inputEx-RadioField .inputEx-selected label { text-decoration: underline; }
+   // </style>
+   
+   
+   // Example 5
+   
+   var field2 = new Y.inputEx.RadioField({label: 'Where did you learn about inputEx ?', name: 'example5', choices: ['Ajaxian','YUI blog'], parentEl: 'container5', allowAny: true});
+   field2.on('updated', function(value) {
+         Y.one('#container5').appendChild( Y.inputEx.cn('div',null,null, "Updated with value: \""+value+"\"") );
+   });
+   
+   
+   // Example 6
+   
+   var field6, element6, button61, button62, button63;
+   
+   element6 = Y.one('#container6');
+   
+   field6 = new Y.inputEx.RadioField({
+      label: 'Would you like to receive an email reminder ?',
+      name: 'example6',
+      display: 'vertically',
+      choices: [{ value: '0', label: 'No' }],
+      value: '0', // default value, also used by clear() method
+      parentEl: 'container6',
+      allowAny: {
+         separators:['Yes, ',' hours before the event'],
+         value:'3', // default value for allowAny field6, not for radioField
+         validator: function(val) {
+            var num = parseInt(val,10);
+            return (val === ""+num && num >= 1 && num <= 48);
+         }
+      },
+      messages: {invalid:"Hours should be between 1 and 48."},
+      showMsg:true,
+      required:true
+   });
+   
+   field6.on('updated', function(value) {
+         element6.appendChild( Y.inputEx.cn('div',null,null, "Updated with value: \""+value+"\"") );
+   });
+   
+   button61 = Y.inputEx.cn('button', null, null, 'setValue("6")');
+   element6.appendChild(button61); 
+   Y.one(button61).on('click', function() { field6.setValue("6"); });
+   
+   button62 = Y.inputEx.cn('button', null, null, 'getValue()');
+   element6.appendChild(button62); 
+   Y.one(button62).on('click', function() { alert(field6.getValue()); });
+   
+   button63 = Y.inputEx.cn('button', null, null, 'clear()');
+   element6.appendChild(button63); 
+   Y.one(button63).on('click', function() { field6.clear(); });
+   
+   /* Style
+   #container6 div.inputEx-StringField-wrapper input {width: 25px;}
+   */
+   
+   
+   // Example 7
+
+
+   var field7, element7;
+   
+   element7 = Y.one('#container7');
+   
+   field7 = new Y.inputEx.RadioField({
+      label: 'Would you like to receive an email reminder ?',
+      name: 'example6bis',
+      display: 'vertically',
+      choices: [{ value: 0, label: 'No' }, { value: 1440, label: 'Yes, 1 day before the event (recommended)'}],
+      value: 1440, // default value, also used by clear() method
+      parentEl: element7,
+      allowAny: {
+         field7: {
+            type: "timeinterval",
+            unit: Y.inputEx.TimeIntervalField.units.MINUTE, // return value in 'minutes'
+            value: 7*24*60, // 1 week = 7 days,
+            fields: [
+               {type:'integer', value:1, required:true},
+               {
+                  type: 'select',
+                  choices: [
+                     { value: Y.inputEx.TimeIntervalField.units.HOUR, label: Y.Intl.get("inputex-timeinterval").timeUnits.HOUR },
+                     { value: Y.inputEx.TimeIntervalField.units.DAY, label: Y.Intl.get("inputex-timeinterval").timeUnits.DAY },
+                     { value: Y.inputEx.TimeIntervalField.units.MONTH, label: Y.Intl.get("inputex-timeinterval").timeUnits.MONTH }
+                  ]
+               }
+            ],
+            separators:['Yes, ',false, ' before the event']
+         },
+         validator: function(val) {
+            return (val >= 120 && val <= 43200);
+         }
+      },
+      required:true,
+      messages: {invalid:"Reminder can be set between 2 hours and 1 month before the event"},
+      showMsg:true
+   });
+   
+   field7.on('updated', function(value) {
+         element7.appendChild( Y.inputEx.cn('div',null,null, "Updated with value: "+value+" (minutes)") );
+   });
+   
+   
+   
+   // Example 8
+   
+
+   var element8, field8, button81, button82;
+   
+   element8 = Y.one('#container8');
+   field8 = new Y.inputEx.RadioField({label: 'Where did you learn about inputEx ?', name: 'example8', choices: ['Ajaxian','YUI blog','Other'], value:'Ajaxian', parentEl: element8});
+   
+   button81 = Y.inputEx.cn('button', null, null, 'disable()');
+   element8.appendChild(button81); 
+   Y.one(button81).on('click', function() { field8.disable(); });
+
+   button82 = Y.inputEx.cn('button', null, null, 'enable()');
+   element8.appendChild(button82); 
+   Y.one(button82).on('click', function() { field8.enable(); });
+   
+   
+   // Example 9
+   
+
+   var element9, field9, button91, button92, button93, logDiv9;
+   
+   element9 = Y.one('#container9');
+   field9 = new Y.inputEx.RadioField({name: 'example9', choices: [{ value: 'United States of America' }, { value: 'France' }], parentEl: element9});
+   
+   button91 = Y.inputEx.cn('button', null, null, "Add 'Spain' choice (and select 'Spain')");
+   Y.one(button91).on('click' ,function() {
+      field9.addChoice({value:"Spain",selected:true});
+      button91.disabled = true;
+   });
+   
+   button92 = Y.inputEx.cn('button', null, null, "Add 'United Kingdom' choice (value : 'uk'), in position 1");
+   Y.one(button92).on('click' ,function() {
+      field9.addChoice({value:"uk",label:"United Kingdom",position:1});
+      button92.disabled = true;
+   });
+   
+   button93 = Y.inputEx.cn('button', null, null, "Add 'Sweden' choice after 'France' choice");
+   Y.one(button93).on('click' ,function() {
+      field9.addChoice({value:"Sweden",after:"France"});
+      button93.disabled = true;
+   });
+   
+   element9.appendChild(button91);
+   element9.appendChild(button92);
+   element9.appendChild(button93);
+   
+   logDiv9 = Y.inputEx.cn('div', null, null, "Log : ");
+   element9.appendChild(logDiv9);
+   
+   field9.on('updated', function(value) {
+      logDiv9.innerHTML += "Updated at "+(new Date())+" with value \""+value+"\"";
+      logDiv9.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   
+   // Example 10
+   
+   var element10, field10, button101, button102, button103, logDiv10;
+   
+   element10 = Y.one('#container10');
+   field10 = new Y.inputEx.RadioField({
+      name: 'example9',
+      choices: [
+         { value: 'usa', label: 'United States of America' },
+         { value: 'de', label: 'Germany' },
+         { value: 'uk', label: 'United Kingdom' },
+         { value: 'fr', label: 'France' },
+         { value: 'se', label: 'Sweden' },
+         { value: 'es', label: 'Spain' }
+      ],
+      parentEl: element10
+   });
+   
+   button101 = Y.inputEx.cn('button', null, null, "Remove 'Spain' choice (by label)");
+   Y.one(button101).on('click', function() {
+      field10.removeChoice({label:"Spain"});
+      button101.disabled = true;
+   });
+   
+   button102 = Y.inputEx.cn('button', null, null, "Remove 'United Kingdom' choice (by value)");
+   Y.one(button102).on('click', function() {
+      field10.removeChoice({value:"uk"});
+      button102.disabled = true;
+   });
+   
+   button103 = Y.inputEx.cn('button', null, null, "Remove 'Germany' choice (by position)");
+   Y.one(button103).on('click', function() {
+      field10.removeChoice({position:1});
+      button103.disabled = true;
+   });
+   
+   element10.appendChild(button101);
+   element10.appendChild(button102);
+   element10.appendChild(button103);
+   
+   logDiv10 = Y.inputEx.cn('div', null, null, "Log : ");
+   element10.appendChild(logDiv10);
+   
+   field10.on('updated', function(value) {
+      logDiv10.innerHTML += "Updated at "+(new Date())+" with value \""+value+"\"";
+      logDiv10.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   
+
+   // Example 11
+   
+   var element11, field11, button111, button112, button113, button114, logDiv11;
+   
+   element11 = Y.one('#container11');
+   field11 = new Y.inputEx.RadioField({name: 'example11', choices: [ { value: 'usa', label: 'United States of America' }, { value: 'fr', label: 'France' }, { value: 'es', label: 'Spain' }], parentEl: element11});
+   
+   button111 = Y.inputEx.cn('button', null, null, "Hide choice 'France'"); element11.appendChild(button111);
+   button112 = Y.inputEx.cn('button', null, null, "Show choice 'France'"); element11.appendChild(button112);
+   button113 = Y.inputEx.cn('button', null, null, "Disable choice 'Spain'"); element11.appendChild(button113);
+   button114 = Y.inputEx.cn('button', null, null, "Enable choice 'Spain'"); element11.appendChild(button114);
+   
+   logDiv11 = Y.inputEx.cn('div', null, null, "Log :");
+   element11.appendChild(logDiv11);
+   
+   field11.on('updated', function(value) {
+      logDiv11.innerHTML += "Updated at "+(new Date())+" with value \""+value+"\"";
+      logDiv11.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   
+   Y.one(button111).on('click' ,function() {
+      
+      field11.hideChoice({value:'fr'});
+      
+      logDiv11.innerHTML += "[INFO] Hide choice 'France' (current value : "+field11.getValue()+")";
+      logDiv11.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   Y.one(button112).on('click' ,function() {
+      
+      field11.showChoice({value:'fr'});
+      
+      logDiv11.innerHTML += "[INFO] Show choice 'France' (current value : "+field11.getValue()+")";
+      logDiv11.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   Y.one(button113).on('click' ,function() {
+      
+      field11.disableChoice({label:'Spain'});
+      
+      logDiv11.innerHTML += "[INFO] Disable choice 'Spain' (current value : "+field11.getValue()+")";
+      logDiv11.appendChild(Y.inputEx.cn('br'));
+   });
+   
+   Y.one(button114).on('click' ,function() {
+      
+      field11.enableChoice({label:'Spain'});
+      
+      logDiv11.innerHTML += "[INFO] Enable choice 'Spain' (current value : "+field11.getValue()+")";
+      logDiv11.appendChild(Y.inputEx.cn('br'));
+   });
+   
+
+});
+
+</script>
+
+</div>
+
+<h2>HTML</h2>
+
+<pre class="code prettyprint">&lt;div id=&quot;field-container&quot;&gt;&lt;&#x2F;div&gt;</pre>
+
+
+<h2>JavaScript</h2>
+
+
+<h3>Implementation</h3>
+
+<pre class="code prettyprint">YUI().use(&#x27;inputex-radio&#x27;, &#x27;inputex-time&#x27;, &#x27;inputex-integer&#x27;, &#x27;inputex-timeinterval&#x27;, function(Y) { 
+
+   &#x2F;&#x2F; Example 1
+
+   new Y.inputEx.RadioField({
+      label: &#x27;Where did you learn about inputEx ?&#x27;,
+      name: &#x27;example1&#x27;,
+      choices: [                    &#x2F;&#x2F; choices: [       &lt;- alternative syntax (shorter)
+         { value: &#x27;Ajaxian&#x27; },     &#x2F;&#x2F;    &#x27;Ajaxian&#x27;,    &lt;-
+         { value: &#x27;YUI blog&#x27; },    &#x2F;&#x2F;    &#x27;YUI blog&#x27;,   &lt;-
+         { value: &#x27;Other&#x27; }        &#x2F;&#x2F;    &#x27;Other&#x27;       &lt;-
+      ],                            &#x2F;&#x2F; ],               &lt;-
+      value:&#x27;Ajaxian&#x27;,
+      parentEl: &#x27;container1&#x27;
+   });
+      
+   &#x2F;&#x2F; Example 2
+
+   new Y.inputEx.RadioField({
+      label: &#x27;Where are you from ?&#x27;,
+      name: &#x27;example2&#x27;,
+      choices: [                                                &#x2F;&#x2F; no alternative syntax
+         { value: &#x27;us&#x27;, label: &#x27;United States of America&#x27; },
+         { value: &#x27;fr&#x27;, label: &#x27;France&#x27; }
+      ],
+      parentEl: &#x27;container2&#x27;
+   });
+
+   &#x2F;&#x2F; Example 3
+
+   var element, field0, button0, val0, logDiv0;
+   
+   element = Y.one(&#x27;#container3&#x27;);
+   field0 = new Y.inputEx.RadioField({ name: &#x27;example3&#x27;, label: &#x27;Where are you from ?&#x27;, choices: [{ value: &#x27;us&#x27;, label: &#x27;United States of America&#x27; }, { value: &#x27;fr&#x27;, label: &#x27;France&#x27; }], parentEl: element });
+   
+   button0 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;SetValue with &#x27;us&#x27;&quot;);
+   element.appendChild(button0);
+   
+   val0 = &#x27;us&#x27;;
+   
+   Y.one(button0).on(&quot;click&quot; ,function() {
+      field0.setValue(val0);
+      val0 = (val0 == &#x27;fr&#x27;) ? &#x27;us&#x27; : &#x27;fr&#x27;;
+      button0.innerHTML = &quot;SetValue with &#x27;&quot;+val0+&quot;&#x27;&quot;;
+   });
+   
+   logDiv0 = Y.inputEx.cn(&#x27;div&#x27;, null, null, &quot;Log :&quot;);
+   element.appendChild(logDiv0);
+   
+   field0.on(&#x27;updated&#x27;, function(value) {
+      logDiv0.innerHTML += &quot;Updated at &quot;+(new Date())+&quot; with value \&quot;&quot;+value+&quot;\&quot;&quot;;
+      logDiv0.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   
+   &#x2F;&#x2F; Example 4
+   
+   new Y.inputEx.RadioField({
+      label: &#x27;Where did you learn about inputEx ?&#x27;,
+      display:&#x27;vertically&#x27;,  &#x2F;&#x2F; instead of default implicit &quot;display:&#x27;inline&#x27;&quot;
+      name: &#x27;example4&#x27;,
+      choices: [&#x27;Ajaxian&#x27;,&#x27;YUI blog&#x27;,&#x27;Other&#x27;],
+      parentEl: &#x27;container4&#x27;
+   });
+   
+   &#x2F;&#x2F; + CSS : underline selected choice
+   &#x2F;&#x2F;
+   &#x2F;&#x2F; &lt;style&gt;
+   &#x2F;&#x2F;   .inputEx-RadioField .inputEx-selected label { text-decoration: underline; }
+   &#x2F;&#x2F; &lt;&#x2F;style&gt;
+   
+   
+   &#x2F;&#x2F; Example 5
+   
+   var field2 = new Y.inputEx.RadioField({label: &#x27;Where did you learn about inputEx ?&#x27;, name: &#x27;example5&#x27;, choices: [&#x27;Ajaxian&#x27;,&#x27;YUI blog&#x27;], parentEl: &#x27;container5&#x27;, allowAny: true});
+   field2.on(&#x27;updated&#x27;, function(value) {
+         Y.one(&#x27;#container5&#x27;).appendChild( Y.inputEx.cn(&#x27;div&#x27;,null,null, &quot;Updated with value: \&quot;&quot;+value+&quot;\&quot;&quot;) );
+   });
+   
+   
+   &#x2F;&#x2F; Example 6
+   
+   var field6, element6, button61, button62, button63;
+   
+   element6 = Y.one(&#x27;#container6&#x27;);
+   
+   field6 = new Y.inputEx.RadioField({
+      label: &#x27;Would you like to receive an email reminder ?&#x27;,
+      name: &#x27;example6&#x27;,
+      display: &#x27;vertically&#x27;,
+      choices: [{ value: &#x27;0&#x27;, label: &#x27;No&#x27; }],
+      value: &#x27;0&#x27;, &#x2F;&#x2F; default value, also used by clear() method
+      parentEl: &#x27;container6&#x27;,
+      allowAny: {
+         separators:[&#x27;Yes, &#x27;,&#x27; hours before the event&#x27;],
+         value:&#x27;3&#x27;, &#x2F;&#x2F; default value for allowAny field6, not for radioField
+         validator: function(val) {
+            var num = parseInt(val,10);
+            return (val === &quot;&quot;+num &amp;&amp; num &gt;= 1 &amp;&amp; num &lt;= 48);
+         }
+      },
+      messages: {invalid:&quot;Hours should be between 1 and 48.&quot;},
+      showMsg:true,
+      required:true
+   });
+   
+   field6.on(&#x27;updated&#x27;, function(value) {
+         element6.appendChild( Y.inputEx.cn(&#x27;div&#x27;,null,null, &quot;Updated with value: \&quot;&quot;+value+&quot;\&quot;&quot;) );
+   });
+   
+   button61 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &#x27;setValue(&quot;6&quot;)&#x27;);
+   element6.appendChild(button61); 
+   Y.one(button61).on(&#x27;click&#x27;, function() { field6.setValue(&quot;6&quot;); });
+   
+   button62 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &#x27;getValue()&#x27;);
+   element6.appendChild(button62); 
+   Y.one(button62).on(&#x27;click&#x27;, function() { alert(field6.getValue()); });
+   
+   button63 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &#x27;clear()&#x27;);
+   element6.appendChild(button63); 
+   Y.one(button63).on(&#x27;click&#x27;, function() { field6.clear(); });
+   
+   &#x2F;* Style
+   #container6 div.inputEx-StringField-wrapper input {width: 25px;}
+   *&#x2F;
+   
+   
+   &#x2F;&#x2F; Example 7
+
+
+   var field7, element7;
+   
+   element7 = Y.one(&#x27;#container7&#x27;);
+   
+   field7 = new Y.inputEx.RadioField({
+      label: &#x27;Would you like to receive an email reminder ?&#x27;,
+      name: &#x27;example6bis&#x27;,
+      display: &#x27;vertically&#x27;,
+      choices: [{ value: 0, label: &#x27;No&#x27; }, { value: 1440, label: &#x27;Yes, 1 day before the event (recommended)&#x27;}],
+      value: 1440, &#x2F;&#x2F; default value, also used by clear() method
+      parentEl: element7,
+      allowAny: {
+         field7: {
+            type: &quot;timeinterval&quot;,
+            unit: Y.inputEx.TimeIntervalField.units.MINUTE, &#x2F;&#x2F; return value in &#x27;minutes&#x27;
+            value: 7*24*60, &#x2F;&#x2F; 1 week = 7 days,
+            fields: [
+               {type:&#x27;integer&#x27;, value:1, required:true},
+               {
+                  type: &#x27;select&#x27;,
+                  choices: [
+                     { value: Y.inputEx.TimeIntervalField.units.HOUR, label: Y.Intl.get(&quot;inputex-timeinterval&quot;).timeUnits.HOUR },
+                     { value: Y.inputEx.TimeIntervalField.units.DAY, label: Y.Intl.get(&quot;inputex-timeinterval&quot;).timeUnits.DAY },
+                     { value: Y.inputEx.TimeIntervalField.units.MONTH, label: Y.Intl.get(&quot;inputex-timeinterval&quot;).timeUnits.MONTH }
+                  ]
+               }
+            ],
+            separators:[&#x27;Yes, &#x27;,false, &#x27; before the event&#x27;]
+         },
+         validator: function(val) {
+            return (val &gt;= 120 &amp;&amp; val &lt;= 43200);
+         }
+      },
+      required:true,
+      messages: {invalid:&quot;Reminder can be set between 2 hours and 1 month before the event&quot;},
+      showMsg:true
+   });
+   
+   field7.on(&#x27;updated&#x27;, function(value) {
+         element7.appendChild( Y.inputEx.cn(&#x27;div&#x27;,null,null, &quot;Updated with value: &quot;+value+&quot; (minutes)&quot;) );
+   });
+   
+   
+   
+   &#x2F;&#x2F; Example 8
+   
+
+   var element8, field8, button81, button82;
+   
+   element8 = Y.one(&#x27;#container8&#x27;);
+   field8 = new Y.inputEx.RadioField({label: &#x27;Where did you learn about inputEx ?&#x27;, name: &#x27;example8&#x27;, choices: [&#x27;Ajaxian&#x27;,&#x27;YUI blog&#x27;,&#x27;Other&#x27;], value:&#x27;Ajaxian&#x27;, parentEl: element8});
+   
+   button81 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &#x27;disable()&#x27;);
+   element8.appendChild(button81); 
+   Y.one(button81).on(&#x27;click&#x27;, function() { field8.disable(); });
+
+   button82 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &#x27;enable()&#x27;);
+   element8.appendChild(button82); 
+   Y.one(button82).on(&#x27;click&#x27;, function() { field8.enable(); });
+   
+   
+   &#x2F;&#x2F; Example 9
+   
+
+   var element9, field9, button91, button92, button93, logDiv9;
+   
+   element9 = Y.one(&#x27;#container9&#x27;);
+   field9 = new Y.inputEx.RadioField({name: &#x27;example9&#x27;, choices: [{ value: &#x27;United States of America&#x27; }, { value: &#x27;France&#x27; }], parentEl: element9});
+   
+   button91 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Add &#x27;Spain&#x27; choice (and select &#x27;Spain&#x27;)&quot;);
+   Y.one(button91).on(&#x27;click&#x27; ,function() {
+      field9.addChoice({value:&quot;Spain&quot;,selected:true});
+      button91.disabled = true;
+   });
+   
+   button92 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Add &#x27;United Kingdom&#x27; choice (value : &#x27;uk&#x27;), in position 1&quot;);
+   Y.one(button92).on(&#x27;click&#x27; ,function() {
+      field9.addChoice({value:&quot;uk&quot;,label:&quot;United Kingdom&quot;,position:1});
+      button92.disabled = true;
+   });
+   
+   button93 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Add &#x27;Sweden&#x27; choice after &#x27;France&#x27; choice&quot;);
+   Y.one(button93).on(&#x27;click&#x27; ,function() {
+      field9.addChoice({value:&quot;Sweden&quot;,after:&quot;France&quot;});
+      button93.disabled = true;
+   });
+   
+   element9.appendChild(button91);
+   element9.appendChild(button92);
+   element9.appendChild(button93);
+   
+   logDiv9 = Y.inputEx.cn(&#x27;div&#x27;, null, null, &quot;Log : &quot;);
+   element9.appendChild(logDiv9);
+   
+   field9.on(&#x27;updated&#x27;, function(value) {
+      logDiv9.innerHTML += &quot;Updated at &quot;+(new Date())+&quot; with value \&quot;&quot;+value+&quot;\&quot;&quot;;
+      logDiv9.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   
+   &#x2F;&#x2F; Example 10
+   
+   var element10, field10, button101, button102, button103, logDiv10;
+   
+   element10 = Y.one(&#x27;#container10&#x27;);
+   field10 = new Y.inputEx.RadioField({
+      name: &#x27;example9&#x27;,
+      choices: [
+         { value: &#x27;usa&#x27;, label: &#x27;United States of America&#x27; },
+         { value: &#x27;de&#x27;, label: &#x27;Germany&#x27; },
+         { value: &#x27;uk&#x27;, label: &#x27;United Kingdom&#x27; },
+         { value: &#x27;fr&#x27;, label: &#x27;France&#x27; },
+         { value: &#x27;se&#x27;, label: &#x27;Sweden&#x27; },
+         { value: &#x27;es&#x27;, label: &#x27;Spain&#x27; }
+      ],
+      parentEl: element10
+   });
+   
+   button101 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Remove &#x27;Spain&#x27; choice (by label)&quot;);
+   Y.one(button101).on(&#x27;click&#x27;, function() {
+      field10.removeChoice({label:&quot;Spain&quot;});
+      button101.disabled = true;
+   });
+   
+   button102 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Remove &#x27;United Kingdom&#x27; choice (by value)&quot;);
+   Y.one(button102).on(&#x27;click&#x27;, function() {
+      field10.removeChoice({value:&quot;uk&quot;});
+      button102.disabled = true;
+   });
+   
+   button103 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Remove &#x27;Germany&#x27; choice (by position)&quot;);
+   Y.one(button103).on(&#x27;click&#x27;, function() {
+      field10.removeChoice({position:1});
+      button103.disabled = true;
+   });
+   
+   element10.appendChild(button101);
+   element10.appendChild(button102);
+   element10.appendChild(button103);
+   
+   logDiv10 = Y.inputEx.cn(&#x27;div&#x27;, null, null, &quot;Log : &quot;);
+   element10.appendChild(logDiv10);
+   
+   field10.on(&#x27;updated&#x27;, function(value) {
+      logDiv10.innerHTML += &quot;Updated at &quot;+(new Date())+&quot; with value \&quot;&quot;+value+&quot;\&quot;&quot;;
+      logDiv10.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   
+
+   &#x2F;&#x2F; Example 11
+   
+   var element11, field11, button111, button112, button113, button114, logDiv11;
+   
+   element11 = Y.one(&#x27;#container11&#x27;);
+   field11 = new Y.inputEx.RadioField({name: &#x27;example11&#x27;, choices: [ { value: &#x27;usa&#x27;, label: &#x27;United States of America&#x27; }, { value: &#x27;fr&#x27;, label: &#x27;France&#x27; }, { value: &#x27;es&#x27;, label: &#x27;Spain&#x27; }], parentEl: element11});
+   
+   button111 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Hide choice &#x27;France&#x27;&quot;); element11.appendChild(button111);
+   button112 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Show choice &#x27;France&#x27;&quot;); element11.appendChild(button112);
+   button113 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Disable choice &#x27;Spain&#x27;&quot;); element11.appendChild(button113);
+   button114 = Y.inputEx.cn(&#x27;button&#x27;, null, null, &quot;Enable choice &#x27;Spain&#x27;&quot;); element11.appendChild(button114);
+   
+   logDiv11 = Y.inputEx.cn(&#x27;div&#x27;, null, null, &quot;Log :&quot;);
+   element11.appendChild(logDiv11);
+   
+   field11.on(&#x27;updated&#x27;, function(value) {
+      logDiv11.innerHTML += &quot;Updated at &quot;+(new Date())+&quot; with value \&quot;&quot;+value+&quot;\&quot;&quot;;
+      logDiv11.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   
+   Y.one(button111).on(&#x27;click&#x27; ,function() {
+      
+      field11.hideChoice({value:&#x27;fr&#x27;});
+      
+      logDiv11.innerHTML += &quot;[INFO] Hide choice &#x27;France&#x27; (current value : &quot;+field11.getValue()+&quot;)&quot;;
+      logDiv11.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   Y.one(button112).on(&#x27;click&#x27; ,function() {
+      
+      field11.showChoice({value:&#x27;fr&#x27;});
+      
+      logDiv11.innerHTML += &quot;[INFO] Show choice &#x27;France&#x27; (current value : &quot;+field11.getValue()+&quot;)&quot;;
+      logDiv11.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   Y.one(button113).on(&#x27;click&#x27; ,function() {
+      
+      field11.disableChoice({label:&#x27;Spain&#x27;});
+      
+      logDiv11.innerHTML += &quot;[INFO] Disable choice &#x27;Spain&#x27; (current value : &quot;+field11.getValue()+&quot;)&quot;;
+      logDiv11.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+   Y.one(button114).on(&#x27;click&#x27; ,function() {
+      
+      field11.enableChoice({label:&#x27;Spain&#x27;});
+      
+      logDiv11.innerHTML += &quot;[INFO] Enable choice &#x27;Spain&#x27; (current value : &quot;+field11.getValue()+&quot;)&quot;;
+      logDiv11.appendChild(Y.inputEx.cn(&#x27;br&#x27;));
+   });
+   
+
+});</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="How to create a radio field.">
+                                            <a href="radio.html">Basic radio field creation</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+
+
+                    <div id="links-sidebox" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Links</h2>
+                        </div>
+
+                        <div class="bd">
+<ul>
+    <li><a href="../assets/../index.html">Home</a></li>
+    <li><a href="../assets/../index.html#examples">All Examples</a></li>
+    <li><a href="../assets/../developer-guide.html">Developer's Guide</a></li>
+    <li><a href="../assets/../contribute.html">How to Contribute</a></li>
+    <li><a href="../assets/../../api/index.html">API Documentation</a></li>
+</ul>
+
+<ul>
+    <li><a href="http://github.com/clicrdv/inputex">Fork/Follow on GitHub</a></li>
+    <li><a href="http://github.com/clicrdv/inputex/issues">GitHub Issues</a></li>
+    <li><a href="http://neyric.com/category/inputex/">Blog</a></li>
+    <li><a href="http://groups.google.com/group/inputex/">Forums</a></li>
+    <li><a href="../assets/../../license.txt">License</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+
+            <div>
+                <center>
+                <img src="http://www.twitter.com/favicon.ico" alt="twitter"> follow <a href="http://twitter.com/inputex"> on Twitter</a><br>
+                <img src="http://github.com/favicon.ico" alt="GitHub"> fork <a href="http://github.com/clicrdv/inputex"> on GitHub</a><br><br>
+                <br /><br />
+            </center>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/inputex-radio',
+    name: 'radio',
+    title: 'Basic radio field creation',
+    newWindow: '',
+    auto:  true 
+};
+YUI.Env.Tests.examples.push('radio');
+
+</script>
+<!--script src="../assets/yui/test-runner.js"></script-->
+
+
+
+</body>
+</html>

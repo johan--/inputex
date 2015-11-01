@@ -1,0 +1,8 @@
+{
+   "inputex-tinymce": {
+      "requires": [
+         "inputex-field"
+      ],
+      "ix_provides": "tinymce"
+   }
+}

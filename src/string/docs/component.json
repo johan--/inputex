@@ -1,0 +1,23 @@
+{
+   "name": "inputex-string",
+   "displayName": "inputex-string",
+   "description": "inputex-string",
+   "author": "neyric",
+   "tags": [
+      "inputex-string"
+   ],
+   "use": [
+      "inputex-field",
+      "event-key"
+   ],
+   "examples": [
+         {
+           "name"       : "string",
+           "displayName": "Basic string field creation",
+           "description": "How to create a string field.",
+           "modules"    : ["inputex-string"],
+           "tags"       : ["string"],
+           "hideTableOfContents": true
+         }
+    ]
+}

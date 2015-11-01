@@ -1,0 +1,20 @@
+{
+   "inputex-domain-name": {
+      "requires": [
+         "intl",
+         "inputex-string"
+      ],
+      "lang": [
+         "en",
+         "fr",
+         "ca",
+         "de",
+         "es",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ],
+      "ix_provides": "domain-name"
+   }
+}

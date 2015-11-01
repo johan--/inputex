@@ -1,0 +1,24 @@
+{
+   "name": "inputex-dateselectmonth",
+   "displayName": "inputex-dateselectmonth",
+   "description": "inputex-dateselectmonth",
+   "author": "neyric",
+   "tags": [
+      "inputex-dateselectmonth"
+   ],
+   "use": [
+      "inputex-combine",
+      "inputex-string",
+      "inputex-select"
+   ],
+   "examples": [
+	   {
+	       "name"       : "dateselectmonth",
+	       "displayName": "Basic dateselectmonth field creation",
+	       "description": "How to create a dateselectmonth field.",
+	       "modules"    : ["inputex-dateselectmonth"],
+	       "tags"       : ["dateselectmonth"],
+	       "hideTableOfContents": true
+	   }
+   ]
+}

@@ -1,0 +1,13 @@
+{
+   "inputex-radio": {
+      "requires": [
+         "selector",
+         "node-event-delegate",
+         "inputex-field",
+         "inputex-choice",
+         "inputex-string"
+      ],
+      "ix_provides": "radio",
+      "skinnable" : true
+   }
+}

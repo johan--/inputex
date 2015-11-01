@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-datesplit_es",function(e){e.Intl.add("inputex-datesplit","es",{dayPlaceholder:"D\u00eda",defaultDateFormat:"d/m/Y",monthPlaceholder:"Mes",yearPlaceholder:"A\u00f1o"})},"@VERSION@");

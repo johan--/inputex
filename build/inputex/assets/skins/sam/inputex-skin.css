@@ -1,0 +1,38 @@
+div.inputEx-invalid > div.inputEx-message,
+div.inputEx-invalid > div.inputEx-label,
+div.inputEx-invalid  div.inputEx-message-below {
+   color:#C00E0C;
+   font-weight:bold;
+}
+
+div.inputEx-invalid > div.inputEx-label label {
+   background:transparent url(images/error_bang.gif) no-repeat scroll 0 1px;
+   padding-left:20px;
+}
+
+div.inputEx-valid > div.inputEx-message {
+   font-weight: normal;
+}
+
+div.inputEx-valid > div.inputEx-label {
+   font-weight:normal;
+}
+
+/* Properties set by an invalid higher hierarchy field are disabled for valid or empty subfields */
+div.inputEx-valid > div.inputEx-label label,
+div.inputEx-empty > div.inputEx-label label {
+   background: none;
+   padding-left: inherit;
+   font-weight:normal;
+}
+
+/* Legacy HTML5 Placeholder for old browsers */
+div.inputEx-typeInvite > div.inputEx-Field input, div.inputEx-typeInvite > div.inputEx-Field textarea {
+   color: #aaa;
+}
+
+/* HTML5 Placeholder */
+div.inputEx-Field ::-webkit-input-placeholder { color: #aaa; } /* chrome / Safari / Opera */
+div.inputEx-Field ::-moz-placeholder { color:#aaa; } /* firefox 19+ */
+div.inputEx-Field :-ms-input-placeholder { color:#aaa; } /* ie */
+div.inputEx-Field input:-moz-placeholder, div.inputEx-Field textarea:-moz-placeholder { color:#aaa; } /* firefox 19- */

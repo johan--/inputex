@@ -1,0 +1,21 @@
+{
+   "inputex-url": {
+      "requires": [
+         "inputex-string"
+      ],
+      "ix_provides": "url",
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

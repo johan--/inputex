@@ -1,0 +1,11 @@
+{
+   "inputex-rpc": {
+      "requires": [
+         "json",
+         "inputex",
+         "io-base",
+         "inputex-jsonschema",
+         "jsonp"
+      ]
+   }
+}

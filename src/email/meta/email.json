@@ -1,0 +1,21 @@
+{
+   "inputex-email": {
+      "requires": [
+         "inputex-string",
+          "inputex-accent-remover"
+      ],
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ],
+      "ix_provides": "email"
+   }
+}

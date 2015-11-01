@@ -1,0 +1,22 @@
+{
+   "name": "inputex-textarea",
+   "displayName": "inputex-textarea",
+   "description": "inputex-textarea",
+   "author": "neyric",
+   "tags": [
+      "inputex-textarea"
+   ],
+   "use": [
+      "inputex-string"
+   ],
+   "examples": [
+            {
+              "name"       : "textarea",
+              "displayName": "Basic string textarea creation",
+              "description": "How to create a textarea field.",
+              "modules"    : ["inputex-textarea"],
+              "tags"       : ["textarea"],
+              "hideTableOfContents": true
+            }
+       ]
+}

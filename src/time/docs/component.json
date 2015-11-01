@@ -1,0 +1,23 @@
+{
+   "name": "inputex-time",
+   "displayName": "inputex-time",
+   "description": "inputex-time",
+   "author": "neyric",
+   "tags": [
+      "inputex-time"
+   ],
+   "use": [
+      "inputex-combine",
+      "inputex-select"
+   ],
+   "examples": [
+               {
+                 "name"       : "time",
+                 "displayName": "Basic time creation",
+                 "description": "How to create a time field.",
+                 "modules"    : ["inputex-time"],
+                 "tags"       : ["time"],
+                 "hideTableOfContents": true
+               }
+          ]
+}

@@ -1,0 +1,26 @@
+{
+   "name": "inputex-inplaceedit",
+   "displayName": "inputex-inplaceedit",
+   "description": "inputex-inplaceedit",
+   "author": "neyric",
+   "tags": [
+      "inputex-inplaceedit"
+   ],
+   "use": [
+      "inputex-field",
+      "inputex-button",
+      "anim-base",
+      "anim-color",
+      "inputex-visus"
+   ],
+   "examples": [
+      {
+         "name"       : "inplaceedit",
+         "displayName": "Basic inplaceedit field creation",
+         "description": "How to create a inplaceedit field.",
+         "modules"    : ["inputex-inplaceedit"],
+         "tags"       : ["inplaceedit"],
+         "hideTableOfContents": true
+      }
+   ]
+}

@@ -1,0 +1,22 @@
+{
+   "name": "inputex-combine",
+   "displayName": "Combine field",
+   "description": "inputex-combine",
+   "author": "neyric",
+   "tags": [
+      "inputex-combine"
+   ],
+   "use": [
+      "inputex-group"
+   ],
+   "examples": [
+	   {
+	       "name"       : "combine",
+	       "displayName": "Basic combine field creation",
+	       "description": "How to create a combine field.",
+	       "modules"    : ["inputex-combine"],
+	       "tags"       : ["combine"],
+	       "hideTableOfContents": true
+	   }
+   ]
+}

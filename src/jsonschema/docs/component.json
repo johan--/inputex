@@ -1,0 +1,22 @@
+{
+   "name": "inputex-jsonschema",
+   "displayName": "inputex-jsonschema",
+   "description": "inputex-jsonschema",
+   "author": "neyric",
+   "tags": [
+      "inputex-jsonschema"
+   ],
+   "use": [
+      "inputex"
+   ],
+   "examples": [
+      {
+         "name"       : "jsonschema",
+         "displayName": "Basic jsonschema field creation",
+         "description": "How to create a jsonschema field.",
+         "modules"    : ["inputex-jsonschema"],
+         "tags"       : ["jsonschema"],
+         "hideTableOfContents": true
+      }
+   ]
+}

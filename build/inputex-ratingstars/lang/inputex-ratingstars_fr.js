@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-ratingstars_fr",function(e){e.Intl.add("inputex-ratingstars","fr",{ratingMsg:"Classement: % (sur % votants) ",sendingRate:"Envoi en cours ...",thanksRate:"Merci d'avoir vot\u00e9"})},"@VERSION@");

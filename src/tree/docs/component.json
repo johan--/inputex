@@ -1,0 +1,24 @@
+{
+   "name": "inputex-tree",
+   "displayName": "inputex-tree",
+   "description": "inputex-tree",
+   "author": "neyric",
+   "tags": [
+      "inputex-tree"
+   ],
+   "use": [
+      "inputex-string",
+      "inputex-list",
+      "inputex-inplaceedit"
+   ],
+   "examples": [
+                        {
+                          "name"       : "tree",
+                          "displayName": "Basic tree field creation",
+                          "description": "How to create a tree field.",
+                          "modules"    : ["inputex-tree"],
+                          "tags"       : ["tree"],
+                          "hideTableOfContents": true
+                        }
+                   ]
+}

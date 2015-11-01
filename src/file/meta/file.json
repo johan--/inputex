@@ -1,0 +1,8 @@
+{
+   "inputex-file": {
+      "requires": [
+         "inputex-field"
+      ],
+      "ix_provides": "file"
+   }
+}

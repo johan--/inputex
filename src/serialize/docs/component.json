@@ -1,0 +1,23 @@
+{
+   "name": "inputex-serialize",
+   "displayName": "inputex-serialize",
+   "description": "inputex-serialize",
+   "author": "neyric",
+   "tags": [
+      "inputex-serialize"
+   ],
+   "use": [
+      "inputex-string",
+      "json"
+   ],
+   "examples": [
+          {
+            "name"       : "serialize",
+            "displayName": "Basic serialize field creation",
+            "description": "How to create a serialize field.",
+            "modules"    : ["inputex-serialize"],
+            "tags"       : ["serialize"],
+            "hideTableOfContents": true
+          }
+     ]
+}

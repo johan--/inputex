@@ -1,0 +1,25 @@
+{
+   "inputex-inplaceedit": {
+      "requires": [
+         "inputex-field",
+         "inputex-button",
+         "anim-base",
+         "anim-color",
+         "inputex-visus"
+      ],
+      "ix_provides": "inplaceedit",
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

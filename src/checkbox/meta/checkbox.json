@@ -1,0 +1,9 @@
+{
+	"inputex-checkbox": {
+		"requires": [
+		  "inputex-field"
+   	    ],
+		"ix_provides": "boolean",
+      "skinnable" : true
+	}
+}

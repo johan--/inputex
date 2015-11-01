@@ -1,0 +1,24 @@
+{
+   "name": "inputex-datetime",
+   "displayName": "inputex-datetime",
+   "description": "inputex-datetime",
+   "author": "neyric",
+   "tags": [
+      "inputex-datetime"
+   ],
+   "use": [
+      "inputex-datepicker",
+      "inputex-combine",
+      "inputex-time"
+   ],
+   "examples": [
+      {
+         "name"       : "datetime",
+         "displayName": "Basic datetime field creation",
+         "description": "How to create a datetime field.",
+         "modules"    : ["inputex-datetime"],
+         "tags"       : ["datetime"],
+         "hideTableOfContents": true
+      }
+   ]
+}

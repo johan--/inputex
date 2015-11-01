@@ -1,0 +1,24 @@
+{
+   "name": "inputex-panel",
+   "displayName": "inputex-panel",
+   "description": "inputex-panel",
+   "author": "neyric",
+   "tags": [
+      "inputex-panel"
+   ],
+   "use": [
+      "inputex",
+      "panel",
+      "inputex-base"
+   ],
+   "examples": [
+      {
+         "name"       : "panel",
+         "displayName": "Basic panel creation",
+         "description": "How to create a panel.",
+         "modules"    : ["inputex-panel"],
+         "tags"       : ["panel"],
+         "hideTableOfContents": true
+      }
+   ]
+}

@@ -1,0 +1,21 @@
+{
+   "inputex-timerange": {
+      "requires": [
+         "intl",
+         "inputex-combine",
+         "inputex-select"
+      ],
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "es",
+         "ca",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ],
+      "ix_provides": "timerange"
+   }
+}

@@ -1,0 +1,20 @@
+{
+   "name": "node-menunav-improved",
+   "displayName": "node-menunav-improved",
+   "description": "TODO",
+   "tags": [
+      "node-menunav-improved"
+   ],
+   "use": [
+   ],
+   "examples": [
+       {
+           "name"       : "firstexample",
+           "displayName": "Basic example",
+           "description": "How to instantiate...",
+           "modules"    : ["node-menunav-improved"],
+           "tags"       : [],
+           "hideTableOfContents": true
+       }
+   ]
+}

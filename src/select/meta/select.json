@@ -1,0 +1,9 @@
+{
+   "inputex-select": {
+      "requires": [
+         "inputex-field",
+         "inputex-choice"
+      ],
+      "ix_provides": "select"
+   }
+}

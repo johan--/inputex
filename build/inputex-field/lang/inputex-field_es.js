@@ -1,0 +1,1 @@
+YUI.add("lang/inputex-field_es",function(e){e.Intl.add("inputex-field","es",{invalid:"Este campo no es v\u00e1lido",required:"Este campo es obligatorio",valid:"Este campo es v\u00e1lido"})},"@VERSION@");

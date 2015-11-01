@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Basic jsonschema field creation</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.4.1/build/cssgrids/grids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui-min.js"></script>
+    <script src="../../build/inputex-loader/inputex-loader.js"></script>
+    <script>YUI_config.groups.inputex.base = '../../build/';</script>
+
+</head>
+<body class="yui3-skin-sam">
+
+<a href="https://github.com/clicrdv/inputex"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"> Example: Basic jsonschema field creation</h1>
+    </div>
+
+
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="example">
+
+    <h2>Build a form from JsonSchema</h2>
+    <p>Instantiate a inputEx.JsonSchema.Builder object, configure the schemaIdentifierMap (Hash of json-schema definitions) and call the <i>schemaToInputEx</i> method to get the inputEx definition.</p>
+    <div class='demoContainer' id='container1'></div>
+
+
+    <h2>Overriding inputEx options</h2>
+    <p>Use the <i>"_inputEx"</i> attribute on json-schema properties. This object will override inputEx' default properties in the field definition. You may also override the inputEx type through the <i>"_type"</i> attribute.</p>
+    <div class='demoContainer' id='container2'></div>
+
+    <script>
+    YUI_config.groups.inputex.base = '../../build/';
+    YUI().use('inputex-group','inputex-select','inputex-string', 'inputex-date','inputex-datepicker','inputex-jsonschema','inputex-checkbox','inputex-list','inputex-color', function(Y) {
+    // Create a schemaIdentifierMap
+var schemaIdentifierMap = {
+    // Person definition
+    "Person": {
+        "id": "Person",
+        "description":"A person",
+        "type":"object",
+        "properties": {
+            "name": { "type":"string"},
+            "born" : { "type":"string", "format":"date", "optional":true},
+            "gender" : { "type":"string", "choices": [ {"value":"male","label":"Guy"}, {"value":"female","label":"Girl"} ]},
+            "grownup": { "type": "boolean" },
+            "favoritecolors": { "type": "array" },
+            "address": {
+                "type":"object",
+                "properties":{
+                    "street":{"type":"string"},
+                    "city":{"type":"string"},
+                    "state":{"type":"string"}
+                }
+            }
+        }
+    }
+};
+
+// Create the JsonSchema builder object
+var builder = new Y.inputEx.JsonSchema.Builder({
+    'schemaIdentifierMap': schemaIdentifierMap
+});
+
+// Get the inputEx field definition from the "Person" object
+var inputExDefinition = builder.schemaToInputEx(schemaIdentifierMap["Person"]);
+
+// Add 'container1' as parent element
+inputExDefinition.parentEl = 'container1';
+
+// Create the form
+var f = Y.inputEx(inputExDefinition);
+
+
+//----------------------------------------------------------------------------
+
+// Create a schemaIdentifierMap
+var schemaIdentifierMap = {
+    // Person definition
+    "Person": {
+        "id": "Person",
+        "description":"A person",
+        "type":"object",
+        "properties": {
+            "name": { "type":"string", "_inputex": {placeholder: "you can add a placeholder", label: 'Your name'} },
+            "born" : { "type":"string", "format":"date", "optional":true, "_inputex": {"_type": "datepicker", valueFormat: 'Y-m-d', value: '2009-01-01', label: 'Birthdate'} },
+            "gender" : { "type":"string", "choices": [ {"value":"male","label":"Guy"}, {"value":"female","label":"Girl"} ]},
+            "grownup": { "type": "boolean", "_inputex": { label: "Grownup?", "description": "Over 18 only"} },
+            "favoritecolors": { "type": "array", "_inputex": { label: "Favorites colors", elementType: {"type": "color"} }}
+        }
+    }
+};
+
+
+// Create the JsonSchema builder object
+var builder = new Y.inputEx.JsonSchema.Builder({
+    'schemaIdentifierMap': schemaIdentifierMap,
+
+    // Those options will be added on all fields
+    'defaultOptions': {
+        'showMsg':true
+    }
+});
+
+// Get the inputEx field definition from the "Person" object
+var inputExDefinition = builder.schemaToInputEx(schemaIdentifierMap["Person"]);
+
+// Add 'container2' as parent element
+inputExDefinition.parentEl = 'container2';
+
+// Create the form
+var f = Y.inputEx(inputExDefinition);
+    });
+    </script>
+
+</div>
+
+<h2>HTML</h2>
+
+<pre class="code prettyprint">&lt;div id=&quot;container1&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div id=&quot;container2&quot;&gt;&lt;&#x2F;div&gt;</pre>
+
+
+<h2>JavaScript</h2>
+
+
+<h3>Implementation</h3>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a schemaIdentifierMap
+var schemaIdentifierMap = {
+    &#x2F;&#x2F; Person definition
+    &quot;Person&quot;: {
+        &quot;id&quot;: &quot;Person&quot;,
+        &quot;description&quot;:&quot;A person&quot;,
+        &quot;type&quot;:&quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;name&quot;: { &quot;type&quot;:&quot;string&quot;},
+            &quot;born&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;format&quot;:&quot;date&quot;, &quot;optional&quot;:true},
+            &quot;gender&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;choices&quot;: [ {&quot;value&quot;:&quot;male&quot;,&quot;label&quot;:&quot;Guy&quot;}, {&quot;value&quot;:&quot;female&quot;,&quot;label&quot;:&quot;Girl&quot;} ]},
+            &quot;grownup&quot;: { &quot;type&quot;: &quot;boolean&quot; },
+            &quot;favoritecolors&quot;: { &quot;type&quot;: &quot;array&quot; },
+            &quot;address&quot;: {
+                &quot;type&quot;:&quot;object&quot;,
+                &quot;properties&quot;:{
+                    &quot;street&quot;:{&quot;type&quot;:&quot;string&quot;},
+                    &quot;city&quot;:{&quot;type&quot;:&quot;string&quot;},
+                    &quot;state&quot;:{&quot;type&quot;:&quot;string&quot;}
+                }
+            }
+        }
+    }
+};
+
+&#x2F;&#x2F; Create the JsonSchema builder object
+var builder = new Y.inputEx.JsonSchema.Builder({
+    &#x27;schemaIdentifierMap&#x27;: schemaIdentifierMap
+});
+
+&#x2F;&#x2F; Get the inputEx field definition from the &quot;Person&quot; object
+var inputExDefinition = builder.schemaToInputEx(schemaIdentifierMap[&quot;Person&quot;]);
+
+&#x2F;&#x2F; Add &#x27;container1&#x27; as parent element
+inputExDefinition.parentEl = &#x27;container1&#x27;;
+
+&#x2F;&#x2F; Create the form
+var f = Y.inputEx(inputExDefinition);
+
+
+&#x2F;&#x2F;----------------------------------------------------------------------------
+
+&#x2F;&#x2F; Create a schemaIdentifierMap
+var schemaIdentifierMap = {
+    &#x2F;&#x2F; Person definition
+    &quot;Person&quot;: {
+        &quot;id&quot;: &quot;Person&quot;,
+        &quot;description&quot;:&quot;A person&quot;,
+        &quot;type&quot;:&quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;name&quot;: { &quot;type&quot;:&quot;string&quot;, &quot;_inputex&quot;: {placeholder: &quot;you can add a placeholder&quot;, label: &#x27;Your name&#x27;} },
+            &quot;born&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;format&quot;:&quot;date&quot;, &quot;optional&quot;:true, &quot;_inputex&quot;: {&quot;_type&quot;: &quot;datepicker&quot;, valueFormat: &#x27;Y-m-d&#x27;, value: &#x27;2009-01-01&#x27;, label: &#x27;Birthdate&#x27;} },
+            &quot;gender&quot; : { &quot;type&quot;:&quot;string&quot;, &quot;choices&quot;: [ {&quot;value&quot;:&quot;male&quot;,&quot;label&quot;:&quot;Guy&quot;}, {&quot;value&quot;:&quot;female&quot;,&quot;label&quot;:&quot;Girl&quot;} ]},
+            &quot;grownup&quot;: { &quot;type&quot;: &quot;boolean&quot;, &quot;_inputex&quot;: { label: &quot;Grownup?&quot;, &quot;description&quot;: &quot;Over 18 only&quot;} },
+            &quot;favoritecolors&quot;: { &quot;type&quot;: &quot;array&quot;, &quot;_inputex&quot;: { label: &quot;Favorites colors&quot;, elementType: {&quot;type&quot;: &quot;color&quot;} }}
+        }
+    }
+};
+
+
+&#x2F;&#x2F; Create the JsonSchema builder object
+var builder = new Y.inputEx.JsonSchema.Builder({
+    &#x27;schemaIdentifierMap&#x27;: schemaIdentifierMap,
+
+    &#x2F;&#x2F; Those options will be added on all fields
+    &#x27;defaultOptions&#x27;: {
+        &#x27;showMsg&#x27;:true
+    }
+});
+
+&#x2F;&#x2F; Get the inputEx field definition from the &quot;Person&quot; object
+var inputExDefinition = builder.schemaToInputEx(schemaIdentifierMap[&quot;Person&quot;]);
+
+&#x2F;&#x2F; Add &#x27;container2&#x27; as parent element
+inputExDefinition.parentEl = &#x27;container2&#x27;;
+
+&#x2F;&#x2F; Create the form
+var f = Y.inputEx(inputExDefinition);</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+
+
+
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+
+
+                                        <li data-description="How to create a jsonschema field.">
+                                            <a href="jsonschema.html">Basic jsonschema field creation</a>
+                                        </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div id="links-sidebox" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Links</h2>
+                        </div>
+
+                        <div class="bd">
+<ul>
+    <li><a href="../assets/../index.html">Home</a></li>
+    <li><a href="../assets/../index.html#examples">All Examples</a></li>
+    <li><a href="../assets/../developer-guide.html">Developer's Guide</a></li>
+    <li><a href="../assets/../contribute.html">How to Contribute</a></li>
+    <li><a href="../assets/../../api/index.html">API Documentation</a></li>
+</ul>
+
+<ul>
+    <li><a href="http://github.com/clicrdv/inputex">Fork/Follow on GitHub</a></li>
+    <li><a href="http://github.com/clicrdv/inputex/issues">GitHub Issues</a></li>
+    <li><a href="http://neyric.com/category/inputex/">Blog</a></li>
+    <li><a href="http://groups.google.com/group/inputex/">Forums</a></li>
+    <li><a href="../assets/../../license.txt">License</a></li>
+</ul>
+
+                        </div>
+                    </div>
+
+
+            <div>
+                <center>
+                <img src="http://www.twitter.com/favicon.ico" alt="twitter"> follow <a href="http://twitter.com/inputex"> on Twitter</a><br>
+                <img src="http://github.com/favicon.ico" alt="GitHub"> fork <a href="http://github.com/clicrdv/inputex"> on GitHub</a><br><br>
+                <br /><br />
+            </center>
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/inputex-jsonschema',
+    name: 'jsonschema',
+    title: 'Basic jsonschema field creation',
+    newWindow: '',
+    auto:  true
+};
+YUI.Env.Tests.examples.push('jsonschema');
+
+</script>
+<!--script src="../assets/yui/test-runner.js"></script-->
+
+
+
+</body>
+</html>

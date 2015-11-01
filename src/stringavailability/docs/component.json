@@ -1,0 +1,25 @@
+{
+   "name": "inputex-stringavailability",
+   "displayName": "inputex-stringavailability",
+   "description": "inputex-stringavailability",
+   "author": "neyric",
+   "tags": [
+      "inputex-stringavailability"
+   ],
+   "use": [
+      "inputex-string",
+      "event-key",
+      "io",
+      "json-parse"
+   ],
+   "examples": [
+            {
+              "name"       : "string-availability",
+              "displayName": "Basic stringavailability field creation",
+              "description": "How to create a stringavailability field.",
+              "modules"    : ["inputex-stringavailability"],
+              "tags"       : ["stringavailability"],
+              "hideTableOfContents": true
+            }
+       ]
+}

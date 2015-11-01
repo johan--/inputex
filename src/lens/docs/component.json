@@ -1,0 +1,23 @@
+{
+   "name": "inputex-lens",
+   "displayName": "inputex-lens",
+   "description": "inputex-lens",
+   "author": "neyric",
+   "tags": [
+      "inputex-lens"
+   ],
+   "use": [
+      "inputex-group",
+      "inputex-inplaceedit"
+   ],
+   "examples": [
+      {
+         "name"       : "lens",
+         "displayName": "Basic lens  creation",
+         "description": "How to create a lens.",
+         "modules"    : ["inputex-lens"],
+         "tags"       : ["lens"],
+         "hideTableOfContents": true
+      }
+   ]
+}

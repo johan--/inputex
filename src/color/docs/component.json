@@ -1,0 +1,25 @@
+{
+   "name": "inputex-color",
+   "displayName": "Color field",
+   "description": "inputex-color",
+   "author": "neyric",
+   "tags": [
+      "inputex-color"
+   ],
+   "use": [
+      "inputex-field",
+      "node-event-delegate",
+      "event-outside",
+      "overlay"
+   ],
+   "examples": [
+	   {
+	       "name"       : "color",
+	       "displayName": "Basic color field creation",
+	       "description": "How to create a color field.",
+	       "modules"    : ["inputex-color"],
+	       "tags"       : ["color"],
+	       "hideTableOfContents": true
+	   }
+   ]
+}

@@ -1,0 +1,23 @@
+{
+   "name": "inputex-timeinterval",
+   "displayName": "inputex-timeinterval",
+   "description": "inputex-timeinterval",
+   "author": "neyric",
+   "tags": [
+      "inputex-timeinterval"
+   ],
+   "use": [
+      "inputex-combine",
+      "inputex-select"
+   ],
+   "examples": [
+                  {
+                    "name"       : "timeinterval",
+                    "displayName": "Basic timeinterval field creation",
+                    "description": "How to create a timeinterval field.",
+                    "modules"    : ["inputex-timeinterval"],
+                    "tags"       : ["timeinterval"],
+                    "hideTableOfContents": true
+                  }
+             ]
+}

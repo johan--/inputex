@@ -1,0 +1,24 @@
+{
+   "inputex-form": {
+      "requires": [
+         "io-base",
+         "json-stringify",
+         "inputex-group",
+         "inputex-button"
+      ],
+      "ix_provides": "form",
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

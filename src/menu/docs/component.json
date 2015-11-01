@@ -1,0 +1,24 @@
+{
+   "name": "inputex-menu",
+   "displayName": "inputex-menu",
+   "description": "inputex-menu",
+   "author": "neyric",
+   "tags": [
+      "inputex-menu"
+   ],
+   "use": [
+      "inputex-field",
+      "node-event-delegate",
+      "node-menunav-improved"
+   ],
+   "examples": [
+      {
+         "name"       : "menu",
+         "displayName": "Basic menu creation",
+         "description": "How to create a menu.",
+         "modules"    : ["inputex-menu"],
+         "tags"       : ["menu"],
+         "hideTableOfContents": true
+      }
+   ]
+}

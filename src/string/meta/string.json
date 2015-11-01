@@ -1,0 +1,22 @@
+{
+   "inputex-string": {
+      "requires": [
+         "inputex-field",
+         "event-key"
+      ],
+      "ix_provides": "string",
+      "skinnable": true,
+      "lang": [
+         "en",
+         "fr",
+         "de",
+         "ca",
+         "es",
+         "fr",
+         "it",
+         "nl",
+         "pl",
+         "pt-BR"
+      ]
+   }
+}

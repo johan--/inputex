@@ -1,0 +1,9 @@
+{
+	"inputex-autocomplete": {
+		"requires": [
+		  "inputex-string",
+		  "autocomplete"
+		],
+		"ix_provides": "autocomplete"
+	}
+}

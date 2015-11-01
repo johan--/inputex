@@ -1,0 +1,22 @@
+{
+   "name": "inputex-keyvalue",
+   "displayName": "inputex-keyvalue",
+   "description": "inputex-keyvalue",
+   "author": "neyric",
+   "tags": [
+      "inputex-keyvalue"
+   ],
+   "use": [
+      "inputex-combine"
+   ],
+   "examples": [
+      {
+         "name"       : "keyvalue",
+         "displayName": "Basic keyvalue field creation",
+         "description": "How to create a keyvalue field.",
+         "modules"    : ["inputex-keyvalue"],
+         "tags"       : ["keyvalue"],
+         "hideTableOfContents": true
+      }
+   ]
+}

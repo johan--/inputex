@@ -1,0 +1,7 @@
+{
+	"inputex-button": {
+		"requires": [
+		  "inputex"
+		  ]
+	  }
+}

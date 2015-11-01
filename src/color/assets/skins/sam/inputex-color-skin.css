@@ -1,0 +1,113 @@
+.inputEx-ColorField-Wrapper {
+	line-height:0;
+}
+
+.inputEx-ColorField-ButtonWrapper {
+  line-height: 0;
+  vertical-align: top; /* for all FF */
+  display: -moz-inline-box; /* for FF2 */
+  display: inline-block;
+  margin: auto 0.25em;
+  /* @include box-shadow(inset 0 1px 0 0 #ffffff); */
+  -moz-box-shadow: inset 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: inset 0 1px 0 0 #ffffff;
+  -o-box-shadow: inset 0 1px 0 0 #ffffff;
+  box-shadow: inset 0 1px 0 0 #ffffff;
+  /* @include border-radius(2px); */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+  border:1px solid #aaaaaa;
+  /*
+    @include background-image(linear-gradient(top, #f9f9f9, #efefef));
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#efefef', GradientType=0); // IE 6-9
+  */
+  background-color: #f9f9f9;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9f9f9), color-stop(100%, #efefef));
+  background-image: -webkit-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -moz-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -o-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: -ms-linear-gradient(top, #f9f9f9, #efefef);
+  background-image: linear-gradient(top, #f9f9f9, #efefef);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#efefef', GradientType=0);
+}
+.inputEx-ColorField-ButtonWrapper:hover {
+  /*
+    @include background-image(linear-gradient(top, #f9f9f9, #efefef));
+    *zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#efefef', GradientType=0); // IE 6-9
+  */
+  background-color: #efefef;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #efefef), color-stop(100%, #f9f9f9));
+  background-image: -webkit-linear-gradient(top, #efefef, #f9f9f9);
+  background-image: -moz-linear-gradient(top, #efefef, #f9f9f9);
+  background-image: -o-linear-gradient(top, #efefef, #f9f9f9);
+  background-image: -ms-linear-gradient(top, #efefef, #f9f9f9);
+  background-image: linear-gradient(top, #efefef, #f9f9f9);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f9f9f9', GradientType=0);
+}
+
+
+.inputEx-ColorField-Button {
+	background-image:url(images/palette.png);
+	background-repeat:no-repeat;
+	background-position:3px 2px;
+	background-color:transparent;
+	width:21px;
+	height:19px;
+	padding:0;
+	cursor:pointer;
+	border:none;
+}
+
+.inputEx-ColorField-colorArea {
+	height: 19px;
+	width: 100px;
+	border: 1px solid #B5B8C8;
+	cursor: pointer;
+	float:left; /* to display color picker icon on the right */
+}
+
+.inputEx-ColorField .yui3-overlay-content { 
+   background-color: white;
+   border: 1px solid #BBB;
+   -webkit-box-shadow: 0 4px 7px rgba(0,0,0,.5);
+      -moz-box-shadow: 0 4px 7px rgba(0,0,0,.5);
+           box-shadow: 0 4px 7px rgba(0,0,0,.5);
+}
+
+.inputEx-ColorField .yui3-overlay-content .yui3-widget-bd { 
+   padding: 0; /* override yui style if the panel is nested inside another panel*/
+ }
+
+.inputEx-ColorField-square {
+   float:left;
+   cursor: pointer;
+   width:15px;
+   height:15px;
+   margin:2px;
+}
+
+.inputEx-ColorField-square.selected {
+	width:13px;
+	height:13px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#666666;
+	border-color:rgba(0,0,0,0.5);
+}
+
+.inputEx-ColorField-square:hover {
+	width:13px;
+	height:13px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#666666;
+	border-color:rgba(0,0,0,0.5);
+}

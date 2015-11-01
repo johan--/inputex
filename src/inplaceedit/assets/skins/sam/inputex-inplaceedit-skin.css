@@ -1,0 +1,13 @@
+.inputEx-InPlaceEdit-visu { cursor: pointer; padding: 3px; }
+
+.inputEx-InPlaceEdit-editor .inputEx-InPlaceEdit-editorDiv {
+  float: left;
+  margin-bottom:0; /* remove 0.2em bottom margin because no need to cumulate field and editor-field margins */
+}
+
+.inputEx-OkButton { margin-left: 5px; }
+
+/* because of this change in combine.js d497d619d18149c1a877f8bc5ddba1fff6850972*/
+.inputEx-editorDiv .inputEx-CombineField {
+  float: left;
+}

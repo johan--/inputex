@@ -1,0 +1,24 @@
+{
+   "name": "inputex-multiautocomplete",
+   "displayName": "inputex-multiautocomplete",
+   "description": "inputex-multiautocomplete",
+   "author": "neyric",
+   "tags": [
+      "inputex-multiautocomplete"
+   ],
+   "use": [
+      "inputex-autocomplete",
+      "json",
+      "inputex-ddlist"
+   ],
+   "examples": [
+      {
+         "name"       : "multiautocomplete",
+         "displayName": "Basic multiautocomplete creation",
+         "description": "How to create a multiautocomplete.",
+         "modules"    : ["inputex-multiautocomplete"],
+         "tags"       : ["multiautocomplete"],
+         "hideTableOfContents": true
+      }
+   ]
+}

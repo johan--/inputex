@@ -1,0 +1,25 @@
+{
+   "name": "inputex-form",
+   "displayName": "inputex-form",
+   "description": "inputex-form",
+   "author": "neyric",
+   "tags": [
+      "inputex-form"
+   ],
+   "use": [
+      "io-base",
+      "inputex-group",
+      "json",
+      "inputex-button"
+   ],
+   "examples": [
+      {
+         "name"       : "form",
+         "displayName": "Basic form field creation",
+         "description": "How to create a form field.",
+         "modules"    : ["inputex-form"],
+         "tags"       : ["form"],
+         "hideTableOfContents": true
+      }
+   ]
+}
