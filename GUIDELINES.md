@@ -102,3 +102,10 @@ You can now run the "localeapp-to-project" command with your PROJET_API_KEY as a
 Rebuild modules. You're done!
 
 
+Release
+-------
+
+Merge every change into gh-pages.
+
+Use [Jekyll](https://help.github.com/articles/using-jekyll-with-pages/) to test and publish the site.
+
