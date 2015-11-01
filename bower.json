@@ -7,14 +7,14 @@
     ],
     "repository": {
         "type" : "git",
-        "url" : "https://github.com/neyric/inputex.git"
+        "url" : "https://github.com/clicrdv/inputex.git"
     },
     "dependencies": {
         "yui": "3.14.1"
     },
     "devDependencies": {
         "shifter": "0.4.2",
-        "yeti": "https://github.com/neyric/yeti/tarball/coverage-dump",
+        "yeti": "https://github.com/clicrdv/yeti/tarball/coverage-dump",
         "phantomjs": "1.9.2-5",
         "istanbul": "0.1.45",
         "yogi": "~0.1.0",

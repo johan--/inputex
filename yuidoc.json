@@ -2,7 +2,7 @@
     "name": "InputEx",
     "description": "InputEx - form and fields framework for YUI3",
     "version": "4.0.0",
-    "url": "http://neyric.github.com/inputex",
+    "url": "http://clicrdv.github.com/inputex",
     "options": {
         "linkNatives": "true",
         "attributesEmit": "true",

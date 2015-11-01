@@ -1,4 +1,4 @@
-InputEx [![Build Status](https://travis-ci.org/neyric/inputex.png?branch=master)](https://travis-ci.org/neyric/inputex)
+InputEx [![Build Status](https://travis-ci.org/clicrdv/inputex.png?branch=master)](https://travis-ci.org/clicrdv/inputex)
 =======
 
 [inputEx](http://neyric.github.com/inputex) is an open-source javascript framework to build fields and forms for web applications using the YUI library.
@@ -34,4 +34,4 @@ See the [developer guide](https://github.com/clicrdv/inputex/blob/master/GUIDELI
 Apply all the steps to build the modules, generate the docs, run the tests, then merge & push the `gh-pages` branch!
 
 
-Copyright (c) 2007-2014 eric.abouaf at gmail.com, released under the MIT license
+Copyright (c) 2007-2015 eric.abouaf at gmail.com, released under the MIT license

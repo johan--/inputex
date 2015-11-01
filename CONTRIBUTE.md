@@ -15,7 +15,7 @@ Reporting an Issue
 ------------------
 
 The issues/bugs and feature requests are managed through the [GitHub
-issue tracker](http://github.com/neyric/inputex/issues). Feel free to
+issue tracker](http://github.com/clicrdv/inputex/issues). Feel free to
 add new ones, vote for your favorites, comment on existing one, ...
 
 Then don’t get your hopes up. Unless you have a "Code Red, Mission
